@@ -100,7 +100,7 @@ C'est **le levier de croissance** et **le moteur de sortie du giron CAD42** :
 - Bouygues
 - Equans Nord
 - Léon Grosse
-- Sogea Satom
+- Vinci (filiales hors périmètre Spiraliss — cf. cadrage 26/02)
 - Missions HSE international
 
 ### Estimation P&L scénario B (complément au BP CA d'Igor)
@@ -201,14 +201,16 @@ Le premier recrutement (~2028) est un jalon critique. Budget à prévoir : 40-60
 
 ---
 
-## Questions pour le comité du 26/02
+## Questions ouvertes — Atelier 27/02
+
+> Cadrage Vinci/Spiraliss = acquis (cf. WhatsApp 26/02). Le périmètre interdit (filiales Spiraliss) est acté. Le reste du marché Vinci + tout le hors-Vinci est ouvert.
 
 1. **Niveau d'ambition** : Le BP Igor (827K€ Y5) est-il le scénario de référence ? Ou c'est encore trop prudent pour JP (qui visait 1M€ Y5) ?
 2. **Ligne "Autres formations"** : Comment la crédibiliser ? Qui prospecte ces clients hors CAD42 ?
-3. **Qualiopi** : From scratch (juin 2026, gratuit hors audit) ou rachat (~10-15K€, immédiat) ?
+3. **Qualiopi** : From scratch (juin 2026) + portage court terme ? Rachat opportuniste (~10-15K€) ? Combiné ?
 4. **Transition Igor** : Confirmation que le seuil de bascule est le CA trimestriel à 50K€ ?
-5. **Investissement supplémentaire** : Si rachat OF, qui finance les ~15K€ ? Augmentation capital, CCA, ou trésorerie Y1 ?
-6. **Go-to-market** : JP et Raph s'engagent-ils activement sur la stratégie contech (au-delà de l'apport d'affaires ponctuel) ?
+5. **Rémunération Igor** : Quel modèle en Y1 (mi-temps Spiraliss + CCA) vs Y2 (full-time, ~50K€ brut sur EBIT de 54K€) ?
+6. **Positionnement IA x BTP** : OF métier qui intègre l'IA, ou OF d'IA appliquée au BTP ? (cf. discussion Julien/Igor/Baptiste)
 
 ---
 

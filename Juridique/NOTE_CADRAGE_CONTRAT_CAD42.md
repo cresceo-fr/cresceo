@@ -1,7 +1,7 @@
 # Note de cadrage — Contrat de prestation Cresceo ↔ CAD42
 
 **Pour** : Maître Olivier Frachon (mission contrat de prestation — séquencée Q4 2026)
-**Date** : 25 février 2026
+**Date** : 25 février 2026 — **Amendé le 02 mars 2026** (post-atelier Lyon 27/02 + validation JP Panaget par téléphone)
 **Rédacteur** : Baptiste Casnedi (DG Cresceo)
 
 ---
@@ -57,15 +57,35 @@ La première proposition commerciale ("CAD42 x CRESCEO", en cours de rédaction)
 
 → **À confirmer** : cette exception est-elle maintenue ? Si oui, la formuler comme une clause spécifique limitée à cette propale initiale.
 
-### 3.4 Propriété intellectuelle — Modules co-produits
+### 3.4 Propriété intellectuelle et droits d'usage — Technologies CAD42
 
-Cresceo et CAD42 co-développent des contenus de formation. Trois catégories identifiées :
+#### 3.4.1 Droit d'usage technologies CAD42 sur formations 2.1 / 2.2 / 2.3 *(ajouté 27/02)*
+
+Les formations des familles **2.1, 2.2 et 2.3** du catalogue Cresceo intègrent les technologies propriétaires de CAD42 :
+- **Algo IA Prévention** (algorithme d'analyse et prévention des risques)
+- **Unifield** (logiciel métier BTP)
+
+**Modalité à définir** (à soumettre à JP) :
+
+| Option | Mécanisme | Avantage | Inconvénient |
+|--------|-----------|----------|--------------|
+| **Forfait licence annuel** | Cresceo verse un forfait fixe à CAD42 par année contractuelle | Prévisibilité pour les deux parties | Peut sous- ou sur-rémunérer CAD42 selon le volume réel |
+| **À l'usage** | Cresceo verse un montant par session utilisant les techs CAD42 | Corrélé au CA réel de Cresceo | Suivi plus lourd, risque de litiges sur le comptage |
+| **Hybride** | Forfait plancher + variable au-delà d'un seuil | Équilibré | Complexe à rédiger |
+
+→ **Position proposée** : commencer par un **forfait annuel révisable** (simple, auditable), à renégocier annuellement selon le volume réel. Montant à définir avec JP.
+
+→ **Point d'attention pour l'avocat** : définir le périmètre exact des technologies couvertes, les conditions d'accès, la responsabilité de CAD42 en cas de défaillance technique, et le devenir du droit d'usage en cas de rupture du contrat.
+
+#### 3.4.2 Propriété intellectuelle — Modules co-produits
+
+Trois catégories de contenus identifiées :
 
 | Catégorie | Description | Régime PI proposé |
 |-----------|-------------|-------------------|
-| **A — Modules Unifield** | Formations utilisant le logiciel Unifield (propriété CAD42) | **Licence croisée** : CAD42 concède à Cresceo le droit d'utiliser Unifield comme support de formation ; Cresceo conserve la PI de l'ingénierie pédagogique |
-| **B — Modules Innovation IA** | Formations IA "pures" (prompt engineering, IA métier, etc.) | **Propriété Cresceo** : créés par Cresceo, pas de PI CAD42 impliquée |
-| **C — Modules Culture digitale** | Formations transverses (acculturation, conduite du changement) | **Licence d'usage** : co-développés, licence réciproque non-exclusive |
+| **A — Modules Unifield** | Formations utilisant Unifield (propriété CAD42) | Licence croisée : CAD42 concède à Cresceo le droit d'utiliser Unifield comme support ; Cresceo conserve la PI de l'ingénierie pédagogique |
+| **B — Modules Innovation IA** | Formations IA "pures" (prompt engineering, IA métier, etc.) | Propriété Cresceo : créés par Cresceo, pas de PI CAD42 impliquée |
+| **C — Modules Culture digitale** | Formations transverses (acculturation, conduite du changement) | Licence d'usage réciproque non-exclusive |
 
 → **Point clé pour l'avocat** : définir clairement qui détient quoi en cas de rupture du contrat (Cresceo garde ses modules, CAD42 garde Unifield, quid des modules co-développés ?).
 
@@ -79,13 +99,43 @@ Cresceo et CAD42 co-développent des contenus de formation. Trois catégories id
 | **Résiliation anticipée** | Faute grave, liquidation, changement de contrôle | — |
 | **Sort des missions en cours** | Missions en cours menées à terme malgré la résiliation | — |
 
-### 3.6 Non-exclusivité et non-concurrence
+### 3.6 Apport d'affaires Cresceo → CAD42 *(ajouté 27/02)*
 
-| Règle | Détail |
-|-------|--------|
-| **Cresceo** peut développer des formations hors canal CAD42 | Prospection directe, autres partenaires, autres secteurs |
-| **CAD42** peut travailler avec d'autres OF | Pas d'obligation de passer par Cresceo pour toutes les formations |
-| **Non-sollicitation** | Ni Cresceo ni CAD42 ne sollicitent directement les clients de l'autre partie sans passer par le contrat | Durée : pendant le contrat + 12 mois ? |
+**Principe validé par JP (27/02)** : sur les formations des familles 2.1, 2.2 et 2.3, Cresceo peut être amenée à identifier des besoins clients qui relèvent de l'offre de services de CAD42 (logiciels, conseil, intégration). Cresceo devient alors **apporteur d'affaires vers CAD42**.
+
+| Élément | Position souhaitée | À arbitrer |
+|---------|-------------------|------------|
+| **Mécanisme** | Cresceo signale à CAD42 un besoin client identifié en formation ou usage logiciel | — |
+| **Assiette** | CA HT signé par CAD42 avec le client apporté par Cresceo | — |
+| **Taux** | À définir (fourchette marché : 5-10%) | **Taux exact à négocier avec JP** |
+| **Déclenchement** | Après encaissement par CAD42 | — |
+| **Traçabilité** | Cresceo notifie CAD42 par écrit (email) avant la mise en relation — déclenche le droit à commission | — |
+
+→ **Note** : ce flux est **symétrique mais distinct** du flux CAD42 → Cresceo (section 3.1/3.2). Les deux mécanismes coexistent dans le même contrat-cadre.
+
+### 3.7 Mobilisation et rétrocession des commerciaux CAD42 *(ajouté 27/02)*
+
+**Principe validé par JP (27/02)** : les 3 commerciaux de CAD42 peuvent être mobilisés pour vendre des formations Cresceo à leurs clients. En contrepartie, Cresceo (ou CAD42 pour le compte de Cresceo) met en place un **accord de rétrocession en salaire**.
+
+| Élément | Mécanisme proposé | À préciser |
+|---------|------------------|------------|
+| **Périmètre** | Les 3 commerciaux CAD42 (noms à confirmer) | Noms à récupérer auprès de JP |
+| **Déclencheur** | Vente effective d'une formation Cresceo à un client CAD42 | Signature convention de formation |
+| **Base de calcul** | CA HT de la formation vendue | — |
+| **Taux de rétrocession** | À définir | Fourchette à négocier avec JP (ex : 5-10% du CA généré) |
+| **Modalité de versement** | Via CAD42 (le commercial reçoit de CAD42, qui refacture à Cresceo) | Vérifier l'impact social/fiscal |
+| **Fréquence** | Trimestrielle | — |
+
+→ **Point d'attention pour l'avocat** : la rétrocession passe par CAD42 (employeur des commerciaux). Cresceo ne verse pas directement. Mécanisme : Cresceo verse une commission à CAD42 sur les ventes générées par les commerciaux, CAD42 répercute en bonus/prime de leurs salariés. Cela évite tout lien de subordination entre Cresceo et les commerciaux CAD42.
+
+### 3.8 Non-exclusivité, vente directe et non-concurrence
+
+| Règle | Détail | Statut |
+|-------|--------|--------|
+| **Cresceo peut prospecter en direct** | Prospection directe, autres partenaires, autres secteurs | Principe général |
+| **Cresceo peut vendre en direct aux Services Formation des clients** | Sans passer par les commerciaux CAD42 | ✅ **Validé par JP (27/02)** |
+| **CAD42 peut travailler avec d'autres OF** | Pas d'obligation d'exclusivité sur toutes les formations | Principe général |
+| **Non-sollicitation** | Ni Cresceo ni CAD42 ne sollicitent les employés-clés de l'autre partie | Pendant le contrat + 12 mois |
 
 ---
 
@@ -93,8 +143,11 @@ Cresceo et CAD42 co-développent des contenus de formation. Trois catégories id
 
 1. **Convention réglementée** : ce contrat devra suivre la procédure des conventions réglementées prévue aux statuts de Cresceo (Jean-Philippe et Raphaël s'abstiennent du vote d'approbation)
 2. **Cohérence avec le pacte d'associés** : le pacte prévoit des règles de gestion des conflits d'intérêts (article 9) qui s'appliquent aux négociations de ce contrat
-3. **PI en cas de rupture** : le point le plus sensible — bien séparer les contenus Cresceo, les contenus CAD42 (Unifield), et les contenus co-développés
-4. **Clause de revoyure** : prévoir un mécanisme de révision annuelle du taux de commission et du périmètre
+3. **PI en cas de rupture** : le point le plus sensible — bien séparer les contenus Cresceo, les contenus CAD42 (Unifield, Algo IA Prévention), et les contenus co-développés
+4. **Clause de revoyure** : prévoir un mécanisme de révision annuelle du taux de commission, du droit d'usage technologique, et du périmètre
+5. **Rétrocession commerciaux CAD42** *(27/02)* : structurer le flux financier Cresceo → CAD42 → commerciaux de façon à éviter tout lien de subordination. Vérifier si cela nécessite une convention de partage de commissions ou si cela reste un accord interne à CAD42.
+6. **Symétrie des apports d'affaires** *(27/02)* : le contrat doit traiter les deux sens (CAD42 → Cresceo et Cresceo → CAD42) sans créer de confusion. Deux annexes distinctes sont recommandées.
+7. **Droit d'usage technologique** *(27/02)* : préciser les obligations de disponibilité, support, et évolution des outils CAD42 utilisés dans les formations Cresceo. Que se passe-t-il si CAD42 modifie ou retire l'accès à Unifield ou Algo IA Prévention ?
 
 ---
 
@@ -106,4 +159,16 @@ Cresceo et CAD42 co-développent des contenus de formation. Trois catégories id
 
 ---
 
-*Note de cadrage à usage de l'avocat — 25 février 2026*
+## 6. Synthèse des points à chiffrer avec JP (avant transmission avocat)
+
+| Point | Question ouverte | Contact |
+|-------|-----------------|---------|
+| Droit d'usage techno CAD42 | Forfait annuel ou à l'usage ? Quel montant ? | jppanaget@cad42.com |
+| Taux commission CAD42 → Cresceo | % exact sur CA formations apportées | jppanaget@cad42.com |
+| Taux commission Cresceo → CAD42 | % exact sur CA CAD42 apporté par Cresceo | jppanaget@cad42.com |
+| Taux rétrocession commerciaux | % exact du CA formation vendu | jppanaget@cad42.com |
+| Noms des 3 commerciaux CAD42 | Périmètre de l'accord | jppanaget@cad42.com |
+
+---
+
+*Note de cadrage à usage de l'avocat — 25 février 2026, amendée le 02 mars 2026*

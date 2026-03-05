@@ -1,11 +1,11 @@
 # Statuts SAS CRESCEO - Draft
 
-**Statut** : Draft v3 — Post-comité all associates du 25/02
-**Date** : 25 février 2026
+**Statut** : Draft v4 — Intégration retours avocat (Me Frachon, 04/03)
+**Date** : 5 mars 2026
 
 ---
 
-> **Note** : Les statuts SAS et le pacte d'associés sont finalisés et signés **simultanément** lors de l'AG constitutive, via l'avocat (Maître Olivier Frachon). Les deux documents forment un ensemble cohérent : les statuts posent le cadre légal (déposé au greffe, public), le pacte complète avec les engagements confidentiels entre associés.
+> **Note** : Les statuts SAS et le pacte d’associés sont finalisés et signés **simultanément** lors de l’AG constitutive, via l’avocat (Maître Olivier Frachon). Les deux documents forment un ensemble cohérent : les statuts posent le cadre légal (déposé au greffe, public), le pacte complète avec les engagements confidentiels entre associés.
 
 ---
 
@@ -19,28 +19,24 @@ Société par Actions Simplifiée (SAS), régie par les articles L.227-1 et suiv
 
 La société est dénommée : **CRESCEO**
 
-Dans tous les actes et documents, la dénomination sera suivie des mots "Société par Actions Simplifiée" ou "SAS" et du montant du capital social.
+Dans tous les actes et documents, la dénomination sera suivie des mots «Société par Actions Simplifiée» ou «SAS» et du montant du capital social.
 
 ### Article 3 — Objet social
 
-La société a pour objet, en France et à l'étranger :
+La société a pour objet, en France et à l’étranger :
 
 - La **formation professionnelle, conseil et accompagnement** des entreprises dans leurs transformations organisationnelles, digitales et opérationnelles
-- La **coordination en matière de sécurité et de protection de la santé** (SPS)
-- Le **placement de consultants** sur des missions d'expertise technique
-- La conception, le développement et la commercialisation de **contenus pédagogiques** et d'outils numériques associés
-- Et plus généralement, toutes opérations industrielles, commerciales, financières, mobilières ou immobilières se rattachant directement ou indirectement à l'objet social
+- La **coordination en matière de sécurité et de protection de la santé** (SPS) — *[OF : à préciser le périmètre exact]*
+- La conception, le développement et la commercialisation de **contenus pédagogiques** et d’outils numériques associés
+- **Prestations de services de conseils** à destination des professionnels, des particuliers et des administrations
+
+> **Retour avocat (04/03)** : Suppression de «placement de consultants» (activité réglementée) et de la clause balai générique. Ajout d’une ligne «prestations de conseils» plus adaptée.
 
 ### Article 4 — Siège social
 
-Le siège social est fixé à : **[Adresse à définir]**
+Le siège social est fixé à : **Les Tricolores, 58 rue de Monceau, 75008 Paris**
 
-Options en discussion :
-
-| Option | Adresse | Avantages | Inconvénients |
-|--------|---------|-----------|---------------|
-| Domiciliation classique | Paris ou Lyon | Simplicité | Pas d'avantages fiscaux |
-| Adresse Président | Domicile Igor | Gratuit 5 ans max | Moins professionnel |
+Le transfert du siège social dans le même département ou dans un département limitrophe peut être décidé par le Président, sous réserve de ratification par les associés lors de la prochaine décision collective.
 
 ### Article 5 — Durée
 
@@ -52,11 +48,11 @@ La société est constituée pour une durée de **99 ans** à compter de son imm
 
 ### Article 6 — Capital social
 
-Le capital social est fixé à **10 000 euros (10 000€)**, divisé en **1 000 actions** d'une valeur nominale de **10 euros (10€)** chacune, entièrement souscrites et libérées.
+Le capital social est fixé à **10 000 euros (10 000€)**, divisé en **1 000 actions** d’une valeur nominale de **10 euros (10€)** chacune, entièrement souscrites et libérées.
 
 ### Article 7 — Répartition du capital
 
-| Associé | Nombre d'actions | % Capital | Apport (€) |
+| Associé | Nombre d’actions | % Capital | Apport (€) |
 |---------|-----------------|-----------|------------|
 | Holding Igor Cannone (*) | 380 | 38% | 3 800€ |
 | Holding Baptiste Casnedi (*) | 190 | 19% | 1 900€ |
@@ -68,15 +64,17 @@ Le capital social est fixé à **10 000 euros (10 000€)**, divisé en **1 000 
 
 (*) Chaque associé souscrit via sa holding respective (dénominations sociales exactes à compléter une fois les holdings créées/immatriculées)
 
+> **Action requise** : Fournir les Kbis de l’ensemble des holdings à Me Frachon.
+
 **Validé** : Libération intégrale à la constitution.
 
 ### Article 8 — Apports
 
-Les apports sont exclusivement en **numéraire** (pas d'apport en nature ni en industrie à ce stade).
+Les apports sont exclusivement en **numéraire** (pas d’apport en nature ni en industrie à ce stade).
 
-Chaque associé libère l'intégralité de son apport à la constitution, par virement sur le compte de la société ouvert auprès de **Qonto**.
+Chaque associé libère l’intégralité de son apport à la constitution, par virement sur le compte de la société ouvert auprès de **Qonto**.
 
-**Note** : Les apports en industrie (expertise, temps de travail) ne constituent pas du capital social en SAS. Ils peuvent être valorisés via le mécanisme de **compte courant d'associé** défini dans le pacte.
+**Note** : Les apports en industrie (expertise, temps de travail) ne constituent pas du capital social en SAS. Ils peuvent être valorisés via le mécanisme de **compte courant d’associé** défini dans le pacte.
 
 ---
 
@@ -86,22 +84,20 @@ Chaque associé libère l'intégralité de son apport à la constitution, par vi
 
 Les actions sont obligatoirement **nominatives**. Elles sont inscrites dans un registre de mouvements de titres tenu au siège social.
 
-### Article 10 — Clause d'agrément (ESSENTIELLE)
+### Article 10 — Clause d’agrément
 
-> Toute cession d'actions est soumise à agrément préalable.
+Toute cession d’actions à un tiers non-associé, à quelque titre que ce soit (vente, donation, apport, échange, etc.), est soumise à l’**agrément préalable** de la collectivité des associés, statuant à la majorité des **deux tiers (2/3)** des voix.
 
-Toute cession d'actions à un tiers non-associé, à quelque titre que ce soit (vente, donation, apport, échange, etc.), est soumise à l'**agrément préalable** de la collectivité des associés, statuant à la majorité des **deux tiers (2/3)** des voix.
-
-#### Procédure d'agrément
+#### Procédure d’agrément
 
 | Étape | Délai | Action |
 |-------|-------|--------|
-| 1. Notification | J | Le cédant notifie au Président par LRAR : identité du cessionnaire, nombre d'actions, prix |
+| 1. Notification | J | Le cédant notifie au Président par LRAR : identité du cessionnaire, nombre d’actions, prix |
 | 2. Consultation | J+15 | Le Président consulte les associés (AG ou consultation écrite) |
-| 3. Décision | J+30 | Décision d'agrément ou de refus (le silence vaut agrément) |
+| 3. Décision | J+30 | Décision d’agrément ou de refus (le silence vaut agrément) |
 | 4. Si refus | J+90 | Les associés ou la société doivent racheter les actions au prix convenu ou fixé par expert (art. 1843-4 C. civ.) |
 
-#### Exceptions à l'agrément
+#### Exceptions à l’agrément
 
 | Type de cession | Agrément requis |
 |----------------|-----------------|
@@ -110,326 +106,209 @@ Toute cession d'actions à un tiers non-associé, à quelque titre que ce soit (
 | À un tiers externe | **Oui** (2/3 des voix) |
 | Par dévolution successorale | **Non** (mais information obligatoire) |
 
-**Validé** : Agrément majorité 2/3, cession au conjoint soumise à agrément (majorité simple), délai 30 jours.
-
-### Article 11 — Inaliénabilité temporaire (Lock-up)
-
-> Protège contre les sorties prématurées en phase d'amorçage.
-
-Les actions sont **inaliénables** pendant une durée de **2 ans** à compter de l'immatriculation de la société.
-
-Pendant cette période, aucune cession, totale ou partielle, n'est autorisée, sauf :
-- Décès de l'associé (transmission aux héritiers)
-- Invalidité permanente empêchant toute activité professionnelle
-- Accord unanime de tous les associés
-
-**Validé** : Lock-up 2 ans (comité 25/02)
-
-### Article 12 — Droit de préemption
-
-> **⚠️ Clause recommandée — Complète l'agrément**
-
-En cas de projet de cession agréé, les associés restants bénéficient d'un **droit de préemption** proportionnel à leur participation au capital.
-
-| Étape | Délai | Action |
-|-------|-------|--------|
-| 1. Notification aux associés | J | Le Président notifie le projet de cession agréé |
-| 2. Exercice du droit | J+30 | Chaque associé indique s'il souhaite préempter (proportionnellement) |
-| 3. Répartition | J+45 | Si tous les associés ne préemptent pas, les parts non souscrites sont réparties entre les préempteurs |
-| 4. Cession au tiers | J+60 | Si préemption non exercée intégralement |
+> **Note avocat** : L’articulation agrément/préemption est traitée dans le pacte d’associés. Voir commentaire Me Frachon sur la compatibilité des deux mécanismes.
 
 ---
 
 ## TITRE IV — Direction et Représentation
 
-### Article 13 — Président
+### Article 11 — Président
 
 La société est dirigée par un **Président**, personne physique ou morale, associé ou non.
 
-**Premier Président** : **Igor Cannone** (nommé pour une durée indéterminée)
+**Premier Président** : **[Holding Igor Cannone]** (nommée pour une durée indéterminée), représentée par Igor Cannone
 
-Le Président représente la société à l'égard des tiers. Il est investi des pouvoirs les plus étendus pour agir en toute circonstance au nom de la société, **dans les limites** de l'objet social et des pouvoirs expressément réservés aux associés et au Directeur Général par les présents statuts.
+> **Retour avocat (04/03)** : Privilégier la **personne morale** (holding) comme titulaire du mandat social plutôt que la personne physique. Cohérent avec la souscription via holdings et le mécanisme CCA du pacte.
 
-### Article 14 — Directeur Général
+Le Président représente la société à l’égard des tiers. Il est investi des pouvoirs les plus étendus pour agir en toute circonstance au nom de la société, **dans les limites** de l’objet social et des pouvoirs expressément réservés aux associés par les présents statuts et le pacte d’associés.
 
-Le Président peut être assisté d'un ou plusieurs **Directeurs Généraux**, personnes physiques, associés ou non.
+### Article 12 — Directeur Général
 
-**Premier Directeur Général** : **Baptiste Casnedi** (nommé pour une durée indéterminée)
+Le Président peut être assisté d’un ou plusieurs **Directeurs Généraux**, personnes physiques ou morales, associés ou non.
 
-Le Directeur Général dispose des mêmes pouvoirs de représentation que le Président à l'égard des tiers.
+**Premier Directeur Général** : **[Holding Baptiste Casnedi]** (nommée pour une durée indéterminée), représentée par Baptiste Casnedi
 
-### Article 15 — Limitation des pouvoirs (ESSENTIELLE)
+Le Directeur Général dispose des mêmes pouvoirs de représentation que le Président à l’égard des tiers.
 
-> Encadre les pouvoirs du Président et du DG dans les rapports entre associés.
+### Article 13 — Limitation des pouvoirs
 
-Les pouvoirs du Président et du Directeur Général sont limités comme suit dans les rapports entre associés :
+Les pouvoirs du Président et du Directeur Général sont limités dans les rapports entre associés selon les modalités définies dans le **pacte d’associés** (paliers de décision, actes soumis à autorisation collective).
 
-#### Paliers de décision
+> **Retour avocat (04/03)** : Le détail des paliers de dépenses et des actes soumis à autorisation relève du pacte (confidentiel), pas des statuts (publics).
 
-| Palier | Montant engagement | Pouvoir de décision | Formalisme |
-|--------|-------------------|---------------------|------------|
-| **Palier 1** | < 2 000€ HT | Président **seul** | Aucun |
-| **Palier 2** | 2 000€ - 10 000€ HT | Président **+ DG** (accord conjoint) | Accord écrit (email suffit) |
-| **Palier 3** | > 10 000€ HT | **Décision collective** des associés (majorité simple) | Procès-verbal |
-
-#### Actes soumis à autorisation collective préalable (quel que soit le montant)
-
-Les actes suivants nécessitent une décision collective des associés :
-
-- Embauche ou licenciement de tout salarié
-- Conclusion ou résiliation de tout contrat d'une durée supérieure à 12 mois
-- Octroi de toute sûreté, caution ou garantie au nom de la société
-- Ouverture ou fermeture de tout compte bancaire (hors compte principal)
-- Souscription de tout emprunt
-- Acquisition ou cession de tout actif immobilisé d'une valeur supérieure à 5 000€
-- Toute prise de participation dans une autre société
-
-**À finaliser avec l'avocat** : Seuils paliers à confirmer (actuellement 2K€ / 10K€).
-
-### Article 16 — Rémunération de la direction
+### Article 14 — Rémunération de la direction
 
 La rémunération du Président et du Directeur Général est fixée par décision collective des associés.
 
-À la constitution, le Président et le Directeur Général n'exercent **pas de mandat rémunéré**. Leur engagement est valorisé selon les modalités définies au pacte d'associés (compte courant d'associé).
+À la constitution, le Président et le Directeur Général n’exercent **pas de mandat rémunéré**. Leur engagement est valorisé selon les modalités définies au pacte d’associés.
 
-### Article 17 — Révocation
+### Article 15 — Révocation
 
-Le Président et le Directeur Général sont révocables **à tout moment** par décision collective des associés statuant à l'**unanimité hors intéressé**.
+Le Président et le Directeur Général sont révocables **à tout moment** par décision collective des associés statuant à l’**unanimité hors intéressé**.
 
-La révocation n'ouvre droit à aucune indemnité, sauf décision contraire des associés ou stipulation du pacte d'associés.
+La révocation n’ouvre droit à aucune indemnité, sauf décision contraire des associés ou stipulation du pacte d’associés.
+
+> **Point de discussion (A)** : Me Frachon recommande une majorité à **50%** plutôt que l’unanimité hors intéressé, «pour éviter toute coalition entre 2 associés». Le consensus associés du 25/02 était l’unanimité hors intéressé. **À revalider en comité.** Note : ce point est d’autant plus structurant si la société compte plusieurs DG (ex: Julien en DG délégué), car l’unanimité hors intéressé deviendrait encore plus contraignante.
 
 ---
 
 ## TITRE V — Décisions Collectives des Associés
 
-### Article 18 — Modalités de consultation
+### Article 16 — Modalités de consultation
 
 Les décisions collectives sont prises :
 - En **Assemblée Générale** (présentiel ou visioconférence)
 - Par **consultation écrite** (email avec accusé de réception)
 - Par **acte unanime** signé par tous les associés
 
-Le Président convoque les associés au moins **5 jours** à l'avance, par tout moyen écrit (email, LRAR).
+Le Président convoque les associés au moins **5 jours** à l’avance, par tout moyen écrit (email, LRAR).
 
-Tout associé, ou groupe d'associés, représentant au moins **10% du capital** peut demander la convocation d'une AG.
+Tout associé, ou groupe d’associés, représentant au moins **10% du capital** peut demander la convocation d’une AG.
 
-### Article 19 — Majorités
+### Article 17 — Majorités
 
 #### Décisions ordinaires (majorité simple > 50%)
 
 - Approbation des comptes annuels
 - Affectation du résultat
 - Rémunération du Président et du DG
-- Nomination ou révocation d'un DG supplémentaire
+- Nomination ou révocation d’un DG supplémentaire
 - Approbation des conventions réglementées
-- Engagements > 10 000€ HT (Palier 3)
 
-#### Décisions extraordinaires (majorité qualifiée 2/3 + Droit de veto du Président)
+#### Décisions extraordinaires (majorité qualifiée 2/3)
 
-- Modification des statuts (hors capital et dissolution)
+- Modification des statuts (hors dissolution)
 - Agrément de cession à un tiers
-- Exclusion d'un associé (art. 20)
 - Émission de valeurs mobilières
 - Transformation de la société
-
-#### Décisions à l'unanimité
-
-- Augmentation des engagements des associés
-- Entrée d'un nouvel associé (sauf augmentation de capital votée aux 2/3)
-- Dissolution anticipée
-- Changement de nationalité de la société
 - Modification du capital
 
-### Article 20 — Exclusion d'un associé (RECOMMANDÉE)
+> **Point de discussion (B)** : Me Frachon recommande de **supprimer le droit de veto du Président** sur les décisions extraordinaires — «trop dangereux, risque de blocage». Le consensus du 25/02 prévoyait ce veto. **À revalider en comité.**
 
-> **⚠️ Clause recommandée dans les statuts — Donne un recours si un associé agit contre l'intérêt social**
+> **Retour avocat (04/03)** : Modification du capital ramenée à **2/3** au lieu de l’unanimité (risque de blocage pour une opération courante en droit des sociétés).
 
-Un associé peut être exclu par décision collective des associés statuant à la majorité des **deux tiers (2/3)** des voix, **l'associé concerné ne prenant pas part au vote**, dans les cas suivants :
+#### Décisions à l’unanimité
 
-1. Violation grave et répétée des statuts ou du pacte d'associés
-2. Condamnation pénale pour des faits portant atteinte à l'honneur ou à la probité
-3. Mise en liquidation judiciaire de l'associé personne morale (holding)
-4. Incapacité légale
-5. Exercice d'une activité directement concurrente non déclarée et non autorisée par les associés (le régime complet de non-concurrence est défini au pacte d'associés)
+- Augmentation des engagements des associés
+- Entrée d’un nouvel associé (sauf augmentation de capital votée aux 2/3)
+- Dissolution anticipée
+- Changement de nationalité de la société
 
-#### Procédure d'exclusion
+### Article 18 — Exclusion d’un associé
 
-| Étape | Délai | Action |
-|-------|-------|--------|
-| 1. Mise en demeure | J | Notification par LRAR avec motifs détaillés |
-| 2. Observations | J+15 | L'associé concerné présente ses observations (écrites ou orales) |
-| 3. Vote | J+30 | Décision collective (2/3 hors intéressé) |
-| 4. Rachat des actions | J+90 | Au prix fixé par accord ou expert (art. 1843-4 C. civ.) |
+La clause d’exclusion et sa procédure sont définies dans le **pacte d’associés**.
 
-La valorisation pour le rachat des actions de l'exclu est déterminée selon les modalités prévues au pacte d'associés ou, à défaut d'accord, par un **expert désigné** conformément à l'article 1843-4 du Code civil.
-
-**Validé** : Majorité d'exclusion 2/3 hors intéressé.
+> **Retour avocat (04/03)** : Me Frachon rédigera une proposition de clause d’exclusion dans le pacte. En attente de sa rédaction.
 
 ---
 
 ## TITRE VI — Exercice Social, Comptes, Résultat
 
-### Article 21 — Exercice social
+### Article 19 — Exercice social
 
-L'exercice social a une durée de **12 mois**, du 1er janvier au 31 décembre.
+L’exercice social a une durée de **12 mois**, du 1er janvier au 31 décembre.
 
-**Exceptionnellement**, le premier exercice commencera à la date d'immatriculation et se terminera le **31 décembre 2027**.
+**Exceptionnellement**, le premier exercice commencera à la date d’immatriculation et se terminera le **31 décembre 2027**.
 
-### Article 22 — Approbation des comptes
+### Article 20 — Approbation des comptes
 
-Les comptes annuels sont soumis à l'approbation des associés dans les **6 mois** suivant la clôture de l'exercice.
+Les comptes annuels sont soumis à l’approbation des associés dans les **6 mois** suivant la clôture de l’exercice.
 
-### Article 23 — Affectation du résultat
+### Article 21 — Affectation du résultat
 
 Le bénéfice distribuable est réparti comme suit :
 
-1. **Réserve légale** : 5% du bénéfice net, jusqu'à ce qu'elle atteigne 10% du capital social (soit 1 000€)
-2. **Réserve de croissance** : montant décidé à l'AGO annuelle
+1. **Réserve légale** : 5% du bénéfice net, jusqu’à ce qu’elle atteigne 10% du capital social (soit 1 000€)
+2. **Réserve de croissance** : montant décidé à l’AGO annuelle
 3. **Dividendes** : le solde est distribué aux associés **proportionnellement** à leur participation au capital, sauf décision contraire unanime
-
-**Validé** : Réserve de croissance décidée annuellement en AGO.
 
 ---
 
-## TITRE VII — Comptes Courants d'Associés
+## TITRE VII — Comptes Courants d’Associés
 
-### Article 24 — Comptes courants d'associés
+### Article 22 — Comptes courants d’associés
 
-> **Note** : Cet article pose le cadre. Les modalités précises (seuil de déclenchement du TJM, valorisation) seront détaillées dans le pacte d'associés.
+Chaque associé peut consentir à la société des avances en **compte courant d’associé** (CCA), en numéraire ou par incorporation de créances.
 
-Chaque associé peut consentir à la société des avances en **compte courant d'associé** (CCA), en numéraire ou par incorporation de créances.
+Les CCA sont rémunérés à un taux d’intérêt fixé annuellement par décision collective, dans la limite du **taux maximum fiscalement déductible** (taux moyen des prêts aux entreprises publié par la Banque de France).
 
-Les CCA sont rémunérés à un taux d'intérêt fixé annuellement par décision collective, dans la limite du **taux maximum fiscalement déductible** (taux moyen des prêts aux entreprises publié par la Banque de France).
+Les CCA sont remboursables sur décision du titulaire, sous réserve d’un préavis de **3 mois** et de la capacité de trésorerie de la société. En cas de pluralité de demandes, les remboursements sont effectués **au prorata** des soldes de CCA.
 
-Les CCA sont remboursables sur décision du titulaire, sous réserve d'un préavis de **3 mois** et de la capacité de trésorerie de la société. En cas de pluralité de demandes, les remboursements sont effectués **au prorata** des soldes de CCA.
-
-**Le temps consacré par les associés au pilotage et à la gestion de la société peut être valorisé et inscrit en CCA**, selon les modalités définies dans le pacte d'associés.
+Les modalités de valorisation du temps des associés en CCA sont définies dans le pacte d’associés.
 
 ---
 
 ## TITRE VIII — Conventions Réglementées
 
-### Article 25 — Conventions entre la société et ses dirigeants ou associés
+### Article 23 — Conventions entre la société et ses dirigeants ou associés
 
-Toute convention intervenant entre la société et l'un de ses associés, dirigeants, ou une société dans laquelle un associé ou dirigeant détient plus de 10% du capital, est soumise à la procédure des **conventions réglementées**.
+Toute convention intervenant entre la société et l’un de ses associés, dirigeants, ou une société dans laquelle un associé ou dirigeant détient plus de 10% du capital, est soumise à la procédure des **conventions réglementées**.
 
-Le Président établit un rapport sur ces conventions, soumis à l'approbation des associés lors de la décision d'approbation des comptes annuels.
+Le Président établit un rapport sur ces conventions, soumis à l’approbation des associés lors de la décision d’approbation des comptes annuels.
 
 **Sont expressément visées** (liste non exhaustive) : toute convention entre la société et une entité dans laquelle un associé ou dirigeant détient une participation, directe ou indirecte, notamment les prestations de services, facturations croisées, et opérations commerciales impliquant les holdings des associés ou les sociétés auxquelles ils sont liés.
 
-**L'associé intéressé ne participe pas au vote** lors de l'approbation de la convention le concernant.
+**L’associé intéressé ne participe pas au vote** lors de l’approbation de la convention le concernant.
 
 ---
 
 ## TITRE IX — Dissolution et Liquidation
 
-### Article 26 — Dissolution
+### Article 24 — Dissolution
 
-La dissolution anticipée de la société est décidée par les associés à l'**unanimité**.
+La dissolution anticipée de la société est décidée par les associés à l’**unanimité**.
 
-En cas de perte de la moitié du capital social, les associés décident, à la majorité des 2/3, s'il y a lieu de poursuivre l'activité ou de dissoudre la société.
+En cas de perte de la moitié du capital social, les associés décident, à la majorité des 2/3, s’il y a lieu de poursuivre l’activité ou de dissoudre la société.
 
-### Article 27 — Liquidation
+### Article 25 — Liquidation
 
-En cas de dissolution, un ou plusieurs liquidateurs sont nommés par les associés. Le boni de liquidation est réparti entre les associés proportionnellement à leur participation au capital, **après remboursement des comptes courants d'associés**.
+En cas de dissolution, un ou plusieurs liquidateurs sont nommés par les associés. Le boni de liquidation est réparti entre les associés proportionnellement à leur participation au capital, **après remboursement des comptes courants d’associés**.
 
 ---
 
 ## TITRE X — Dispositions Diverses
 
-### Article 28 — Contestations
+### Article 26 — Contestations
 
-Toutes les contestations qui pourraient s'élever pendant la durée de la société ou lors de sa liquidation entre les associés ou entre un associé et la société seront soumises, **préalablement à toute action judiciaire**, à une procédure de **médiation** d'une durée maximale de 60 jours.
+Toutes les contestations qui pourraient s’élever pendant la durée de la société ou lors de sa liquidation entre les associés ou entre un associé et la société seront soumises, **préalablement à toute action judiciaire**, à une procédure de **médiation** d’une durée maximale de 60 jours.
 
 À défaut de résolution amiable, les litiges seront portés devant le **Tribunal de Commerce** compétent du lieu du siège social.
 
-### Article 29 — Frais de constitution
+### Article 27 — Frais de constitution
 
-Les frais de constitution sont pris en charge par la société et portés au compte de frais d'établissement.
-
----
-
-## Synthèse : Répartition des thèmes entre Statuts et Pacte
-
-> Les deux documents sont signés simultanément lors de l'AG constitutive. Les statuts (publics, déposés au greffe) posent le cadre légal. Le pacte (confidentiel) complète avec les engagements détaillés entre associés.
-
-### Couvert par les statuts
-
-| Thème | Article(s) | Contenu |
-|-------|-----------|---------|
-| **Gouvernance** | 13-17 | Président, DG, plafonds de dépenses, révocation |
-| **Majorités** | 19 | Simple, qualifiée, unanimité selon le type |
-| **Agrément cession** | 10 | Toute cession soumise à accord 2/3 |
-| **Lock-up** | 11 | Inaliénabilité 2 ans |
-| **Préemption** | 12 | Droit prioritaire des associés |
-| **Exclusion** | 20 | Procédure et motifs définis |
-| **CCA** | 24 | Cadre légal, remboursement, intérêts |
-| **Conventions réglementées** | 25 | Procédure pour contrats avec entités liées |
-| **Médiation** | 28 | Obligation de médiation avant contentieux |
-
-### Complété par le pacte
-
-| Thème | Statuts | Pacte |
-|-------|---------|-------|
-| Non-concurrence | Motif d'exclusion (art. 20) | Périmètre, durée, exceptions pré-déclarées |
-| Good/Bad leaver | — | Valorisation, décote, définition faute grave |
-| Tag-along / Drag-along | — | Seuils, procédure |
-| Valorisation des parts | Renvoi à expert (art. 1843-4) | Multiple EBITDA, ANR |
-| PI / Contenus créés | — | Propriété Cresceo, licences, modules CAD42 |
-| Engagement temps associés | — | Heures/jours par associé, suivi |
-| CCA détaillé | Cadre général (art. 24) | Seuil déclenchement TJM, mécanisme |
-| Relations commerciales | Convention réglementée (art. 25) | Renvoi aux contrats de prestation séparés |
-| Confidentialité | — | Durées, sanctions |
-| Conflits d'intérêts | Convention réglementée (art. 25) | Procédure déclaration, registre, abstention |
+Les frais de constitution sont pris en charge par la société et portés au compte de frais d’établissement.
 
 ---
 
-## Checklist de Validation
+## Synthèse : Répartition Statuts / Pacte (post-retours avocat)
 
-### À valider en réunion d'associés
+> Les statuts (publics, greffe) ne contiennent que le cadre légal minimal. Le pacte (confidentiel) porte les engagements détaillés entre associés.
 
-**Capital & Apports**
-- [x] Montant capital social : 10 000€
-- [x] Libération intégrale
+### Clauses déplacées des statuts vers le pacte (retour avocat 04/03)
 
-**Siège social**
-- [x] Domiciliation (à confirmer)
+| Clause | Ancien article statuts | Raison |
+|--------|----------------------|--------|
+| Inalienabilité / Lock-up | Ex-art. 11 | Relève du pacte confidentiel |
+| Droit de préemption | Ex-art. 12 | Relève du pacte confidentiel |
+| Paliers de décision / Limitation pouvoirs | Ex-art. 15 (détail) | Inopposable aux tiers, relève du pacte |
+| Exclusion d’un associé (procédure) | Ex-art. 20 | Me Frachon rédigera dans le pacte |
 
-**Direction**
-- [x] Président : Igor Cannone
-- [x] DG : Baptiste Casnedi
-- [ ] Seuil palier 1 (Président seul) : _____ €
-- [ ] Seuil palier 2 (Président + DG) : _____ €
-- [x] Majorité de révocation : unanimité hors intéressé
+### Points de discussion restants (A & B)
 
-**Cessions & Sorties**
-- [x] Majorité agrément entre associés : majorité 2/3
-- [x] Agrément cession au conjoint : oui
-- [x] Durée lock-up : 2 ans
-- [x] Délai préemption : 30 jours
+| Point | Consensus 25/02 | Recommandation avocat | Statut |
+|-------|-----------------|----------------------|--------|
+| **(A) Révocation** | Unanimité hors intéressé | Majorité 50% | A revalider en comité |
+| **(B) Veto Président** | Oui, sur décisions extraordinaires | Supprimer (risque blocage) | A revalider en comité |
 
-**Décisions collectives**
-- [x] Majorité modification capital : unanimité
-- [x] Droit de veto pour certains associés (Président)
+### Actions requises
 
-**Exercice social**
-- [x] Année civile (jan-déc) confirmée
-- [x] Premier exercice long (→ 31/12/2027)
+| Action | Responsable | Statut |
+|--------|-------------|--------|
+| Fournir Kbis holdings | Baptiste | En cours |
+| Fournir email expert-comptable | Baptiste | En cours |
+| Préciser périmètre SPS (art. 3) | Igor | A faire |
+| Revalider points A & B en comité | Tous | A planifier |
 
 ---
 
-## Prochaines Étapes
-
-| # | Action | Responsable | Statut |
-|---|--------|-------------|--------|
-| 1 | ✅ Validation répartition parts | Tous | Atelier BP 04/02 |
-| 2 | ✅ Retours Jean-Philippe & Julien sur drafts | Jean-Philippe, Julien | 24/02 |
-| 3 | ✅ Point all associates | Tous | 25/02 |
-| 4 | 🔲 Transmission à l'avocat (statuts + pacte) | Baptiste | Mars |
-| 5 | 🔲 Holdings finalisées | Jean-Philippe, Raphaël, Julien | Fin février |
-| 6 | 🔲 Création SAS + signature statuts + pacte | Avocat | Mars |
-| 7 | 🔲 Contrat presta CAD42 | Avocat | Q4 2026 |
-
----
-
-*Document préparatoire — v3 du 25 février 2026 (post-comité all associates)*
+*Document v4 du 5 mars 2026 — Intégration retours Me Frachon (04/03)*

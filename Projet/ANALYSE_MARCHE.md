@@ -1,6 +1,6 @@
 # Analyse de Marché - Formation IA BTP & Consulting HSE
 
-**Date** : 29 janvier 2026
+**Date** : 29 janvier 2026 (mis à jour 05/03/2026)
 **Périmètre** : Formation professionnelle BTP + Consulting HSE international
 **Statut** : Document de travail (à enrichir)
 
@@ -78,7 +78,7 @@ Le marché du consulting HSE (Hygiène, Sécurité, Environnement) pour les gran
 
 | Groupe | CA 2024 | Présence internationale | Potentiel | Contact |
 |--------|---------|------------------------|-----------|---------|
-| **Vinci** | ~65 Mds € | Monde entier | Très élevé | Via Spiraliss |
+| **Vinci** | ~65 Mds € | Monde entier | Très élevé | Hors filiales Spiraliss (Sogea Env, Pologne, OM, Maroc) |
 | **Bouygues Construction** | ~35 Mds € | Europe, Afrique, Asie | Élevé | À prospecter |
 | **Colas** (groupe Bouygues) | ~15 Mds € | Monde entier (routes) | Élevé | À prospecter (entité distincte de Bouygues Construction) |
 | **Eiffage** | ~22 Mds € | Europe principalement | Moyen | À prospecter |
@@ -205,6 +205,7 @@ Les startups en croissance, notamment celles incubées, ont des besoins de forma
 | **OpenClassrooms** | Digital, certifiant | 100% en ligne, CPF | Pas présentiel |
 | **Simplon** | Social, reconversion | Image, financements | Cibles différentes |
 | **Cabinets BIM** | Spécialiste BTP | Expertise technique | Pas IA générative |
+| **Mister ConTech** | Formation IA appliquée BTP | Fondateur crédible (ESTP, ex-Bouygues, co-fondateur BulldozAir/YC), réseau ingénierie (EGIS, ARTELIA, SETEC, SYSTRA) | Pas de Qualiopi, pas de HSE, outils IA génériques, lancé fin 2025, pas de références |
 
 ### 3.2 Concurrents Consulting HSE
 
@@ -223,7 +224,7 @@ Les startups en croissance, notamment celles incubées, ont des besoins de forma
                          |
         Cegos    ←-------+-------→    Cresceo (cible)
         Demos            |            CAD 42
-                         |
+        Mister ConTech   |
                          |
         Bureau Veritas   |    Cabinets HSE
         Apave            |    spécialisés
@@ -231,11 +232,13 @@ Les startups en croissance, notamment celles incubées, ont des besoins de forma
                     EXPERTISE HSE/BTP
 ```
 
+> **Mister ConTech** (lancé fin 2025) : concurrent direct sur la brique "formation IA BTP" mais positionné côté IA généraliste sans expertise HSE. Fondé par Ali El Hariri (ESTP, ex-Bouygues Construction, co-fondateur BulldozAir — Y Combinator S16). Réseau solide côté ingénierie (EGIS, ARTELIA, SETEC, SYSTRA). Présent au BIM World 2026 (avril). Pas de Qualiopi identifié. [mistercontech.com](https://mistercontech.com/)
+
 **Proposition de valeur unique** :
 - Seul acteur combinant IA générative + HSE/BTP
 - Réseau formateurs certifiés IA
 - Accès portefeuille CAD 42 (majors BTP)
-- Potentiel contrat-cadre Vinci (Spiraliss)
+- Accès filiales Vinci hors périmètre Spiraliss
 - Équipe multiculturelle (projets internationaux)
 
 ---
@@ -248,7 +251,7 @@ Les startups en croissance, notamment celles incubées, ont des besoins de forma
 - Accès clients BTP (CAD 42)
 - Équipe complémentaire (technique + business)
 - Structure légère, coûts fixes bas
-- Potentiel contrat Vinci (Spiraliss)
+- Accès filiales Vinci (hors périmètre Spiraliss)
 
 ### Faiblesses (Weaknesses)
 - Nouvelle structure, pas de track record
@@ -263,10 +266,10 @@ Les startups en croissance, notamment celles incubées, ont des besoins de forma
 - Grands projets internationaux (JO, NEOM...)
 - Financements OPCO disponibles
 - French Tech / BPI si innovation
-- Peu de concurrents sur le créneau IA+BTP
+- Peu de concurrents sur le créneau IA+HSE+BTP (Mister ConTech couvre IA+BTP mais pas HSE)
 
 ### Menaces (Threats)
-- Arrivée nouveaux entrants IA
+- Arrivée nouveaux entrants IA (notamment **Mister ConTech** — formation IA BTP, fondateur crédible, réseau ingénierie)
 - Internalisation formations par majors
 - Conjoncture BTP volatile
 - Évolution réglementaire Qualiopi

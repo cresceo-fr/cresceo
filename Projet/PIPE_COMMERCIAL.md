@@ -1,7 +1,7 @@
-# Pipe Commercial Cresceo — État au 26/02/2026
+# Pipe Commercial Cresceo — État au 02/03/2026
 
-**Usage** : Support atelier Lyon 27/02 — à enrichir en séance
-**Objectif** : Construire le plan de prospection 90 jours (mars-mai 2026)
+**Dernière mise à jour** : 02/03/2026 (post-atelier Lyon 27/02 + validation JP par téléphone)
+**Objectif** : Plan de prospection 90 jours (mars-mai 2026)
 
 ---
 
@@ -34,39 +34,45 @@
 
 | # | Client | Secteur | Taille | Contact CAD42 | Contact cible | Potentiel formation | Priorité | Statut | CA estimé |
 |---|--------|---------|--------|---------------|---------------|---------------------|----------|--------|-----------|
-| 1 | **Vinci** | BTP Major | CA ~65Md€ | JP/Raph | ? | Élevé — IA métiers, HSE, Lean | 1 | ⚠️ Conflit à gérer | ? |
+| 1 | **Vinci (hors Spiraliss)** | BTP Major | CA ~65Md€ | JP/Raph | ? | Élevé — IA métiers, HSE, Lean | 2 | GO (hors Sogea Env, Pologne, OM, Maroc) | ? |
 | 2 | **Bouygues Construction** | BTP Major | CA ~35Md€ | JP/Raph | ? | Élevé — même profil que Vinci | 2 | À prospecter | ? |
 | 3 | **Spie Batignolles** | BTP | CA ~3Md€ | JP/Raph (client actif) | ? | Élevé | 2 | À prospecter | ? |
 | 4 | **Eiffage** | BTP Major | CA ~22Md€ | JP/Raph | ? | Moyen | 3 | Prospect froid | ? |
 | 5 | **Passeport Intérim** | Intérim BTP | ? | JP/Raph | ? | Moyen — formations obligatoires | 3 | Identifié BP Igor | ? |
 | 6 | **Equans Nord** | Services multi-techniques | ? | JP/Raph | ? | Moyen | 3 | Identifié BP Igor | ? |
-| 7 | **Sogea Satom** | BTP International | Filiale Vinci | JP/Raph | ? | Moyen — HSE international | 3 | Identifié BP Igor | ? |
+| 7 | **Sogea Satom** | BTP International | Filiale Vinci | JP/Raph | ? | Moyen — HSE international | 3 | ⚠️ À vérifier (périmètre Spiraliss ?) | ? |
 | 8 | ? | | | | | | | | |
 | 9 | ? | | | | | | | | |
 | 10 | ? | | | | | | | | |
 
-**Questions à traiter le 27/02 :**
-- [ ] Quels clients CAD42 ont déjà exprimé un besoin formation ?
-- [ ] Les 3 commerciaux CAD42 impliqués — qui sont-ils ? Briefés ?
-- [ ] La propale "CAD42 x CRESCEO" est-elle prête ?
-- [ ] Volume actuel de la relation CAD42-Vinci ?
+**Décisions actées 27/02 (JP par téléphone) :**
+- ✅ Volume 1.2 : 13 ventes + 1.3 : 13 ventes — validés, cohérents avec BP CAD42
+- ✅ Cresceo peut vendre en direct aux Services Formation des clients
+- ✅ Mécanisme commerciaux CAD42 : rétrocession en salaire (3 commerciaux) — à formaliser
+- ✅ Techno CAD42 (Algo IA Prévention + Unifield) utilisée sur formations 2.1/2.2/2.3 — droit d'usage à écrire
+- ✅ Cresceo peut apporter des affaires à CAD42 — rémunération d'apport d'affaires à définir
+- ⚠️ Vérifier quelles filiales Vinci étaient déjà en compte Spiraliss (action Igor)
 
-### Stratégie compte Vinci — À arbitrer
+### Cadrage Vinci / Spiraliss — Règle finale (validée atelier 27/02)
 
-> Vinci est à la fois le plus gros potentiel ET le plus complexe (conflit Igor/Spiraliss)
+**Périmètre Cresceo** : tout marché **hors filiales Vinci clientes de Spiraliss**.
 
-| Scénario | Description | Avantage | Risque |
-|----------|-------------|----------|--------|
-| **A. Via CAD42** | CAD42 propose Cresceo à ses contacts Vinci. Igor n'intervient pas commercialement. | Clean juridiquement, sépare les rôles | Dépendance CAD42, moins de contrôle |
-| **B. Via Julien** | Julien pilote l'approche commerciale Vinci. Igor sur la délivrance uniquement. | Associé non-conflicté, expertise terrain | Julien pas dédié à Cresceo full-time |
-| **C. Canal séparé** | Cresceo prospecte Vinci indépendamment, sans lien CAD42 ni Spiraliss. Via réseau Julien (LG, contacts BTP). | Indépendance totale | Plus lent, pas de levier CAD42 |
-| **D. Report** | Ne pas prospecter Vinci en Y1. Focus sur d'autres majors (Bouygues, Spie, LG). | Élimine le conflit | Laisse le plus gros potentiel de côté |
+**Périmètre interdit (no-go ferme Igor) :**
+- Filiales Vinci sous contrat Spiraliss : **Sogea Environnement, Pologne, Outre-mer, Maroc**
+- Tant que Spiraliss n'a pas donné un accord écrit, Igor ne va pas sur ces clients
+- ⚠️ **Action** : Vérifier si d'autres filiales Vinci étaient déjà en compte Spiraliss (Igor → 10/03)
+
+**Périmètre ouvert :**
+- **Toutes les autres filiales Vinci** (hors contrat Spiraliss) → GO
+- **Tout le hors-Vinci** → open bar
+
+**Cas CAD42 ↔ clients Vinci Spiraliss** :
+- Si CAD42 veut vendre des formations aux clients Vinci (comptes Spiraliss), CAD42 peut faire **réaliser par un tiers** (Julien Gardette ou autre EURL, via portage Qualiopi ou non — ITG, Auxime…)
+- Cresceo ne facture pas dans ce cas, c'est une prestation tierce
 
 **Règle de gestion des conflits d'intérêts (pacte art. 9) :**
 - Igor s'abstient de tout vote sur les décisions impliquant Vinci/Spiraliss
 - Le mandataire Cresceo pour Vinci doit être un associé non lié
-
-**→ Décision attendue le 27/02 : quel scénario ?**
 
 ---
 
@@ -129,14 +135,17 @@
 
 ### Mars 2026
 
-| Action | Responsable | Livrable |
-|--------|-------------|----------|
-| Remplir mapping clients CAD42 (10 prospects nommés) | JP + Raph | Tableau complété |
-| Briefer les 3 commerciaux CAD42 | Igor + JP | Brief écrit |
-| Debrief RDV Léon Grosse → proposition si intérêt | Igor + Julien | Proposition adaptée |
-| Relancer contacts Julien (David Poulain, Simon Mérieux) | Julien | RDV pris |
-| Créer 1-pager Cresceo (PDF laissable) | Baptiste + Éloïse | Document |
-| Créer catalogue formations synthétique | Igor | PDF 4 pages |
+| Action | Responsable | Livrable | Statut |
+|--------|-------------|----------|--------|
+| Vérifier liste filiales Vinci en compte Spiraliss | Igor | Liste confirmée | 🔲 |
+| Contacter ITG / Auxime pour portage transitoire Qualiopi | Baptiste ou Igor | Devis + délais | 🔲 |
+| Rédiger note de cadrage contrat CAD42 (droit usage techno + apport affaires + rétrocession commerciaux) | Baptiste | Note → JP | 🔲 |
+| Remplir mapping clients CAD42 (10 prospects nommés) | JP + Raph | Tableau complété | 🔲 |
+| Briefer les 3 commerciaux CAD42 (rétrocession en salaire) | Igor + JP | Brief + accord | 🔲 |
+| Debrief RDV Léon Grosse → proposition si intérêt | Igor + Julien | Proposition adaptée | 🔲 |
+| Relancer contacts Julien (David Poulain, Simon Mérieux) | Julien | RDV pris | 🔲 |
+| Créer 1-pager Cresceo (PDF laissable) | Baptiste + Éloïse | Document | 🔲 |
+| Créer catalogue formations synthétique | Igor | PDF 4 pages | 🔲 |
 
 ### Avril 2026
 
