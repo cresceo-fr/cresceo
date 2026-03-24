@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos formations — Cresceo</title>
+  <meta name="description" content="Catalogue formations Cresceo : Regard Sécurité, Piloter la Prévention, Piloter la Production. Formations HSE et Lean sur chantier avec IA.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Formations Cresceo — HSE & Lean avec IA">
+  <meta property="og:description" content="Formations professionnelles sur chantier : détection de risques par IA, Lean Construction, prévention HSE.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cresceo.fr/formations.html">
+
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Regard Sécurité",
+      "description": "Identifier les situations à risque via une analyse IA pour développer son regard sécurité sur chantier.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Cresceo",
+        "url": "https://cresceo.fr"
+      },
+      "educationalLevel": "Professional",
+      "about": ["HSE", "Prévention des risques", "Intelligence artificielle", "BTP"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Piloter la Prévention",
+      "description": "Piloter les indicateurs de sécurité quotidiens pour réduire la sinistralité.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Cresceo",
+        "url": "https://cresceo.fr"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Piloter la Production",
+      "description": "Optimiser les cycles de production en exploitant les données de flux terrain.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Cresceo",
+        "url": "https://cresceo.fr"
+      }
+    }
+  ]
+  </script>
+
+  <style>
+    :root {
+      --bleu-profond: #112331;
+      --bleu-clair: #1a3347;
+      --vert-tech: #079b85;
+      --vert-tech-10: rgba(7, 155, 133, 0.1);
+      --vert-tech-20: rgba(7, 155, 133, 0.2);
+      --orange-signal: #f9a937;
+      --orange-signal-10: rgba(249, 169, 55, 0.1);
+      --orange-signal-20: rgba(249, 169, 55, 0.2);
+      --blanc: #ffffff;
+      --gris-clair: #f5f6f8;
+      --gris-texte: #4a5568;
+      --gris-border: #e2e8f0;
+    }
+
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--bleu-profond);
+      background: var(--blanc);
+      line-height: 1.6;
+    }
+
+    /* NAV — identical to index.html */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(17, 35, 49, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75); text-decoration: none;
+      font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.02em; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blanc); }
+    .nav-cta {
+      background: var(--vert-tech); color: var(--blanc) !important;
+      padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: #068a76; }
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px; cursor: pointer;
+      padding: 4px; background: none; border: none;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px; background: var(--blanc);
+      border-radius: 2px; transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--bleu-profond);
+      padding: 8rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal));
+    }
+    .page-header h1 {
+      font-family: 'Montserrat', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700; color: var(--blanc); margin-bottom: 0.8rem;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.6); font-size: 1.05rem; max-width: 600px; margin: 0 auto;
+    }
+    .breadcrumb {
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }
+    .breadcrumb a { color: var(--vert-tech); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* FORMATION FICHE */
+    .formation-fiche {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      border-bottom: 1px solid var(--gris-border);
+    }
+
+    .formation-fiche:last-of-type {
+      border-bottom: none;
+    }
+
+    .fiche-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .fiche-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .fiche-badge--hse {
+      background: var(--vert-tech-10);
+      color: var(--vert-tech);
+      border: 1px solid var(--vert-tech-20);
+    }
+
+    .fiche-badge--lean {
+      background: var(--orange-signal-10);
+      color: #c07800;
+      border: 1px solid var(--orange-signal-20);
+    }
+
+    .fiche-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      line-height: 1.3;
+    }
+
+    .fiche-meta {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      background: var(--gris-clair);
+      border-radius: 6px;
+    }
+
+    .fiche-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .fiche-meta-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gris-texte);
+    }
+
+    .fiche-meta-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--bleu-profond);
+    }
+
+    .fiche-section {
+      margin-bottom: 1.8rem;
+    }
+
+    .fiche-section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--gris-border);
+    }
+
+    .fiche-section p {
+      color: var(--gris-texte);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .fiche-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fiche-section li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--gris-texte);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .fiche-section li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--vert-tech);
+    }
+
+    .fiche-section--lean li::before {
+      background: var(--orange-signal);
+    }
+
+    .fiche-cta {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; padding: 0.7rem 1.5rem; border-radius: 4px;
+      transition: all 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary { background: var(--vert-tech); color: var(--blanc); }
+    .btn-primary:hover { background: #068a76; transform: translateY(-1px); }
+    .btn-outline-dark {
+      background: transparent; color: var(--bleu-profond);
+      border: 1.5px solid var(--gris-border);
+    }
+    .btn-outline-dark:hover { border-color: var(--bleu-profond); }
+
+    /* COACHING SECTION */
+    .coaching-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .coaching-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .coaching-header h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      margin-bottom: 0.5rem;
+    }
+
+    .coaching-header p {
+      color: var(--gris-texte);
+    }
+
+    .coaching-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .coaching-card {
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--gris-border);
+    }
+
+    .coaching-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .coaching-card p {
+      font-size: 0.9rem;
+      color: var(--gris-texte);
+      line-height: 1.6;
+    }
+
+    .coaching-card--hse {
+      border-left: 3px solid var(--vert-tech);
+    }
+
+    .coaching-card--lean {
+      border-left: 3px solid var(--orange-signal);
+    }
+
+    /* INFO BOX */
+    .info-box {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .info-box-inner {
+      background: var(--gris-clair);
+      border-radius: 8px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .info-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      margin-bottom: 0.8rem;
+      grid-column: 1 / -1;
+    }
+
+    .info-item label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--gris-texte);
+      margin-bottom: 0.3rem;
+    }
+
+    .info-item p {
+      color: var(--bleu-profond);
+      font-size: 0.9rem;
+    }
+
+    .info-item a {
+      color: var(--vert-tech);
+      text-decoration: none;
+    }
+
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--bleu-clair) 100%);
+      text-align: center; padding: 4rem 1.5rem;
+      position: relative;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal));
+    }
+    .cta-section h2 {
+      font-family: 'Montserrat', sans-serif; font-size: 1.6rem;
+      font-weight: 700; color: var(--blanc); margin-bottom: 0.8rem;
+    }
+    .cta-section p { color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .cta-section .btn-primary { font-size: 1rem; padding: 0.9rem 2rem; }
+    .cta-email { margin-top: 1rem; color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+    .cta-email a { color: var(--vert-tech); text-decoration: none; }
+
+    /* FOOTER */
+    .footer {
+      background: #0a1a26; color: rgba(255,255,255,0.4); padding: 2rem 1.5rem;
+      text-align: center; font-size: 0.8rem;
+    }
+    .footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer a:hover { color: var(--vert-tech); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        background: rgba(17, 35, 49, 0.98); flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem; gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.8rem 0; font-size: 0.95rem; }
+      .nav-hamburger { display: flex; }
+
+      .fiche-header { flex-direction: column; gap: 0.8rem; }
+      .fiche-meta { gap: 1rem; }
+      .coaching-grid { grid-template-columns: 1fr; }
+      .info-box-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="Cresceo" width="120" height="36">
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#formations">Formations</a></li>
+        <li><a href="index.html#pourquoi">Pourquoi Cresceo</a></li>
+        <li><a href="index.html#experts">Experts</a></li>
+        <li><a href="mailto:contact@cresceo.fr" class="nav-cta">Nous contacter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a> <span>/</span> <span style="color: rgba(255,255,255,0.7);">Formations</span>
+    </div>
+    <h1>Nos formations</h1>
+    <p>Programmes détaillés de nos formations HSE et Lean pour les professionnels du BTP.</p>
+  </header>
+
+  <!-- ==================== REGARD SÉCURITÉ ==================== -->
+  <article class="formation-fiche" id="regard-securite">
+    <div class="fiche-header">
+      <span class="fiche-badge fiche-badge--hse">HSE &mdash; Prévention</span>
+      <div>
+        <h2 class="fiche-title">Développer son Regard Sécurité sur chantier grâce à l'IA</h2>
+      </div>
+    </div>
+
+    <div class="fiche-meta">
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Durée</span>
+        <span class="fiche-meta-value">1 jour (7h)</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Modalité</span>
+        <span class="fiche-meta-value">Présentiel sur chantier</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Tarif</span>
+        <span class="fiche-meta-value">Sur devis</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Délai d'accès</span>
+        <span class="fiche-meta-value">2 à 4 semaines</span>
+      </div>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Objectifs pédagogiques</h3>
+      <ul>
+        <li>Identifier les situations à risque sur un chantier grâce à une analyse assistée par IA</li>
+        <li>Développer son regard sécurité par la pratique terrain</li>
+        <li>Acquérir la compétence de détection autonome de risques</li>
+        <li>Analyser les rapports visuels et factuels produits par l'IA</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Public visé</h3>
+      <p>Conducteurs de travaux, chefs de chantier, préventeurs, coordinateurs SPS, nouveaux arrivants (toutes fonctions).</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Prérequis</h3>
+      <p>Aucun prérequis technique. Un smartphone est fourni ou nécessaire. La formation est accessible aux personnes ne maîtrisant pas la lecture (rapports visuels et photographiques).</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Programme</h3>
+      <ul>
+        <li>Manager la prévention : rôles et responsabilités</li>
+        <li>Analyse des risques : fondamentaux et pratique terrain</li>
+        <li>Réglementation applicable (Code du travail, DUERP)</li>
+        <li>Posture du préventeur sur chantier</li>
+        <li>Visites chantier avec smartphone : détection de risques assistée par IA</li>
+        <li>Construire son plan d'actions sécurité</li>
+        <li>Les acteurs de la prévention dans l'entreprise</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Méthodes pédagogiques</h3>
+      <p>Alternance de théorie et de pratique terrain. Visites de chantier avec analyse IA en temps réel via smartphone. Cas d'usage réels. Formation gamifiée : chasse aux risques sur le terrain.</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Moyens techniques et supports</h3>
+      <ul>
+        <li>Application IA de détection de risques sur smartphone</li>
+        <li>Supports de cours (présentation, fiches réflexes)</li>
+        <li>Cas d'usage réels issus de chantiers</li>
+        <li>Classe virtuelle (si modalité hybride)</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Évaluation</h3>
+      <p>Évaluation continue par mise en situation terrain. Analyse des risques détectés lors des visites chantier. En 3 visites, les participants doublent en moyenne leur capacité de détection (73% de risques identifiés).</p>
+    </div>
+
+    <div class="fiche-cta">
+      <a href="mailto:contact@cresceo.fr?subject=Demande programme Regard Sécurité" class="btn btn-primary">Demander un devis</a>
+      <a href="index.html#contact" class="btn btn-outline-dark">Nous contacter</a>
+    </div>
+  </article>
+
+  <!-- ==================== PILOTER LA PRÉVENTION ==================== -->
+  <article class="formation-fiche" id="piloter-prevention">
+    <div class="fiche-header">
+      <span class="fiche-badge fiche-badge--hse">HSE &mdash; Prévention</span>
+      <div>
+        <h2 class="fiche-title">Piloter la Prévention</h2>
+      </div>
+    </div>
+
+    <div class="fiche-meta">
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Durée</span>
+        <span class="fiche-meta-value">0,5 jour (3,5h)</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Modalité</span>
+        <span class="fiche-meta-value">Classe virtuelle + terrain</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Tarif</span>
+        <span class="fiche-meta-value">Sur devis</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Délai d'accès</span>
+        <span class="fiche-meta-value">2 à 4 semaines</span>
+      </div>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Objectifs pédagogiques</h3>
+      <ul>
+        <li>Piloter les indicateurs de sécurité quotidiens pour réduire la sinistralité</li>
+        <li>Définir et suivre les KPIs sécurité pertinents</li>
+        <li>Analyser les rapports périodiques issus des données terrain</li>
+        <li>Animer un quart d'heure sécurité ou un briefing efficace</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Public visé</h3>
+      <p>Conducteurs de travaux, chefs de chantier, préventeurs, responsables QSE.</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Prérequis</h3>
+      <p>Connaissance de base de l'environnement chantier BTP.</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Programme</h3>
+      <ul>
+        <li>Définir les KPIs sécurité adaptés à son chantier</li>
+        <li>Analyser les rapports périodiques issus des données terrain</li>
+        <li>Analyse d'une semaine type : identifier les signaux faibles</li>
+        <li>Simulation d'un briefing sécurité basé sur les données collectées</li>
+        <li>Animer une causerie sécurité : méthodes et outils</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Méthodes pédagogiques</h3>
+      <p>Classe virtuelle interactive. Analyse de cas concrets. Simulation de briefing sécurité. Fiches réflexes "Prise de décision" fournies.</p>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Moyens techniques et supports</h3>
+      <ul>
+        <li>Fiches réflexes "Prise de décision"</li>
+        <li>Exemples de rapports terrain</li>
+        <li>Plateforme de classe virtuelle</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section">
+      <h3>Évaluation</h3>
+      <p>Évaluation formative par mise en situation (simulation de briefing). Quiz de validation des acquis en fin de session.</p>
+    </div>
+
+    <div class="fiche-cta">
+      <a href="mailto:contact@cresceo.fr?subject=Demande programme Piloter la Prévention" class="btn btn-primary">Demander un devis</a>
+      <a href="index.html#contact" class="btn btn-outline-dark">Nous contacter</a>
+    </div>
+  </article>
+
+  <!-- ==================== PILOTER LA PRODUCTION ==================== -->
+  <article class="formation-fiche fiche-section--lean" id="piloter-production">
+    <div class="fiche-header">
+      <span class="fiche-badge fiche-badge--lean">Production &mdash; Lean</span>
+      <div>
+        <h2 class="fiche-title">Piloter la Production</h2>
+      </div>
+    </div>
+
+    <div class="fiche-meta">
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Durée</span>
+        <span class="fiche-meta-value">0,5 jour (3,5h)</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Modalité</span>
+        <span class="fiche-meta-value">Classe virtuelle + terrain</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Tarif</span>
+        <span class="fiche-meta-value">Sur devis</span>
+      </div>
+      <div class="fiche-meta-item">
+        <span class="fiche-meta-label">Délai d'accès</span>
+        <span class="fiche-meta-value">2 à 4 semaines</span>
+      </div>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Objectifs pédagogiques</h3>
+      <ul>
+        <li>Optimiser les cycles de production en exploitant les données de flux terrain</li>
+        <li>Définir les KPIs de production pertinents</li>
+        <li>Suivre l'efficacité des décisions opérationnelles</li>
+        <li>Réaliser une chronoanalyse à partir de données réelles</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Public visé</h3>
+      <p>Conducteurs de travaux, chefs de chantier, responsables méthodes.</p>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Prérequis</h3>
+      <p>Connaissance de base de l'environnement chantier BTP et des processus de production.</p>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Programme</h3>
+      <ul>
+        <li>Définir les KPIs de production adaptés à son chantier</li>
+        <li>Analyser les rapports périodiques de flux de production</li>
+        <li>Analyse d'une journée type : temps morts, temps élémentaires, enclenchement des tâches</li>
+        <li>Gestion des approvisionnements et de la main d'oeuvre</li>
+        <li>Suivre l'efficacité des décisions opérationnelles</li>
+        <li>Introduction à la chronoanalyse terrain</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Méthodes pédagogiques</h3>
+      <p>Classe virtuelle interactive. Analyse de cas concrets de production. Fiches réflexes "Prise de décision" fournies. Exemples de rapports de production terrain.</p>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Moyens techniques et supports</h3>
+      <ul>
+        <li>Fiches réflexes "Prise de décision"</li>
+        <li>Exemples de rapports de production</li>
+        <li>Plateforme de classe virtuelle</li>
+      </ul>
+    </div>
+
+    <div class="fiche-section fiche-section--lean">
+      <h3>Évaluation</h3>
+      <p>Évaluation formative par analyse de cas. Quiz de validation des acquis en fin de session.</p>
+    </div>
+
+    <div class="fiche-cta">
+      <a href="mailto:contact@cresceo.fr?subject=Demande programme Piloter la Production" class="btn btn-primary">Demander un devis</a>
+      <a href="index.html#contact" class="btn btn-outline-dark">Nous contacter</a>
+    </div>
+  </article>
+
+  <!-- ==================== COACHING ==================== -->
+  <section class="coaching-section" id="coaching">
+    <div class="coaching-header">
+      <h2>Accompagnement personnalisé</h2>
+      <p>En complément de nos formations, nous proposons un accompagnement sur-mesure pour ancrer les compétences dans la durée.</p>
+    </div>
+
+    <div class="coaching-grid">
+      <div class="coaching-card coaching-card--hse">
+        <h3>Accompagnement Prévention</h3>
+        <p>Coaching personnalisé pour renforcer votre démarche de prévention : suivi post-formation, accompagnement terrain, analyse de risques en continu.</p>
+      </div>
+      <div class="coaching-card coaching-card--lean">
+        <h3>Accompagnement Productivité</h3>
+        <p>Coaching Lean appliqué à votre contexte : optimisation des flux, chronoanalyse, plan d'actions opérationnel, suivi des indicateurs de performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INFORMATIONS PRATIQUES ==================== -->
+  <div class="info-box">
+    <div class="info-box-inner">
+      <h3>Informations pratiques</h3>
+
+      <div class="info-item">
+        <label>Accessibilité</label>
+        <p>Nos formations sont accessibles aux personnes en situation de handicap. Contactez notre référent pour adapter les modalités.</p>
+      </div>
+
+      <div class="info-item">
+        <label>Référent handicap</label>
+        <p><a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a></p>
+      </div>
+
+      <div class="info-item">
+        <label>Financement</label>
+        <p>Nos formations peuvent être prises en charge par votre OPCO (Constructys pour le BTP). Contactez-nous pour étudier les possibilités.</p>
+      </div>
+
+      <div class="info-item">
+        <label>Réclamation</label>
+        <p>Toute réclamation peut être adressée à <a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a>. Nous nous engageons à traiter votre demande sous 5 jours ouvrés.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Besoin d'un programme sur-mesure ?</h2>
+    <p>Contactez-nous pour adapter nos formations à votre contexte.</p>
+    <a href="mailto:contact@cresceo.fr" class="btn btn-primary">Nous écrire</a>
+    <p class="cta-email">ou directement : <a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Cresceo SAS &mdash; Organisme de formation (NDA en cours d'obtention) &mdash; <a href="mentions-legales.html">Mentions légales</a> &mdash; <a href="accessibilite.html">Accessibilité</a></p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

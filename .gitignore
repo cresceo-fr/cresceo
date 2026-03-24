@@ -11,6 +11,10 @@ WhatsApp/
 *.docx
 *.xlsx
 
+# Exception : assets du site
+!landing/assets/*.png
+!landing/*.jpeg
+
 # Dossiers privés
 DAF/
 CTO/
