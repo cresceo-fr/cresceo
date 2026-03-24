@@ -96,7 +96,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 70px;
     }
 
     .nav-logo {
@@ -107,8 +107,16 @@
     }
 
     .nav-logo img {
-      height: 36px;
+      height: 44px;
       width: auto;
+    }
+
+    .nav-logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--blanc);
+      letter-spacing: -0.01em;
     }
 
     .nav-links {
@@ -185,7 +193,7 @@
       align-items: center;
       background: var(--bleu-profond);
       overflow: hidden;
-      padding-top: 64px;
+      padding-top: 70px;
     }
 
     .hero-bg {
@@ -997,7 +1005,7 @@
       .nav-links {
         display: none;
         position: absolute;
-        top: 64px;
+        top: 70px;
         left: 0;
         right: 0;
         background: rgba(17, 35, 49, 0.98);
@@ -1027,7 +1035,7 @@
 
       .hero {
         min-height: auto;
-        padding-top: 80px;
+        padding-top: 70px;
         padding-bottom: 2rem;
       }
 
@@ -1105,7 +1113,8 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="assets/logo.png" alt="Cresceo" width="120" height="36">
+        <img src="assets/icon.png" alt="Cresceo" width="44" height="44">
+        <span class="nav-logo-text">Cresceo</span>
       </a>
 
       <button class="nav-hamburger" id="hamburger" aria-label="Menu">
