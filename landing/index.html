@@ -9,7 +9,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Cresceo — Formation HSE & IA pour le BTP">
-  <meta property="og:description" content="Développez le regard sécurité de vos équipes grâce à l'IA. 73% de risques détectés en 3 visites.">
+  <meta property="og:description" content="Maîtrisez vos risques sur chantier grâce à l'IA. Vos équipes triplent leur capacité de détection en 3 visites.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cresceo.fr">
   <meta property="og:image" content="https://cresceo.fr/assets/logo.png">
@@ -833,7 +833,6 @@
     /* ==================== CTA FINAL ==================== */
     .cta-section {
       background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--bleu-clair) 100%);
-      text-align: center;
       padding: 5rem 1.5rem;
       position: relative;
       overflow: hidden;
@@ -849,7 +848,20 @@
       background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal));
     }
 
-    .cta-section h2 {
+    .cta-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .cta-text {
+      padding-top: 1rem;
+    }
+
+    .cta-text h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: clamp(1.4rem, 3vw, 2rem);
       font-weight: 700;
@@ -857,33 +869,174 @@
       margin-bottom: 1rem;
     }
 
-    .cta-section p {
+    .cta-text p {
       color: rgba(255,255,255,0.6);
       font-size: 1.05rem;
-      margin-bottom: 2rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
     }
 
-    .cta-section .btn-primary {
-      font-size: 1.05rem;
-      padding: 1rem 2.5rem;
-    }
-
-    .cta-email {
-      margin-top: 1.5rem;
-      color: rgba(255,255,255,0.4);
+    .cta-opco {
+      background: rgba(7, 155, 133, 0.12);
+      border: 1px solid rgba(7, 155, 133, 0.3);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      color: rgba(255,255,255,0.7);
       font-size: 0.9rem;
+      line-height: 1.6;
     }
 
-    .cta-email a {
+    .cta-opco strong {
       color: var(--vert-tech);
-      text-decoration: none;
     }
 
-    .cta-email a:hover {
-      text-decoration: underline;
+    .devis-form {
+      background: var(--blanc);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .devis-form h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4a5568;
+      margin-bottom: 0.3rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: 'Roboto', sans-serif;
+      color: var(--bleu-profond);
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--vert-tech);
+      box-shadow: 0 0 0 3px rgba(7, 155, 133, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+
+    .devis-estimate {
+      background: linear-gradient(135deg, rgba(7,155,133,0.08), rgba(249,169,55,0.08));
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1.2rem 0;
+      text-align: center;
+      display: none;
+    }
+
+    .devis-estimate .estimate-label {
+      font-size: 0.8rem;
+      color: #4a5568;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .devis-estimate .estimate-price {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--vert-tech);
+      margin: 0.3rem 0;
+    }
+
+    .devis-estimate .estimate-detail {
+      font-size: 0.8rem;
+      color: #718096;
+    }
+
+    .devis-estimate .estimate-opco {
+      font-size: 0.85rem;
+      color: var(--orange-signal);
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .devis-form .btn-submit {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--vert-tech);
+      color: var(--blanc);
+      border: none;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .devis-form .btn-submit:hover {
+      background: #068a76;
+      transform: translateY(-1px);
+    }
+
+    .devis-form .form-note {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-top: 0.8rem;
+    }
+
+    .devis-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .devis-success .success-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .devis-success h3 {
+      color: var(--vert-tech);
+      margin-bottom: 0.5rem;
+    }
+
+    .devis-success p {
+      color: #4a5568;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .cta-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .cta-text {
+        text-align: center;
+      }
     }
 
     /* ==================== FOOTER ==================== */
@@ -1131,9 +1284,9 @@
 
     <div class="hero-inner">
       <div class="hero-content">
-        <h1>Formez vos équipes à <span>détecter plus de risques</span> grâce à l'IA</h1>
+        <h1><span>Maîtrisez vos risques</span> sur chantier grâce à l'IA</h1>
         <p class="hero-subtitle">
-          La seule formation qui se déroule directement sur vos chantiers, avec une IA de détection de risques en temps réel. Résultats mesurables dès 3 visites.
+          La seule formation qui se déroule directement sur vos chantiers, avec une IA de détection de risques. En 3 visites, vos équipes triplent leur capacité de détection — et deviennent autonomes.
         </p>
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
@@ -1141,12 +1294,12 @@
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
-            <span class="hero-stat-number">73%</span>
-            <span class="hero-stat-label">de risques détectés<br>en 3 visites</span>
+            <span class="hero-stat-number">×3</span>
+            <span class="hero-stat-label">capacité de détection<br>en 3 visites</span>
           </div>
           <div class="hero-stat">
-            <span class="hero-stat-number">1/min</span>
-            <span class="hero-stat-label">risque détecté<br>par l'IA</span>
+            <span class="hero-stat-number">Autonomie</span>
+            <span class="hero-stat-label">vos équipes n'ont plus<br>besoin de l'IA après</span>
           </div>
           <div class="hero-stat">
             <span class="hero-stat-number">+15 ans</span>
@@ -1177,7 +1330,7 @@
         <div class="persona-card">
           <p class="persona-situation">Vous encadrez des équipes ou êtes élu CSE</p>
           <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Développez votre regard sécurité et celui de vos équipes. En 3 visites, doublez votre capacité à identifier les risques sur le terrain.</p>
+          <p class="persona-solution">Développez votre regard sécurité et celui de vos équipes. En 3 visites, triplez votre capacité à identifier les risques sur le terrain.</p>
         </div>
 
         <div class="persona-card">
@@ -1187,15 +1340,15 @@
         </div>
 
         <div class="persona-card">
-          <p class="persona-situation">Vous embauchez en propre ou en intérim</p>
+          <p class="persona-situation">Vous intégrez de nouveaux collaborateurs ou du personnel intérimaire</p>
           <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Formez vos nouvelles recrues à détecter les situations dangereuses. Pas besoin de savoir lire : les rapports sont visuels et basés sur des photos de chantier.</p>
+          <p class="persona-solution">Formez vos salariés et intérimaires à détecter les situations dangereuses dès leur arrivée. Formation renforcée obligatoire pour les CDD/intérimaires (art. L4154-2). Rapports visuels, pas besoin de savoir lire.</p>
         </div>
 
         <div class="persona-card">
-          <p class="persona-situation">Vous réalisez des accueils sécurité</p>
+          <p class="persona-situation">Vous réalisez des accueils sécurité chantier</p>
           <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Professionnalisez et externalisez vos accueils sécurité avec un outil de détection des risques en temps réel. Vos équipes montent en compétence dès le premier jour.</p>
+          <p class="persona-solution">Externalisez vos accueils sécurité et faites-les financer. À partir de 75 € HT par accueil (min. 20 participants). Vos équipes montent en compétence dès le premier jour.</p>
         </div>
       </div>
     </div>
@@ -1303,7 +1456,7 @@
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <h3 class="diff-title">Résultats mesurables</h3>
-          <p class="diff-desc">73% de risques détectés en 3 visites. Des KPIs avant/après pour prouver le ROI de la formation.</p>
+          <p class="diff-desc">×3 sur la capacité de détection en 3 visites (chiffres TSO). Des KPIs avant/après pour prouver le ROI de la formation.</p>
         </div>
 
         <div class="diff-item">
@@ -1375,28 +1528,112 @@
 
         <ul class="reglementation-articles">
           <li>
-            <strong>Art. L4121-1 du Code du travail</strong>
-            <span>L'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé physique et mentale des travailleurs : actions de prévention, d'information et de formation.</span>
+            <strong>Accueil sécurité sur chantier</strong>
+            <span>Art. L4141-1 et R4141-2 du Code du travail — L'employeur organise une formation pratique et appropriée à la sécurité, notamment à l'embauche et à chaque changement de poste.</span>
           </li>
           <li>
-            <strong>Art. R4141-2 du Code du travail</strong>
-            <span>L'employeur informe les travailleurs sur les risques pour leur santé et leur sécurité, et organise une formation pratique et appropriée.</span>
+            <strong>Formation à la sécurité des collaborateurs</strong>
+            <span>Art. L4141-2 et L4121-1 du Code du travail — L'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé des travailleurs : actions de prévention, d'information et de formation.</span>
           </li>
           <li>
-            <strong>Art. R4121-1 du Code du travail</strong>
-            <span>L'employeur transcrit et met à jour dans un document unique les résultats de l'évaluation des risques (DUERP).</span>
+            <strong>Réalisation du DUERP</strong>
+            <span>Art. L4121-3 et R4121-1 du Code du travail — L'employeur transcrit et met à jour les résultats de l'évaluation des risques dans un Document Unique.</span>
+          </li>
+          <li>
+            <strong>Formation renforcée (intérimaires / CDD)</strong>
+            <span>Art. L4154-2 du Code du travail — Les salariés en CDD et intérimaires exposés à des risques particuliers bénéficient d'une formation renforcée à la sécurité.</span>
           </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ==================== CTA FINAL ==================== -->
+  <!-- ==================== CTA FINAL / DEVIS ==================== -->
   <section class="cta-section" id="contact">
-    <h2>Prêt à former vos équipes ?</h2>
-    <p>Contactez-nous pour recevoir un programme détaillé et un devis adapté à vos besoins.</p>
-    <a href="mailto:contact@cresceo.fr" class="btn btn-primary">Nous écrire</a>
-    <p class="cta-email">ou directement par email : <a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a></p>
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Obtenez votre devis en 30 secondes</h2>
+        <p>Renseignez vos besoins, recevez une estimation instantanée et un programme détaillé par email.</p>
+        <div class="cta-opco">
+          <strong>Prise en charge possible jusqu'à 100%</strong><br>
+          Nos formations sont éligibles au financement OPCO (Constructys pour le BTP) et FAF (Fonds d'Assurance Formation pour les indépendants). Votre reste à charge peut être nul.
+        </div>
+      </div>
+
+      <div class="devis-form" id="devisForm">
+        <h3>Demande de devis</h3>
+        <form id="quoteForm" action="https://formspree.io/f/mkopnwgr" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom / Prénom</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email professionnel</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fonction">Fonction</label>
+              <select id="fonction" name="fonction" required>
+                <option value="">Sélectionnez...</option>
+                <option value="Dirigeant / Direction générale">Dirigeant / Direction générale</option>
+                <option value="DRH / Responsable formation">DRH / Responsable formation</option>
+                <option value="Conducteur de travaux">Conducteur de travaux</option>
+                <option value="Chef de chantier">Chef de chantier</option>
+                <option value="Préventeur / HSE">Préventeur / HSE</option>
+                <option value="Élu CSE">Élu CSE</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="entreprise">Entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="besoin">Votre besoin</label>
+            <select id="besoin" name="besoin" required onchange="updateDevis()">
+              <option value="">Sélectionnez...</option>
+              <option value="individuel">Je souhaite me former moi-même</option>
+              <option value="groupe">Je souhaite former une ou plusieurs équipes</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="nbGroup" style="display:none;">
+            <label for="nb">Nombre de personnes à former</label>
+            <select id="nb" name="nb_personnes" onchange="updateDevis()">
+              <option value="1">1 à 5 personnes</option>
+              <option value="2">6 à 10 personnes</option>
+              <option value="3">11 à 20 personnes</option>
+              <option value="4">Plus de 20 personnes</option>
+            </select>
+          </div>
+
+          <input type="hidden" name="estimation" id="estimationField">
+          <input type="hidden" name="_subject" value="Nouveau devis Cresceo - Regard Sécurité">
+
+          <div class="devis-estimate" id="devisEstimate">
+            <div class="estimate-label">Estimation indicative</div>
+            <div class="estimate-price" id="estimatePrice"></div>
+            <div class="estimate-detail" id="estimateDetail"></div>
+            <div class="estimate-opco">Potentiellement pris en charge à 100% par votre OPCO ou FAF</div>
+          </div>
+
+          <button type="submit" class="btn-submit">Recevoir mon devis détaillé</button>
+          <p class="form-note">Réponse sous 24h &mdash; ou <a href="mailto:contact@cresceo.fr" style="color:var(--vert-tech);">contact@cresceo.fr</a></p>
+        </form>
+
+        <div class="devis-success" id="devisSuccess">
+          <div class="success-icon">&#10003;</div>
+          <h3>Demande envoyée !</h3>
+          <p>Vous recevrez votre devis détaillé et le programme complet sous 24h.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ==================== FOOTER ==================== -->
@@ -1456,6 +1693,79 @@
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
+      });
+    });
+
+    // Devis calculator
+    function updateDevis() {
+      const besoin = document.getElementById('besoin').value;
+      const nbGroup = document.getElementById('nbGroup');
+      const estimate = document.getElementById('devisEstimate');
+      const priceEl = document.getElementById('estimatePrice');
+      const detailEl = document.getElementById('estimateDetail');
+      const hiddenField = document.getElementById('estimationField');
+
+      if (besoin === 'groupe') {
+        nbGroup.style.display = 'block';
+      } else if (besoin === 'individuel') {
+        nbGroup.style.display = 'none';
+      } else {
+        nbGroup.style.display = 'none';
+        estimate.style.display = 'none';
+        return;
+      }
+
+      var prixParticipant = 400;
+
+      if (besoin === 'individuel') {
+        priceEl.textContent = prixParticipant + ' \u20ac HT';
+        detailEl.textContent = 'Formation + acc\u00e8s technologie IA \u2014 1 journ\u00e9e sur chantier';
+        hiddenField.value = prixParticipant + '\u20ac HT - individuel';
+      } else {
+        var nb = document.getElementById('nb').value;
+        if (nb === '1') {
+          var total = 3 * prixParticipant;
+          priceEl.textContent = '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT';
+          detailEl.textContent = prixParticipant + ' \u20ac/participant \u2014 1 \u00e0 5 personnes';
+          hiddenField.value = 'Groupe 1-5 pers. \u00e0 partir de ' + total + '\u20ac HT';
+        } else if (nb === '2') {
+          var total = 6 * prixParticipant;
+          priceEl.textContent = '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT';
+          detailEl.textContent = prixParticipant + ' \u20ac/participant \u2014 6 \u00e0 10 personnes (1 session)';
+          hiddenField.value = 'Groupe 6-10 pers. \u00e0 partir de ' + total + '\u20ac HT';
+        } else if (nb === '3') {
+          priceEl.textContent = 'Devis sur mesure';
+          detailEl.textContent = '11 \u00e0 20 personnes \u2014 tarif intra-entreprise';
+          hiddenField.value = 'Groupe 11-20 pers. - devis sur mesure';
+        } else {
+          priceEl.textContent = 'Devis sur mesure';
+          detailEl.textContent = '+20 personnes \u2014 nous vous recontactons avec une offre adapt\u00e9e';
+          hiddenField.value = 'Groupe +20 pers. - devis sur mesure';
+        }
+      }
+
+      estimate.style.display = 'block';
+    }
+
+    // Form submission via Formspree
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('devisForm').querySelector('form').style.display = 'none';
+          document.getElementById('devisSuccess').style.display = 'block';
+        } else {
+          alert('Erreur lors de l\u2019envoi. Vous pouvez nous joindre \u00e0 contact@cresceo.fr');
+        }
+      }).catch(() => {
+        alert('Erreur r\u00e9seau. Vous pouvez nous joindre \u00e0 contact@cresceo.fr');
       });
     });
 
