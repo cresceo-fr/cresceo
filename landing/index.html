@@ -393,22 +393,23 @@
       width: 100%;
       max-width: 480px;
       aspect-ratio: 16 / 9;
-      background: var(--bleu-clair);
+      background: linear-gradient(135deg, rgba(7,155,133,0.15) 0%, var(--bleu-clair) 50%, rgba(249,169,55,0.1) 100%);
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 1rem;
       cursor: pointer;
-      transition: border-color 0.3s;
+      transition: border-color 0.3s, box-shadow 0.3s;
       overflow: hidden;
       position: relative;
     }
 
     .hero-video-placeholder:hover {
       border-color: var(--vert-tech);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     }
 
     .play-btn {
