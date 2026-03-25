@@ -752,21 +752,8 @@
       height: 80px;
       border-radius: 50%;
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--blanc);
-    }
-
-    .expert-avatar--ic {
-      background: linear-gradient(135deg, var(--vert-tech), #05806d);
-    }
-
-    .expert-avatar--jg {
-      background: linear-gradient(135deg, var(--orange-signal), #d08500);
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.15);
     }
 
     .expert-name {
@@ -1349,7 +1336,7 @@
 
       <div class="experts-grid">
         <div class="expert-card">
-          <div class="expert-avatar expert-avatar--ic">IC</div>
+          <img src="assets/igor.jpg" alt="Igor Cannone" class="expert-avatar" width="80" height="80">
           <div>
             <h3 class="expert-name">Igor Cannone</h3>
             <p class="expert-role">Expert HSE & Intelligence Artificielle</p>
@@ -1358,7 +1345,7 @@
         </div>
 
         <div class="expert-card">
-          <div class="expert-avatar expert-avatar--jg">JG</div>
+          <img src="assets/julien.jpg" alt="Julien Gardette" class="expert-avatar" width="80" height="80">
           <div>
             <h3 class="expert-name">Julien Gardette</h3>
             <p class="expert-role">Expert Lean Construction & BTP</p>

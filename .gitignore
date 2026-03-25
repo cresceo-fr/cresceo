@@ -13,6 +13,7 @@ WhatsApp/
 
 # Exception : assets du site
 !landing/assets/*.png
+!landing/assets/*.jpg
 !landing/*.jpeg
 
 # Dossiers privés
