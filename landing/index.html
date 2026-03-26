@@ -453,6 +453,26 @@
       font-size: 0.85rem;
     }
 
+    .hero-other-needs {
+      display: block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.2rem;
+      background: rgba(249, 169, 55, 0.08);
+      border: 1px solid rgba(249, 169, 55, 0.25);
+      border-radius: 8px;
+      color: var(--orange-signal);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .hero-other-needs:hover {
+      background: rgba(249, 169, 55, 0.15);
+      border-color: var(--orange-signal);
+    }
+
     /* ==================== SECTIONS COMMON ==================== */
     .section {
       padding: 5rem 1.5rem;
@@ -1295,7 +1315,7 @@
     <div class="hero-inner">
       <div class="hero-content">
         <p class="hero-baseline">Organisme de formation spécialisé en Intelligence Artificielle, Lean Management et HSE pour les professionnels du BTP et de l'Industrie</p>
-        <h1><span>Maîtrisez vos risques</span> sur chantier grâce à l'IA</h1>
+        <h1>Découvrez notre formation<br><span>« Maîtrisez vos risques »</span></h1>
         <p class="hero-subtitle">
           La seule formation qui se déroule directement sur vos chantiers, avec une IA de détection de risques. En 3 visites, vos équipes triplent leur capacité de détection — et deviennent autonomes.
         </p>
@@ -1323,6 +1343,9 @@
         <a href="https://www.youtube.com/watch?v=1GioarVCvu0" target="_blank" rel="noopener" class="hero-video-placeholder" aria-label="Voir la vidéo de démonstration">
           <div class="play-btn"></div>
           <span class="hero-video-label">Voir la démonstration en conditions réelles</span>
+        </a>
+        <a href="#contact" class="hero-other-needs">
+          Pour tout autre besoin en formation Lean, HSE ou IA &rarr;
         </a>
       </div>
     </div>
