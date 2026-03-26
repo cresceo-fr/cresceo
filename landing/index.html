@@ -292,6 +292,15 @@
       align-items: center;
     }
 
+    .hero-baseline {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
     .hero-content h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -1285,6 +1294,7 @@
 
     <div class="hero-inner">
       <div class="hero-content">
+        <p class="hero-baseline">Organisme de formation spécialisé en Intelligence Artificielle, Lean Management et HSE pour les professionnels du BTP et de l'Industrie</p>
         <h1><span>Maîtrisez vos risques</span> sur chantier grâce à l'IA</h1>
         <p class="hero-subtitle">
           La seule formation qui se déroule directement sur vos chantiers, avec une IA de détection de risques. En 3 visites, vos équipes triplent leur capacité de détection — et deviennent autonomes.
@@ -1418,6 +1428,24 @@
       </div>
     </div>
   </section>
+
+  <!-- ==================== TEASER FORMATIONS ==================== -->
+  <div style="max-width:800px;margin:0 auto;padding:0 1.5rem 3rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
+    <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:2px solid var(--vert-tech);background:rgba(7,155,133,0.05);text-align:center;">
+      <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--vert-tech);">HSE / Prévention</span>
+      <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Maîtrisez vos risques sur chantier grâce à l'IA</p>
+    </div>
+    <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:1px dashed rgba(249,169,55,0.4);background:rgba(249,169,55,0.03);text-align:center;opacity:0.6;">
+      <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange-signal);">Productivité / Lean</span>
+      <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Mesurez votre productivité grâce à l'IA</p>
+      <span style="font-size:0.75rem;color:#a0aec0;font-style:italic;">Bientôt disponible</span>
+    </div>
+    <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:1px dashed rgba(7,155,133,0.3);background:rgba(7,155,133,0.02);text-align:center;opacity:0.6;">
+      <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--vert-tech);">Processus métiers</span>
+      <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Optimisez vos processus métiers grâce à l'IA</p>
+      <span style="font-size:0.75rem;color:#a0aec0;font-style:italic;">Bientôt disponible</span>
+    </div>
+  </div>
 
   <!-- ==================== DIFFÉRENCIANTS ==================== -->
   <section class="section section--alt" id="pourquoi">
@@ -1593,6 +1621,15 @@
               <label for="entreprise">Entreprise</label>
               <input type="text" id="entreprise" name="entreprise" required>
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="formation">Formation qui vous intéresse</label>
+            <select id="formation" name="formation" required>
+              <option value="Regard Sécurité" selected>Prévention — Maîtrisez vos risques sur chantier grâce à l'IA</option>
+              <option value="Productivité Lean">Productivité — Mesurez votre productivité grâce à l'IA (bientôt)</option>
+              <option value="Processus métiers">Processus — Optimisez vos processus métiers grâce à l'IA (bientôt)</option>
+            </select>
           </div>
 
           <div class="form-group">
