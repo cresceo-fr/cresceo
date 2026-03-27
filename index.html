@@ -22,6 +22,24 @@
   <meta name="twitter:description" content="Formation détection risques chantier avec IA. Prévention BTP, Lean Construction. Financement OPCO. Résultats ×3 en 3 visites.">
   <meta name="twitter:image" content="https://cresceo.fr/assets/logo.png">
 
+  <!-- GA4 (chargé uniquement après consentement) -->
+  <script>
+    window.gaLoaded = false;
+    function loadGA4() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7BZC8Y1G2Q';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7BZC8Y1G2Q');
+    }
+    if (localStorage.getItem('cresceo_consent') === 'accepted') { loadGA4(); }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/icon.png">
 
@@ -1308,9 +1326,61 @@
         gap: 0.8rem;
       }
     }
+
+    /* ==================== COOKIE BANNER ==================== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--bleu-profond);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .cookie-banner a {
+      color: var(--vert-tech);
+      text-decoration: none;
+    }
+
+    .cookie-banner button {
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cookie-accept {
+      background: var(--vert-tech);
+      color: var(--blanc);
+    }
+
+    .cookie-refuse {
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.2) !important;
+    }
   </style>
 </head>
 <body>
+
+  <!-- ==================== COOKIE BANNER ==================== -->
+  <div class="cookie-banner" id="cookieBanner" style="display:none;">
+    <span>Ce site utilise des cookies pour mesurer l'audience. <a href="mentions-legales.html">En savoir plus</a></span>
+    <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button class="cookie-refuse" onclick="refuseCookies()">Refuser</button>
+  </div>
 
   <!-- ==================== NAV ==================== -->
   <nav class="nav" id="nav">
@@ -1900,6 +1970,25 @@
         alert('Erreur r\u00e9seau. Vous pouvez nous joindre \u00e0 contact@cresceo.fr');
       });
     });
+
+    // Cookie consent
+    (function() {
+      var consent = localStorage.getItem('cresceo_consent');
+      if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'flex';
+      }
+    })();
+
+    function acceptCookies() {
+      localStorage.setItem('cresceo_consent', 'accepted');
+      document.getElementById('cookieBanner').style.display = 'none';
+      loadGA4();
+    }
+
+    function refuseCookies() {
+      localStorage.setItem('cresceo_consent', 'refused');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
 
     // Scroll animations
     const observerOptions = {

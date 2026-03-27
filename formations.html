@@ -18,6 +18,25 @@
   <meta name="twitter:description" content="Formation détection risques chantier avec IA. Prévention BTP, Lean Construction, DUERP. Financement OPCO.">
 
   <link rel="icon" type="image/png" href="assets/icon.png">
+
+  <!-- GA4 (chargé uniquement après consentement) -->
+  <script>
+    window.gaLoaded = false;
+    function loadGA4() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7BZC8Y1G2Q';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7BZC8Y1G2Q');
+    }
+    if (localStorage.getItem('cresceo_consent') === 'accepted') { loadGA4(); }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
