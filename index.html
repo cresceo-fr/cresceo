@@ -1690,8 +1690,8 @@
             <label for="formation">Formation qui vous intéresse</label>
             <select id="formation" name="formation" required>
               <option value="Regard Sécurité" selected>Prévention — Maîtrisez vos risques sur chantier grâce à l'IA</option>
-              <option value="Productivité Lean">Productivité — Mesurez votre productivité grâce à l'IA (bientôt)</option>
-              <option value="Processus métiers">Processus — Optimisez vos processus métiers grâce à l'IA (bientôt)</option>
+              <option value="Productivité Lean">Productivité — Mesurez votre productivité grâce à l'IA</option>
+              <option value="Processus métiers">Processus — Optimisez vos processus métiers grâce à l'IA</option>
             </select>
           </div>
 
@@ -1703,6 +1703,15 @@
               <option value="groupe">Je souhaite former une ou plusieurs équipes</option>
             </select>
           </div>
+
+          <script>
+            document.getElementById('formation').addEventListener('change', function() {
+              var isRegard = this.value === 'Regard Sécurité';
+              document.getElementById('devisEstimate').style.display = 'none';
+              document.getElementById('nbGroup').style.display = 'none';
+              if (isRegard) { updateDevis(); }
+            });
+          </script>
 
           <div class="form-group" id="nbGroup" style="display:none;">
             <label for="nb">Nombre de personnes à former</label>
@@ -1730,8 +1739,8 @@
 
         <div class="devis-success" id="devisSuccess">
           <div class="success-icon">&#10003;</div>
-          <h3>Demande envoyée !</h3>
-          <p>Vous recevrez votre devis détaillé et le programme complet sous 24h.</p>
+          <h3>Merci pour votre demande !</h3>
+          <p id="successMessage">Vous recevrez votre devis détaillé et le programme complet sous 24h.</p>
         </div>
       </div>
     </div>
@@ -1808,11 +1817,18 @@
     // Devis calculator
     function updateDevis() {
       const besoin = document.getElementById('besoin').value;
+      const formation = document.getElementById('formation').value;
       const nbGroup = document.getElementById('nbGroup');
       const estimate = document.getElementById('devisEstimate');
       const priceEl = document.getElementById('estimatePrice');
       const detailEl = document.getElementById('estimateDetail');
       const hiddenField = document.getElementById('estimationField');
+
+      if (formation !== 'Regard Sécurité') {
+        nbGroup.style.display = 'none';
+        estimate.style.display = 'none';
+        return;
+      }
 
       if (besoin === 'groupe') {
         nbGroup.style.display = 'block';
@@ -1868,6 +1884,13 @@
         headers: { 'Accept': 'application/json' }
       }).then(response => {
         if (response.ok) {
+          var formation = document.getElementById('formation').value;
+          var msg = document.getElementById('successMessage');
+          if (formation === 'Regard Sécurité') {
+            msg.textContent = 'Nos équipes vous transmettront un devis détaillé et le programme complet sous 24h.';
+          } else {
+            msg.textContent = 'Merci pour votre intérêt ! Nos équipes vont vous transmettre un devis personnalisé sous 24h.';
+          }
           document.getElementById('devisForm').querySelector('form').style.display = 'none';
           document.getElementById('devisSuccess').style.display = 'block';
         } else {
