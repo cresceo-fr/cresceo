@@ -81,6 +81,20 @@
         "priceCurrency": "EUR",
         "description": "Par participant, financement OPCO possible"
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Piloter la productivité de chantier grâce à l'IA",
+      "description": "Mesurez et optimisez vos flux de production directement sur chantier, avec des outils IA d'analyse en temps réel.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Cresceo",
+        "url": "https://cresceo.fr"
+      },
+      "educationalLevel": "Professional",
+      "timeRequired": "PT4H",
+      "about": ["Lean Construction", "Productivité chantier", "Formation IA BTP", "Optimisation production"]
     }
   ]
   </script>
@@ -233,6 +247,63 @@
       transform: rotate(-45deg) translate(5px, -5px);
     }
 
+    /* ==================== SECTION NAV (sticky sommaire) ==================== */
+    .section-nav {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(17, 35, 49, 0.9);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .section-nav.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .section-nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 3px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+    }
+
+    .section-nav-link:hover {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .section-nav-link--hse {
+      color: var(--vert-tech);
+    }
+
+    .section-nav-link--lean {
+      color: var(--orange-signal);
+    }
+
+    .section-nav-link--cta {
+      background: var(--vert-tech);
+      color: var(--blanc);
+      border-radius: 4px;
+    }
+
+    #prevention, #productivite, #formations, #experts, #contact {
+      scroll-margin-top: 130px;
+    }
+
     /* ==================== HERO ==================== */
     .hero {
       position: relative;
@@ -334,51 +405,167 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 4rem 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 2.5rem;
     }
 
     .hero-baseline {
-      grid-column: 1 / -1;
       font-family: 'Montserrat', sans-serif;
       font-size: 1.05rem;
-      color: rgba(255,255,255,0.55);
-      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
       letter-spacing: 0.02em;
       margin-bottom: 0.5rem;
       line-height: 1.5;
       text-align: center;
     }
 
-    .hero-content h1 {
+    .hero-h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
       font-weight: 700;
       color: var(--blanc);
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
     }
 
-    .hero-content h1 span {
+    .hero-h1 span {
       color: var(--vert-tech);
     }
 
-    .hero-content .hero-subtitle {
+    .hero-h1 span.orange {
+      color: var(--orange-signal);
+    }
+
+    /* Pillar cards in hero */
+    .hero-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero-pillar-card {
+      padding: 2rem 1.8rem;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+
+    .hero-pillar-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-pillar-card--hse {
+      border-color: rgba(7, 155, 133, 0.3);
+      box-shadow: none;
+    }
+
+    .hero-pillar-card--hse.active,
+    .hero-pillar-card--hse:hover {
+      border-color: var(--vert-tech);
+      background: rgba(7, 155, 133, 0.08);
+      box-shadow: 0 0 20px rgba(7, 155, 133, 0.2);
+    }
+
+    .hero-pillar-card--lean {
+      border-color: rgba(249, 169, 55, 0.3);
+      box-shadow: none;
+    }
+
+    .hero-pillar-card--lean.active,
+    .hero-pillar-card--lean:hover {
+      border-color: var(--orange-signal);
+      background: rgba(249, 169, 55, 0.08);
+      box-shadow: 0 0 20px rgba(249, 169, 55, 0.2);
+    }
+
+    .hero-pillar-emoji {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .hero-pillar-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--blanc);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .hero-pillar-subtitle {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .hero-pillar-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .hero-pillar-stat-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .hero-pillar-stat-item .hero-pillar-stat {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .hero-pillar-stat-item .hero-pillar-stat-label {
+      display: block;
+      font-size: 0.7rem;
+      opacity: 0.6;
+      margin-top: 0.2rem;
+    }
+
+    .hero-pillar-card--hse .hero-pillar-stat {
+      color: var(--vert-tech);
+    }
+
+    .hero-pillar-card--lean .hero-pillar-stat {
+      color: var(--orange-signal);
+    }
+
+    .hero-pillar-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.2rem;
+      display: block;
+    }
+
+    .hero-common-subtitle {
       font-size: clamp(1rem, 1.8vw, 1.15rem);
       color: rgba(255,255,255,0.7);
       font-weight: 300;
       line-height: 1.7;
-      margin-bottom: 2rem;
-      max-width: 520px;
+      text-align: center;
+      max-width: 700px;
     }
 
     .hero-ctas {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      margin-bottom: 3rem;
+      justify-content: center;
     }
 
     .btn {
@@ -418,40 +605,28 @@
       background: rgba(255,255,255,0.05);
     }
 
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .hero-stat {
+    .hero-other-needs {
+      display: block;
+      padding: 0.8rem 1.2rem;
+      background: rgba(249, 169, 55, 0.08);
+      border: 1px solid rgba(249, 169, 55, 0.25);
+      border-radius: 8px;
+      color: var(--orange-signal);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
       text-align: center;
+      transition: background 0.2s, border-color 0.2s;
     }
 
-    .hero-stat-number {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--vert-tech);
-      display: block;
-    }
-
-    .hero-stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      margin-top: 0.3rem;
-      display: block;
-    }
-
-    .hero-visual {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .hero-other-needs:hover {
+      background: rgba(249, 169, 55, 0.15);
+      border-color: var(--orange-signal);
     }
 
     .hero-video-placeholder {
       width: 100%;
-      max-width: 480px;
+      max-width: 320px;
       aspect-ratio: 16 / 9;
       background: linear-gradient(135deg, rgba(7,155,133,0.15) 0%, var(--bleu-clair) 50%, rgba(249,169,55,0.1) 100%);
       border-radius: 8px;
@@ -504,26 +679,6 @@
       font-size: 0.85rem;
     }
 
-    .hero-other-needs {
-      display: block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
-      background: rgba(249, 169, 55, 0.08);
-      border: 1px solid rgba(249, 169, 55, 0.25);
-      border-radius: 8px;
-      color: var(--orange-signal);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      text-align: center;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .hero-other-needs:hover {
-      background: rgba(249, 169, 55, 0.15);
-      border-color: var(--orange-signal);
-    }
-
     /* ==================== SECTIONS COMMON ==================== */
     .section {
       padding: 5rem 1.5rem;
@@ -548,6 +703,10 @@
       color: var(--vert-tech);
       margin-bottom: 0.8rem;
       display: block;
+    }
+
+    .section-tag--orange {
+      color: var(--orange-signal);
     }
 
     .section-title {
@@ -592,23 +751,30 @@
     }
 
     .persona-card {
-      background: var(--blanc);
-      border: 1px solid var(--gris-border);
-      border-radius: 8px;
-      padding: 2rem;
-      transition: transform 0.2s, box-shadow 0.2s;
       position: relative;
+      background: var(--blanc);
+      border-radius: 8px;
+      padding: 1.8rem;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
       overflow: hidden;
     }
 
     .persona-card::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal));
+      inset: 0;
+      border-radius: 8px;
+      padding: 2px;
+      background: linear-gradient(135deg, var(--vert-tech), var(--orange-signal));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .persona-card--lean::before {
+      background: linear-gradient(135deg, var(--orange-signal), var(--vert-tech));
     }
 
     .persona-card:hover {
@@ -621,15 +787,18 @@
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--bleu-profond);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0;
       line-height: 1.4;
     }
 
-    .persona-arrow {
-      display: block;
-      color: var(--vert-tech);
-      font-size: 1.2rem;
-      margin-bottom: 0.6rem;
+    .persona-solution {
+      border-left: 3px solid var(--vert-tech);
+      padding-left: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .persona-card--lean .persona-solution {
+      border-left-color: var(--orange-signal);
     }
 
     .persona-solution {
@@ -755,12 +924,23 @@
       transition: gap 0.2s;
     }
 
+    .formation-link--lean {
+      color: var(--orange-signal);
+    }
+
     .formation-link:hover {
       gap: 0.6rem;
     }
 
     .section-cta {
       text-align: center;
+    }
+
+    .formation-programme-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
     }
 
     /* ==================== DIFFÉRENCIANTS ==================== */
@@ -1109,6 +1289,10 @@
       font-size: 0.95rem;
     }
 
+    .devis-success .devis-estimate {
+      margin-top: 1.5rem;
+    }
+
     @media (max-width: 768px) {
       .cta-inner {
         grid-template-columns: 1fr;
@@ -1190,23 +1374,8 @@
 
     /* ==================== RESPONSIVE ==================== */
     @media (max-width: 1024px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2.5rem;
-      }
-
-      .hero-content .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-ctas {
-        justify-content: center;
-      }
-
-      .hero-stats {
-        justify-content: center;
+      .hero-pillars {
+        max-width: 700px;
       }
 
       .formations-grid {
@@ -1218,6 +1387,10 @@
       }
 
       .reglementation-content {
+        grid-template-columns: 1fr;
+      }
+
+      .formation-programme-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -1260,12 +1433,8 @@
         padding-bottom: 2rem;
       }
 
-      .hero-stats {
-        gap: 1.2rem;
-      }
-
-      .hero-stat-number {
-        font-size: 1.4rem;
+      .hero-pillars {
+        grid-template-columns: 1fr;
       }
 
       .personas-grid {
@@ -1273,6 +1442,10 @@
       }
 
       .formations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .formation-programme-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1304,11 +1477,12 @@
       .section {
         padding: 3.5rem 1.5rem;
       }
+
     }
 
     @media (max-width: 480px) {
-      .hero-content h1 {
-        font-size: 1.6rem;
+      .hero-pillar-title {
+        font-size: 1.1rem;
       }
 
       .hero-ctas {
@@ -1319,11 +1493,6 @@
       .btn {
         width: 100%;
         justify-content: center;
-      }
-
-      .hero-stats {
-        flex-direction: column;
-        gap: 0.8rem;
       }
     }
 
@@ -1405,6 +1574,14 @@
     </div>
   </nav>
 
+  <!-- ==================== SECTION NAV ==================== -->
+  <div class="section-nav" id="sectionNav">
+    <a href="#prevention" class="section-nav-link section-nav-link--hse">Prévention</a>
+    <a href="#productivite" class="section-nav-link section-nav-link--lean">Productivité</a>
+    <a href="#experts" class="section-nav-link">Experts</a>
+    <a href="#contact" class="section-nav-link section-nav-link--cta">Devis</a>
+  </div>
+
   <main>
   <!-- ==================== HERO ==================== -->
   <section class="hero" id="hero">
@@ -1417,156 +1594,292 @@
     </div>
 
     <div class="hero-inner">
-      <p class="hero-baseline">Organisme de formation sécurité chantier, Intelligence Artificielle et Lean Construction<br>pour les professionnels du BTP et de l'Industrie — Certification Qualiopi</p>
-      <div class="hero-content">
-        <h1>Formation <span>Maîtrisez vos risques</span> sur chantier grâce à l'IA</h1>
-        <p class="hero-subtitle">
-          La seule formation qui se déroule directement sur vos chantiers, avec une IA de détection de risques. En 3 visites, vos équipes triplent leur capacité de détection — et deviennent autonomes.
-        </p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
-          <a href="#formations" class="btn btn-outline">Voir le programme</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-number">×3</span>
-            <span class="hero-stat-label">capacité de détection<br>en 3 visites</span>
+      <p class="hero-baseline">Organisme de formation HSE, Lean et IA pour les professionnels du BTP et de l'Industrie — Qualiopi</p>
+      <h1 class="hero-h1">Formations <span>Prévention</span> et <span class="orange">Productivité</span> grâce à l'IA</h1>
+
+      <div class="hero-pillars">
+        <a href="#prevention" class="hero-pillar-card hero-pillar-card--hse" id="heroPillarHse">
+          <span class="hero-pillar-emoji">&#x1F7E2;</span>
+          <h2 class="hero-pillar-title">Prévention &amp; HSE</h2>
+          <p class="hero-pillar-subtitle">Maîtrisez vos risques sur chantier grâce à l'IA</p>
+          <div class="hero-pillar-stats">
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">&times;3</span>
+              <span class="hero-pillar-stat-label">capacité de détection</span>
+            </div>
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">1/min</span>
+              <span class="hero-pillar-stat-label">risque détecté par l'IA</span>
+            </div>
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">+15 ans</span>
+              <span class="hero-pillar-stat-label">expertise terrain</span>
+            </div>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-number">Autonomie</span>
-            <span class="hero-stat-label">vos équipes n'ont plus<br>besoin de l'IA après</span>
+        </a>
+
+        <a href="#productivite" class="hero-pillar-card hero-pillar-card--lean" id="heroPillarLean">
+          <span class="hero-pillar-emoji">&#x1F7E0;</span>
+          <h2 class="hero-pillar-title">Productivité &amp; Lean</h2>
+          <p class="hero-pillar-subtitle">Mesurez et optimisez la productivité de vos chantiers grâce à l'IA</p>
+          <div class="hero-pillar-stats">
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">&times;2</span>
+              <span class="hero-pillar-stat-label">identification des gaspillages</span>
+            </div>
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">Temps réel</span>
+              <span class="hero-pillar-stat-label">données de production</span>
+            </div>
+            <div class="hero-pillar-stat-item">
+              <span class="hero-pillar-stat">+20 ans</span>
+              <span class="hero-pillar-stat-label">expertise BTP</span>
+            </div>
           </div>
-          <div class="hero-stat">
-            <span class="hero-stat-number">+15 ans</span>
-            <span class="hero-stat-label">d'expertise<br>HSE terrain</span>
-          </div>
-        </div>
+        </a>
       </div>
 
-      <div class="hero-visual">
-        <a href="https://www.youtube.com/watch?v=1GioarVCvu0" target="_blank" rel="noopener" class="hero-video-placeholder" aria-label="Voir la vidéo de démonstration">
-          <div class="play-btn"></div>
-          <span class="hero-video-label">Voir la démonstration en conditions réelles</span>
-        </a>
-        <a href="#contact" class="hero-other-needs">
-          Pour tout autre besoin en formation Lean, HSE ou IA &rarr;
-        </a>
+      <p class="hero-common-subtitle">En 3 visites, vos équipes développent des compétences durables — et deviennent autonomes.</p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
+        <a href="#formations" class="btn btn-outline">Voir les programmes</a>
       </div>
+
     </div>
   </section>
 
-  <!-- ==================== PERSONAS ==================== -->
-  <section class="section section--alt" id="besoins">
+  <!-- ==================== PERSONAS HSE ==================== -->
+  <section class="section" id="prevention" style="background: linear-gradient(180deg, rgba(7,155,133,0.03) 0%, var(--blanc) 100%);">
     <div class="section-inner">
       <div class="section-header">
-        <span class="section-tag">Vos enjeux</span>
-        <h2 class="section-title">Une formation, plusieurs réponses à vos besoins</h2>
+        <span class="section-tag">Prévention &amp; HSE</span>
+        <h2 class="section-title">Vos enjeux sécurité</h2>
         <p class="section-subtitle">Quel que soit votre rôle sur le chantier, nos formations s'adaptent à vos problématiques quotidiennes.</p>
       </div>
 
       <div class="personas-grid">
         <div class="persona-card">
-          <p class="persona-situation">Vous encadrez des équipes ou êtes élu CSE</p>
-          <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Développez votre regard sécurité et celui de vos équipes. En 3 visites, triplez votre capacité à identifier les risques sur le terrain.</p>
+          <div>
+            <p class="persona-situation">Vous encadrez des équipes ou êtes élu CSE</p>
+            <p class="persona-solution">Développez votre regard sécurité et celui de vos équipes. En 3 visites, triplez votre capacité à identifier les risques sur le terrain.</p>
+          </div>
         </div>
 
         <div class="persona-card">
-          <p class="persona-situation">Vous devez mettre à jour votre DUERP</p>
-          <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Utilisez l'IA pour actualiser votre analyse de risques à partir de données terrain réelles. Conforme RGPD, avec floutage automatique des personnes.</p>
+          <div>
+            <p class="persona-situation">Vous devez mettre à jour votre DUERP</p>
+            <p class="persona-solution">Utilisez l'IA pour actualiser votre analyse de risques à partir de données terrain réelles. Conforme RGPD, avec floutage automatique des personnes.</p>
+          </div>
         </div>
 
         <div class="persona-card">
-          <p class="persona-situation">Vous intégrez de nouveaux collaborateurs ou du personnel intérimaire</p>
-          <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Formez vos salariés et intérimaires à détecter les situations dangereuses dès leur arrivée. Formation renforcée obligatoire pour les CDD/intérimaires (art. L4154-2). Rapports visuels, pas besoin de savoir lire.</p>
+          <div>
+            <p class="persona-situation">Vous intégrez de nouveaux collaborateurs ou du personnel intérimaire</p>
+            <p class="persona-solution">Formez vos salariés et intérimaires à détecter les situations dangereuses dès leur arrivée. Formation renforcée obligatoire pour les CDD/intérimaires (art. L4154-2). Rapports visuels, pas besoin de savoir lire.</p>
+          </div>
         </div>
 
         <div class="persona-card">
-          <p class="persona-situation">Vous réalisez des accueils sécurité chantier</p>
-          <span class="persona-arrow">&#8594;</span>
-          <p class="persona-solution">Externalisez vos accueils sécurité et faites-les financer. À partir de 75 € HT par accueil (min. 20 participants). Vos équipes montent en compétence dès le premier jour.</p>
+          <div>
+            <p class="persona-situation">Vous réalisez des accueils sécurité chantier</p>
+            <p class="persona-solution">Externalisez vos accueils sécurité et faites-les financer. À partir de 75 € HT par accueil (min. 20 participants). Vos équipes montent en compétence dès le premier jour.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== FORMATIONS ==================== -->
+  <!-- ==================== FORMATION HSE ==================== -->
   <section class="section" id="formations">
     <div class="section-inner">
-      <div class="section-header">
-        <span class="section-tag">Formation phare</span>
-        <h2 class="section-title">Regard Sécurité</h2>
-        <p class="section-subtitle">Une journée sur chantier pour apprendre à détecter les risques avec l'IA. Résultats mesurables dès la première session.</p>
+
+      <div id="formationHse">
+        <div class="section-header">
+          <span class="section-tag">Formation phare</span>
+          <h2 class="section-title">Regard Sécurité</h2>
+          <p class="section-subtitle">Une journée sur chantier pour apprendre à détecter les risques avec l'IA. Résultats mesurables dès la première session.</p>
+        </div>
+
+        <div class="formation-programme-grid">
+          <!-- Regard Sécurité — carte -->
+          <div>
+            <div class="formation-card" style="margin:0;">
+              <div class="formation-tag formation-tag--hse">
+                <span class="formation-tag-dot"></span>
+                HSE &mdash; Prévention
+              </div>
+              <div class="formation-body">
+                <h3 class="formation-title">Développer son Regard Sécurité sur chantier grâce à l'IA</h3>
+                <p class="formation-duration">1 jour &mdash; Présentiel sur chantier</p>
+                <p class="formation-desc">La seule formation chasse aux risques sur chantier avec IA. Il suffit d'un smartphone. Formation gamifiée, résultats immédiats, accessible à tous (rapports visuels, pas besoin de savoir lire).</p>
+                <p class="formation-public"><strong>Public :</strong> Conducteurs de travaux, chefs de chantier, préventeurs, coordinateurs SPS, nouveaux arrivants</p>
+                <a href="formations.html#regard-securite" class="formation-link">Programme complet &#8594;</a>
+              </div>
+            </div>
+
+            <!-- Video placeholder moved here from hero -->
+            <div style="margin-top:1.5rem;">
+              <a href="https://www.youtube.com/watch?v=1GioarVCvu0" target="_blank" rel="noopener" class="hero-video-placeholder" aria-label="Voir la vidéo de démonstration">
+                <div class="play-btn"></div>
+                <span class="hero-video-label">Voir la démonstration en conditions réelles</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Programme détaillé HSE -->
+          <div>
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--bleu-profond);margin-bottom:1.2rem;">Programme de la formation</h3>
+            <ol style="list-style:none;padding:0;">
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">1</span>
+                Manager la prévention : rôles et responsabilités
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">2</span>
+                Analyse des risques : fondamentaux et pratique terrain
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">3</span>
+                Réglementation applicable (Code du travail, DUERP)
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">4</span>
+                Posture du préventeur sur chantier
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">5</span>
+                <strong style="color:var(--bleu-profond);">Visites chantier avec smartphone</strong> : détection de risques assistée par IA
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">6</span>
+                Construire son plan d'actions sécurité
+              </li>
+              <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;font-size:0.95rem;color:var(--gris-texte);">
+                <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">7</span>
+                Les acteurs de la prévention dans l'entreprise
+              </li>
+            </ol>
+            <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Obtenir un devis</a>
+          </div>
+        </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
-        <!-- Regard Sécurité — carte -->
-        <div class="formation-card" style="margin:0;">
-          <div class="formation-tag formation-tag--hse">
-            <span class="formation-tag-dot"></span>
-            HSE &mdash; Prévention
-          </div>
-          <div class="formation-body">
-            <h3 class="formation-title">Développer son Regard Sécurité sur chantier grâce à l'IA</h3>
-            <p class="formation-duration">1 jour &mdash; Présentiel sur chantier</p>
-            <p class="formation-desc">La seule formation chasse aux risques sur chantier avec IA. Il suffit d'un smartphone. Formation gamifiée, résultats immédiats, accessible à tous (rapports visuels, pas besoin de savoir lire).</p>
-            <p class="formation-public"><strong>Public :</strong> Conducteurs de travaux, chefs de chantier, préventeurs, coordinateurs SPS, nouveaux arrivants</p>
-            <a href="formations.html#regard-securite" class="formation-link">Programme complet &#8594;</a>
+    </div>
+  </section>
+
+  <!-- ==================== TRANSITION GREEN → ORANGE ==================== -->
+  <div style="height:3px;background:linear-gradient(90deg, var(--vert-tech), var(--orange-signal));"></div>
+
+  <!-- ==================== PERSONAS LEAN ==================== -->
+  <section class="section" id="productivite" style="background: linear-gradient(180deg, rgba(249,169,55,0.03) 0%, var(--blanc) 100%);">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag section-tag--orange">Productivité &amp; Lean</span>
+        <h2 class="section-title">Vos enjeux production</h2>
+        <p class="section-subtitle">Optimisez la performance de vos chantiers avec des outils IA et des méthodes Lean éprouvées.</p>
+      </div>
+
+      <div class="personas-grid">
+        <div class="persona-card persona-card--lean">
+          <div>
+            <p class="persona-situation">Vous constatez des retards et dépassements de budget</p>
+            <p class="persona-solution">Identifiez les gaspillages et temps morts sur vos chantiers. L'IA analyse vos flux de production en temps réel.</p>
           </div>
         </div>
 
-        <!-- Programme détaillé -->
-        <div>
-          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--bleu-profond);margin-bottom:1.2rem;">Programme de la formation</h3>
-          <ol style="list-style:none;padding:0;counter-reset:programme;">
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">1</span>
-              Manager la prévention : rôles et responsabilités
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">2</span>
-              Analyse des risques : fondamentaux et pratique terrain
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">3</span>
-              Réglementation applicable (Code du travail, DUERP)
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">4</span>
-              Posture du préventeur sur chantier
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">5</span>
-              <strong style="color:var(--bleu-profond);">Visites chantier avec smartphone</strong> : détection de risques assistée par IA
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">6</span>
-              Construire son plan d'actions sécurité
-            </li>
-            <li style="position:relative;padding:0.8rem 0 0.8rem 0rem;font-size:0.95rem;color:var(--gris-texte);counter-increment:programme;">
-              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--vert-tech-10);color:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">7</span>
-              <span style="padding-left:2.8rem;display:block;">Les acteurs de la prévention dans l'entreprise</span>
-            </li>
-          </ol>
-          <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Obtenir un devis</a>
+        <div class="persona-card persona-card--lean">
+          <div>
+            <p class="persona-situation">Vous pilotez la production de chantiers complexes</p>
+            <p class="persona-solution">Mesurez vos indicateurs de productivité et fiabilisez vos enchaînements de tâches grâce aux données terrain.</p>
+          </div>
+        </div>
+
+        <div class="persona-card persona-card--lean">
+          <div>
+            <p class="persona-situation">Vous devez fiabiliser vos études de prix</p>
+            <p class="persona-solution">Exploitez les données de vos chantiers précédents pour construire des estimations réalistes.</p>
+          </div>
+        </div>
+
+        <div class="persona-card persona-card--lean">
+          <div>
+            <p class="persona-situation">Vous préparez un REX de chantier</p>
+            <p class="persona-solution">Structurez votre retour d'expérience à partir de données factuelles pour améliorer vos futurs projets.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== TEASER FORMATIONS ==================== -->
+  <!-- ==================== FORMATION LEAN ==================== -->
+  <section class="section" id="formationLean">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag section-tag--orange">Formation phare</span>
+        <h2 class="section-title">Piloter la Productivité avec l'IA</h2>
+        <p class="section-subtitle">Maîtrisez les outils IA pour identifier les gaspillages, optimiser vos flux de production et animer la performance sur vos chantiers.</p>
+      </div>
+
+      <div class="formation-programme-grid">
+        <!-- Lean — carte -->
+        <div>
+          <div class="formation-card" style="margin:0;">
+            <div class="formation-tag formation-tag--lean">
+              <span class="formation-tag-dot"></span>
+              Productivité / Lean
+            </div>
+            <div class="formation-body">
+              <h3 class="formation-title">Piloter la Productivité avec l'IA</h3>
+              <p class="formation-duration">4 semaines &mdash; Classes virtuelles interactives</p>
+              <p class="formation-desc">Maîtrisez les outils IA pour identifier les gaspillages, optimiser vos flux de production et animer la performance sur vos chantiers.</p>
+              <p class="formation-public"><strong>Public :</strong> Conducteurs de travaux, directeurs de travaux, chefs de chantier, responsables méthodes, spécialistes Lean</p>
+              <a href="formations.html#lean" class="formation-link formation-link--lean">Programme complet &#8594;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programme détaillé Lean -->
+        <div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;color:var(--bleu-profond);margin-bottom:1.2rem;">Programme de la formation</h3>
+          <ol style="list-style:none;padding:0;">
+            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--orange-signal-10);color:var(--orange-signal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">1</span>
+              L'IA au service de l'efficacité opérationnelle
+            </li>
+            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--orange-signal-10);color:var(--orange-signal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">2</span>
+              Maîtriser les données pour la chasse aux gaspillages
+            </li>
+            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--orange-signal-10);color:var(--orange-signal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">3</span>
+              Animer la performance et la coordination terrain
+            </li>
+            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;border-bottom:1px solid var(--gris-border);font-size:0.95rem;color:var(--gris-texte);">
+              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--orange-signal-10);color:var(--orange-signal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">4</span>
+              Amélioration continue et Lean Construction
+            </li>
+            <li style="position:relative;padding:0.8rem 0 0.8rem 2.8rem;font-size:0.95rem;color:var(--gris-texte);">
+              <span style="position:absolute;left:0;top:0.7rem;width:2rem;height:2rem;background:var(--orange-signal-10);color:var(--orange-signal);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:700;">5</span>
+              Plan de progrès personnel et pérennisation
+            </li>
+          </ol>
+          <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;background:var(--orange-signal);">Obtenir un devis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEASER 3 PILLARS ==================== -->
   <div style="max-width:800px;margin:0 auto;padding:0 1.5rem 3rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
-    <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:2px solid var(--vert-tech);background:rgba(7,155,133,0.05);text-align:center;">
+    <a href="#prevention" style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:2px solid var(--vert-tech);background:rgba(7,155,133,0.05);text-align:center;text-decoration:none;">
       <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--vert-tech);">HSE / Prévention</span>
       <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Maîtrisez vos risques sur chantier grâce à l'IA</p>
-    </div>
-    <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:1px dashed rgba(249,169,55,0.4);background:rgba(249,169,55,0.03);text-align:center;opacity:0.6;">
+    </a>
+    <a href="#productivite" style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:2px solid var(--orange-signal);background:rgba(249,169,55,0.05);text-align:center;text-decoration:none;">
       <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange-signal);">Productivité / Lean</span>
       <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Mesurez votre productivité grâce à l'IA</p>
-      <span style="font-size:0.75rem;color:#a0aec0;font-style:italic;">Bientôt disponible</span>
-    </div>
+    </a>
     <div style="flex:1;min-width:220px;padding:1.2rem 1.5rem;border-radius:8px;border:1px dashed rgba(7,155,133,0.3);background:rgba(7,155,133,0.02);text-align:center;opacity:0.6;">
       <span style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--vert-tech);">Processus métiers</span>
       <p style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:600;color:var(--bleu-profond);margin:0.4rem 0 0;">Optimisez vos processus métiers grâce à l'IA</p>
@@ -1587,16 +1900,16 @@
           <div class="diff-icon diff-icon--vert">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h3 class="diff-title">Formation sur chantier</h3>
-          <p class="diff-desc">Pas en salle de cours. Directement sur vos chantiers, avec vos situations réelles.</p>
+          <h3 class="diff-title">Formation sur le terrain</h3>
+          <p class="diff-desc">Pas en salle de cours. Sur vos chantiers ou en classe virtuelle, avec vos situations réelles.</p>
         </div>
 
         <div class="diff-item">
           <div class="diff-icon diff-icon--orange">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="diff-title">IA de détection de risques</h3>
-          <p class="diff-desc">L'intelligence artificielle détecte 1 risque par minute. Vos équipes apprennent en conditions réelles.</p>
+          <h3 class="diff-title">IA au service du terrain</h3>
+          <p class="diff-desc">L'intelligence artificielle objective la réalité du chantier. Prévention et productivité, données factuelles. (Conforme RGPD)</p>
         </div>
 
         <div class="diff-item">
@@ -1612,15 +1925,15 @@
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
           <h3 class="diff-title">Résultats mesurables</h3>
-          <p class="diff-desc">×3 sur la capacité de détection en 3 visites (chiffres TSO). Des KPIs avant/après pour prouver le ROI de la formation.</p>
+          <p class="diff-desc">KPIs avant/après pour prouver le ROI. ×3 en détection de risques, ×2 en identification des gaspillages.</p>
         </div>
 
         <div class="diff-item">
           <div class="diff-icon diff-icon--vert">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="diff-title">Conforme RGPD</h3>
-          <p class="diff-desc">Floutage automatique des personnes. Rapports visuels et factuels, pas besoin de savoir lire.</p>
+          <h3 class="diff-title">Certifié Qualiopi</h3>
+          <p class="diff-desc">Formations certifiées Qualiopi. Éligibles au financement OPCO Constructys et FAF.</p>
         </div>
 
         <div class="diff-item">
@@ -1774,15 +2087,6 @@
             </select>
           </div>
 
-          <script>
-            document.getElementById('formation').addEventListener('change', function() {
-              var isRegard = this.value === 'Regard Sécurité';
-              document.getElementById('devisEstimate').style.display = 'none';
-              document.getElementById('nbGroup').style.display = 'none';
-              if (isRegard) { updateDevis(); }
-            });
-          </script>
-
           <div class="form-group" id="nbGroup" style="display:none;">
             <label for="nb">Nombre de personnes à former</label>
             <select id="nb" name="nb_personnes" onchange="updateDevis()">
@@ -1794,14 +2098,7 @@
           </div>
 
           <input type="hidden" name="estimation" id="estimationField">
-          <input type="hidden" name="_subject" value="Nouveau devis Cresceo - Regard Sécurité">
-
-          <div class="devis-estimate" id="devisEstimate">
-            <div class="estimate-label">Estimation indicative</div>
-            <div class="estimate-price" id="estimatePrice"></div>
-            <div class="estimate-detail" id="estimateDetail"></div>
-            <div class="estimate-opco">Potentiellement pris en charge à 100% par votre OPCO ou FAF</div>
-          </div>
+          <input type="hidden" name="_subject" value="Nouveau devis Cresceo">
 
           <button type="submit" class="btn-submit">Recevoir mon devis détaillé</button>
           <p class="form-note">Réponse sous 24h &mdash; ou <a href="mailto:contact@cresceo.fr" style="color:var(--vert-tech);">contact@cresceo.fr</a></p>
@@ -1811,6 +2108,12 @@
           <div class="success-icon">&#10003;</div>
           <h3>Merci pour votre demande !</h3>
           <p id="successMessage">Vous recevrez votre devis détaillé et le programme complet sous 24h.</p>
+          <div class="devis-estimate" id="devisEstimateSuccess">
+            <div class="estimate-label">Estimation indicative</div>
+            <div class="estimate-price" id="estimatePriceSuccess"></div>
+            <div class="estimate-detail" id="estimateDetailSuccess"></div>
+            <div class="estimate-opco">Potentiellement pris en charge à 100% par votre OPCO ou FAF</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1839,6 +2142,7 @@
         <h4>Formations</h4>
         <ul>
           <li><a href="formations.html#regard-securite">Regard Sécurité</a></li>
+          <li><a href="formations.html#lean">Productivité Lean</a></li>
           <li><a href="formations.html#coaching">Accompagnement</a></li>
         </ul>
       </div>
@@ -1884,19 +2188,30 @@
       });
     });
 
-    // Devis calculator
+    // Mini-nav visibility on scroll
+    var sectionNav = document.getElementById('sectionNav');
+    var heroSection = document.getElementById('hero');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > heroSection.offsetHeight - 100) {
+        sectionNav.classList.add('visible');
+      } else {
+        sectionNav.classList.remove('visible');
+      }
+    });
+
+    // ==================== DEVIS CALCULATOR ====================
+    var lastEstimation = null;
+
     function updateDevis() {
-      const besoin = document.getElementById('besoin').value;
-      const formation = document.getElementById('formation').value;
-      const nbGroup = document.getElementById('nbGroup');
-      const estimate = document.getElementById('devisEstimate');
-      const priceEl = document.getElementById('estimatePrice');
-      const detailEl = document.getElementById('estimateDetail');
-      const hiddenField = document.getElementById('estimationField');
+      var besoin = document.getElementById('besoin').value;
+      var formation = document.getElementById('formation').value;
+      var nbGroup = document.getElementById('nbGroup');
+      var hiddenField = document.getElementById('estimationField');
+
+      lastEstimation = null;
 
       if (formation !== 'Regard Sécurité') {
         nbGroup.style.display = 'none';
-        estimate.style.display = 'none';
         return;
       }
 
@@ -1906,67 +2221,83 @@
         nbGroup.style.display = 'none';
       } else {
         nbGroup.style.display = 'none';
-        estimate.style.display = 'none';
         return;
       }
 
       var prixParticipant = 400;
 
       if (besoin === 'individuel') {
-        priceEl.textContent = prixParticipant + ' \u20ac HT';
-        detailEl.textContent = 'Formation + acc\u00e8s technologie IA \u2014 1 journ\u00e9e sur chantier';
+        lastEstimation = {
+          price: prixParticipant + ' \u20ac HT',
+          detail: 'Formation + acc\u00e8s technologie IA \u2014 1 journ\u00e9e sur chantier'
+        };
         hiddenField.value = prixParticipant + '\u20ac HT - individuel';
       } else {
         var nb = document.getElementById('nb').value;
         if (nb === '1') {
           var total = 3 * prixParticipant;
-          priceEl.textContent = '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT';
-          detailEl.textContent = prixParticipant + ' \u20ac/participant \u2014 1 \u00e0 5 personnes';
+          lastEstimation = {
+            price: '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT',
+            detail: prixParticipant + ' \u20ac/participant \u2014 1 \u00e0 5 personnes'
+          };
           hiddenField.value = 'Groupe 1-5 pers. \u00e0 partir de ' + total + '\u20ac HT';
         } else if (nb === '2') {
           var total = 6 * prixParticipant;
-          priceEl.textContent = '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT';
-          detailEl.textContent = prixParticipant + ' \u20ac/participant \u2014 6 \u00e0 10 personnes (1 session)';
+          lastEstimation = {
+            price: '\u00c0 partir de ' + total.toLocaleString('fr-FR') + ' \u20ac HT',
+            detail: prixParticipant + ' \u20ac/participant \u2014 6 \u00e0 10 personnes (1 session)'
+          };
           hiddenField.value = 'Groupe 6-10 pers. \u00e0 partir de ' + total + '\u20ac HT';
         } else if (nb === '3') {
-          priceEl.textContent = 'Devis sur mesure';
-          detailEl.textContent = '11 \u00e0 20 personnes \u2014 tarif intra-entreprise';
+          lastEstimation = {
+            price: 'Devis sur mesure',
+            detail: '11 \u00e0 20 personnes \u2014 tarif intra-entreprise'
+          };
           hiddenField.value = 'Groupe 11-20 pers. - devis sur mesure';
         } else {
-          priceEl.textContent = 'Devis sur mesure';
-          detailEl.textContent = '+20 personnes \u2014 nous vous recontactons avec une offre adapt\u00e9e';
+          lastEstimation = {
+            price: 'Devis sur mesure',
+            detail: '+20 personnes \u2014 nous vous recontactons avec une offre adapt\u00e9e'
+          };
           hiddenField.value = 'Groupe +20 pers. - devis sur mesure';
         }
       }
-
-      estimate.style.display = 'block';
     }
 
     // Form submission via Formspree
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
+      var form = e.target;
+      var formData = new FormData(form);
+
+      // Run calculator one last time to capture estimation
+      updateDevis();
 
       fetch(form.action, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
-      }).then(response => {
+      }).then(function(response) {
         if (response.ok) {
           var formation = document.getElementById('formation').value;
           var msg = document.getElementById('successMessage');
-          if (formation === 'Regard Sécurité') {
+          var estimateDiv = document.getElementById('devisEstimateSuccess');
+
+          if (formation === 'Regard Sécurité' && lastEstimation) {
             msg.textContent = 'Nos équipes vous transmettront un devis détaillé et le programme complet sous 24h.';
+            document.getElementById('estimatePriceSuccess').textContent = lastEstimation.price;
+            document.getElementById('estimateDetailSuccess').textContent = lastEstimation.detail;
+            estimateDiv.style.display = 'block';
           } else {
-            msg.textContent = 'Merci pour votre intérêt ! Nos équipes vont vous transmettre un devis personnalisé sous 24h.';
+            msg.textContent = 'Nos équipes vont vous transmettre un devis personnalisé sous 24h.';
+            estimateDiv.style.display = 'none';
           }
           document.getElementById('devisForm').querySelector('form').style.display = 'none';
           document.getElementById('devisSuccess').style.display = 'block';
         } else {
           alert('Erreur lors de l\u2019envoi. Vous pouvez nous joindre \u00e0 contact@cresceo.fr');
         }
-      }).catch(() => {
+      }).catch(function() {
         alert('Erreur r\u00e9seau. Vous pouvez nous joindre \u00e0 contact@cresceo.fr');
       });
     });
@@ -1991,13 +2322,13 @@
     }
 
     // Scroll animations
-    const observerOptions = {
+    var observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
@@ -2006,7 +2337,7 @@
       });
     }, observerOptions);
 
-    document.querySelectorAll('.persona-card, .formation-card, .diff-item, .expert-card, .reglementation-articles li').forEach(el => {
+    document.querySelectorAll('.persona-card, .formation-card, .diff-item, .expert-card, .reglementation-articles li').forEach(function(el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
