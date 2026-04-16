@@ -1,7 +1,7 @@
 # CONDITIONS GÉNÉRALES DE VENTE (CGV)
 
 **CRESCEO SAS** — Organisme de formation professionnelle
-SAS au capital de 8 600 € — SIREN 103 298 188 — RCS Paris
+SAS au capital de 10 000 € — SIREN 103 298 188 — RCS Paris
 Siège social : 58 rue de Monceau, 75008 Paris
 N° de déclaration d'activité : [à compléter dès réception NDA]
 Certification Qualiopi : [en cours — audit initial mai 2026]
