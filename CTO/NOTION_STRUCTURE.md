@@ -304,6 +304,47 @@ Documentation des scénarios d'automatisation.
 
 ## Machine à Contenus — Process
 
+### Statut au 18/04/2026
+
+- ✅ **Page LinkedIn Cresceo créée** (weekend 18-19/04) — profils associés à mettre à jour (Baptiste en tête, les autres suivent). URL à renseigner dans ce doc.
+- ✅ **5 idées SEO seedées** dans DB Notion `Idées & brouillons` (15/04, cf. sprint précédent) — dont 3 prioritaires "A publier vite" : 73% de risques détectés, Formation IA BTP NelIA, Lean construction IA.
+- 🟡 **Palier choisi** : **Standard (~25€/mois com)** — Make.com Free + Claude API + Canva Pro. À activer S17-S18.
+- 🟡 **Pipeline automation** : à builder (Make scenario Notion → Claude → Notion) — effort ~2-3h, Baptiste.
+- 🟡 **Metricool** : compte à créer, connexion LinkedIn à faire une fois la page stable.
+
+### Plan de lancement éditorial (S17-S20, rotation 2 posts/semaine)
+
+| Semaine | Post #1 (lundi-mardi) | Post #2 (jeudi-vendredi) | Qui |
+|---------|----------------------|--------------------------|-----|
+| S17 | Annonce Kbis + création page LI (cover Canva, tag croisé 4 associés) | 73% de risques détectés en 3 visites — chiffre choc (HSE) | Éloïse (édit) + Igor (expertise) |
+| S18 | Formation IA BTP : accueil sécurité réinventé avec NelIA (HSE) | Présentation équipe — Igor + Julien (crédibilité métier) | Éloïse + Igor + Julien |
+| S19 | Lean construction sur chantier : mesurer pour progresser grâce à l'IA (Lean) | Focus partenariat CAD42 × Cresceo (Unifield + pilote Qualiopi) | Éloïse + Julien |
+| S20 | Pas besoin de savoir lire : l'IA rend la sécurité accessible (HSE, inclusion) | Point d'étape audit Qualiopi + éligibilité OPCO Constructys | Éloïse + Igor |
+
+**Hashtags fil rouge** : #FormationBTP #IAChantier #Prévention (+ #Lean ou #Qualiopi selon post)
+**CTA par défaut** : lien cresceo.fr ou formulaire devis
+
+### Rôles
+
+- **Éloïse** — plan éditorial, validation ton, publication, interactions communautaires
+- **Igor** — validation expertise HSE / chiffres, commentaires experts sur posts sectoriels
+- **Julien** — validation expertise Lean, contenus production / gros œuvre
+- **Baptiste** — tech (Make.com, Claude API, Metricool, webhooks Notion), monitoring KPIs engagement
+
+### Plan de déploiement technique
+
+**S17** — scenario Make `Notion → Claude API → Notion` :
+- Trigger : changement de statut "À rédiger" dans DB `Idées & brouillons` (Notion webhook)
+- Action : appel Claude API avec prompt système basé sur `Guidelines Com` + `Messages Clés Regard Sécurité`
+- Output : texte généré écrit dans champ `Brouillon`, statut bascule à "En revue"
+
+**S18** — scenario Make `Notion → Metricool` :
+- Trigger : statut "Prêt" + `Date publication` renseignée
+- Action : push vers Metricool (API) pour planification + publication
+- Retour : lien post remonté dans Notion, engagement tracké en async
+
+**S19-S20** — itération : mesure KPIs (engagement, leads générés via formulaire devis), ajustement du ton / fréquence, seed des idées suivantes (angle case study pilote CAD42, angle RGPD IA chantier, etc.).
+
 ### Architecture d'automatisation
 
 **Objectif** : minimiser les étapes manuelles entre l'idée et la publication.
