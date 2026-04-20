@@ -625,56 +625,87 @@ Notion Plus sert l'ensemble du projet (CRM, pilotage, pédagogie, réunions…).
 
 **Source de vérité** : Qonto reste la source comptable. Pennylane est la référence fiscale. Notion est une vue opérationnelle enrichie (catégorisation métier, rattachement à des chantiers/clients, suivi notes de frais).
 
-### 3 options évaluées
+### Options évaluées
 
 | Option | Mécanisme | Coût mensuel | Setup | Avantage | Limite |
 |--------|-----------|--------------|-------|----------|--------|
-| **A. Make.com** (reco) | Webhook Qonto API → Make scénario → création ligne Notion Dépenses | 0€ (plan gratuit, 1000 ops/mois suffisent) | 1-2h | DIY, contrôle total, déjà prévu pour Machine à Contenus | Doit être maintenu |
-| **B. Pennylane natif** | Pennylane agrège Qonto + comptabilité, export manuel vers Notion | Pennylane déjà prévu | 0 | Pas de dev | Pas de sync auto Notion, ressaisie ou export CSV |
-| **C. Zapier Qonto** | Trigger Qonto → action Notion | ~20€/mois Zapier Starter | 30 min | Plus simple que Make | Payant, moins puissant que Make |
+| **A. DIY Python** (reco) | Script Python pollant l'API Qonto → scoring/enrichissement Claude → push Notion, pattern identique à `CTO/ao-veille/` | 0€ | 2-3h | Cohérent avec la stack (Python + Claude + Notion + GitHub Actions cron), contrôle total, pas d'outil tiers à maintenir | Code à écrire |
+| B. Make.com | Webhook Qonto → Make scénario → Notion | 0€ (plan gratuit, 1000 ops/mois) | 1-2h | Visuel | Outil de plus, abo potentiel si usage Machine à Contenus |
+| C. Pennylane natif | Pennylane agrège Qonto + compta, export manuel Notion | Pennylane déjà prévu | 0 | Pas de dev | Pas de sync auto Notion |
+| D. Zapier Qonto | Trigger Qonto → action Notion | ~20€/mois | 30 min | Simple | Payant |
 
-### Recommandation : Option A (Make.com)
+### Recommandation : Option A (DIY Python, pattern `ao-veille`)
 
 **Justification** :
-- Make.com est **déjà prévu** pour la Machine à Contenus (Notion ↔ Claude API ↔ Metricool) → on mutualise l'abonnement
-- **Plan gratuit** (1 000 opérations / mois) suffit pour Cresceo Y1 (50-100 transactions/mois prévues)
-- **Qonto a une API officielle** bien documentée (https://api-doc.qonto.com) avec auth IBAN + API key
-- Plus fin que Pennylane sur les règles de catégorisation custom (ex: distinguer sous-traitance CAD42 vs prestation juridique)
+- On a déjà un pipeline Python Claude/Notion opérationnel dans `CTO/ao-veille/` (fetch → filter → score → push Notion + notif Brevo) — l'architecture est prouvée
+- Qonto expose une API REST documentée (https://api-doc.qonto.com) avec **auth par API Key** (HTTP Basic Auth, login + secret_key — pas d'OAuth)
+- Même pattern de stockage de tokens que Gmail dans `ao-veille` : JSON local gitignored (dev) + env vars GitHub Secrets (prod)
+- Pas de SaaS à maintenir, zéro coût récurrent
+- Enrichissement IA natif : on peut appeler Claude Haiku directement pour auto-catégoriser les transactions (même prompt pattern que `ao_veille.py`)
 
-### Scénario Make à construire (V1)
+### Architecture proposée (`CTO/qonto-sync/`)
 
 ```
-Trigger: Qonto new transaction (polling 1×/h)
-  ↓
-Filter: amount ≠ 0 AND status = "completed"
-  ↓
-Router:
-  ├── IF operation_type = "card" → Notion: create Dépense (type = Prestation ponctuelle)
-  ├── IF operation_type = "transfer" (sortant) → Notion: create Dépense
-  ├── IF operation_type = "transfer" (entrant, client) → Notion: mark Facture as Payée (match sur Numéro dans label)
-  └── ELSE → notification Slack/mail pour classement manuel
-  ↓
-Enrichissement IA (optionnel, Claude API) : extraction fournisseur + catégorie suggérée depuis le libellé Qonto
-  ↓
-Notion: create row in Dépenses avec pré-remplissage
+Structure :
+CTO/qonto-sync/
+├── .gitignore          # qonto_token.json, .env, results_*.json
+├── README.md           # doc usage + GitHub Secrets à configurer
+├── config.py           # ICP catégorisation, prompts Claude, mapping Qonto → Notion
+├── qonto_sync.py       # logique principale : fetch → filter → enrich → push
+├── _oauth_qonto_setup.py  # one-shot pour générer qonto_token.json depuis creds user
+├── requirements.txt    # requests, anthropic, notion-client
+└── qonto_token.json    # gitignored (local dev)
 ```
 
-**Champs pré-remplis automatiquement** : Date, Montant HT/TTC, Fournisseur (libellé Qonto), Payée par = "Qonto Cresceo", Statut = "Payée".
-**Champs à compléter manuellement** : Catégorie, Type (si pas déduit), Notes, Justificatif (lien Drive).
+**Tokens Qonto** (à obtenir sur Qonto → Paramètres → Intégrations → API Business) :
+- `QONTO_LOGIN` (format : `cresceo-XXXX`)
+- `QONTO_SECRET_KEY`
+- `QONTO_ORGANIZATION_SLUG` (= login sans suffixe)
 
-### Setup requis (hors scope du 15/04)
+Stockage :
+- **Dev** : `qonto_token.json` local (gitignored), contient les 3 valeurs
+- **Prod** : GitHub Secrets du repo `cresceo-fr/qonto-sync` (ou réutiliser ao-veille si on mutualise le repo)
 
-1. Créer une API key Qonto (dans paramètres Qonto → Intégrations → API)
-2. Stocker la clé dans Make.com (pas dans settings repo)
-3. Builder le scénario Make (~1h)
-4. Tester sur 1 semaine de transactions historiques
-5. Activer le cron
+### Pipeline
 
-**Estimation effort** : 2h de build + 1 semaine observation avant production.
+```
+1. Trigger: GitHub Actions cron (ex: tous les jours à 08h00)
+2. Fetch : GET https://thirdparty.qonto.com/v2/transactions
+   - Filtre cursor : last_sync_timestamp stocké dans Notion (page "Sync state")
+3. Filter : amount ≠ 0 AND status in ("completed", "pending")
+4. Enrich (Claude Haiku, optionnel) :
+   - Extraction fournisseur depuis label
+   - Catégorie suggérée parmi les options de DB Dépenses
+   - Détection facture client entrante (match numéro devis/facture dans label)
+5. Router :
+   ├── Carte → DB Dépenses (type: Prestation ponctuelle)
+   ├── Virement sortant → DB Dépenses (type: Facture fournisseur ou Abonnement selon enrichissement)
+   ├── Virement entrant client → match Facture émise → bascule "Payée"
+   └── Sinon → DB Dépenses avec statut "À classer"
+6. Push Notion (create page dans DB appropriée)
+7. Notif : log console + optionnel Brevo si transaction importante (>500€) ou sans match
+8. Update cursor last_sync_timestamp
+```
 
-### Alternative (si Make trop lourd au démarrage)
+**Champs pré-remplis automatiquement** : Date, Montant HT/TTC, Fournisseur (depuis label), Payée par = "Qonto Cresceo", Statut = "Payée", Catégorie (suggérée par Claude).
+**Champs à compléter manuellement** : confirmation catégorie (si faible confiance), Notes, Justificatif (lien Drive).
 
-En Y1 démarrage : **export mensuel CSV depuis Qonto** (1 clic) → import manuel dans la DB Dépenses Notion (10 min/mois). À utiliser les 1-2 premiers mois pendant qu'on construit le scénario Make.
+### Setup (hors scope de la session 18/04)
+
+1. Créer API Key Qonto (Paramètres → Intégrations → API Business)
+2. Lancer `_oauth_qonto_setup.py` en local pour créer `qonto_token.json` (valide les credentials)
+3. Créer repo GitHub `cresceo-fr/qonto-sync` (ou module dans `cresceo-fr/ao-veille/qonto/`)
+4. Copier le pattern d'`ao_veille.py` (fetch, filter, score, Notion push)
+5. Ajouter les 3 Secrets dans GitHub Actions : `QONTO_LOGIN`, `QONTO_SECRET_KEY`, `QONTO_ORGANIZATION_SLUG`
+6. Configurer GitHub Actions workflow (`.github/workflows/qonto-sync.yml`, cron quotidien)
+7. Tester sur 1 semaine de transactions historiques
+8. Activer en prod
+
+**Estimation effort** : 3-4h (copier-adapter le pattern ao-veille, pas de dev greenfield). À caler Baptiste en S18.
+
+### Alternative pour le démarrage immédiat
+
+En attendant la bascule auto : **export mensuel CSV depuis Qonto** (1 clic) → import manuel dans la DB Dépenses Notion (~10 min/mois). Utilisable pendant les 2-3 premières semaines pendant le build.
 
 ---
 
