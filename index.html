@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cresceo — Formation prévention et productivité chantier avec IA</title>
-  <meta name="description" content="Formations sécurité chantier et Lean Construction avec IA pour le BTP et l'Industrie. Détection risques, productivité, DUERP. Financement OPCO Constructys.">
+  <title>Cresceo — Formation prévention et productivité chantier avec IA | Qualiopi</title>
+  <meta name="description" content="Organisme de formation certifié Qualiopi. Formations sécurité chantier et Lean Construction avec IA pour le BTP et l'Industrie. Détection risques, productivité, DUERP. Financement OPCO Constructys.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cresceo.fr/">
   <meta name="google-site-verification" content="qVhYlThHNfPAerTlRsQFbRpH5we8sOY7Wd9cJ4UiLrE">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Cresceo — Formation prévention et productivité chantier avec IA">
-  <meta property="og:description" content="Formations sécurité et Lean Construction avec IA pour le BTP. Prévention des risques, productivité chantier. Financement OPCO.">
+  <meta property="og:title" content="Cresceo — Formation prévention et productivité chantier avec IA | Qualiopi">
+  <meta property="og:description" content="Organisme de formation certifié Qualiopi. Sécurité chantier et Lean Construction avec IA pour le BTP. Prévention des risques, productivité chantier. Financement OPCO.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cresceo.fr">
   <meta property="og:image" content="https://cresceo.fr/assets/logo.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cresceo — Formation prévention et productivité chantier avec IA">
-  <meta name="twitter:description" content="Formations sécurité et Lean Construction avec IA pour le BTP. Détection risques, productivité, DUERP. Financement OPCO Constructys.">
+  <meta name="twitter:title" content="Cresceo — Formation prévention et productivité chantier avec IA | Qualiopi">
+  <meta name="twitter:description" content="Organisme de formation certifié Qualiopi. Sécurité chantier et Lean Construction avec IA. Détection risques, productivité, DUERP. Financement OPCO.">
   <meta name="twitter:image" content="https://cresceo.fr/assets/logo.png">
 
   <!-- GA4 (chargé uniquement après consentement) -->
@@ -55,12 +55,21 @@
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
       "name": "Cresceo",
-      "description": "Organisme de formation IA, Lean et HSE pour les professionnels du BTP et de l'Industrie",
+      "description": "Organisme de formation IA, Lean et HSE pour les professionnels du BTP et de l'Industrie, certifié Qualiopi.",
       "url": "https://cresceo.fr",
       "email": "contact@cresceo.fr",
       "slogan": "La croissance par le savoir",
       "areaServed": "France",
-      "knowsAbout": ["Intelligence Artificielle", "HSE", "Lean Management", "BTP", "Prévention des risques"]
+      "knowsAbout": ["Intelligence Artificielle", "HSE", "Lean Management", "BTP", "Prévention des risques"],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "Qualiopi",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "France Compétences"
+        }
+      }
     },
     {
       "@context": "https://schema.org",
@@ -769,6 +778,70 @@
       background: var(--gris-clair);
     }
 
+    /* ==================== L'IA EN ACTION ==================== */
+    .ia-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+    }
+    .ia-gallery-item {
+      margin: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--blanc);
+      border: 1px solid var(--gris-border);
+      box-shadow: 0 2px 12px rgba(17, 35, 49, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .ia-gallery-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(17, 35, 49, 0.12);
+    }
+    .ia-gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .ia-gallery-item figcaption {
+      padding: 0.8rem 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--bleu-profond);
+      border-top: 2px solid var(--vert-tech);
+      background: var(--blanc);
+    }
+    .ia-vision {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .ia-vision-text p {
+      color: var(--gris-texte);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+    }
+    .ia-vision-text strong {
+      color: var(--bleu-profond);
+    }
+    .ia-vision-note {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.2rem;
+      background: rgba(7, 155, 133, 0.05);
+      border-radius: 6px;
+      border-left: 3px solid var(--vert-tech);
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      .ia-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
     /* ==================== PERSONAS ==================== */
     .personas-grid {
       display: grid;
@@ -1074,47 +1147,47 @@
     }
 
     /* ==================== RÉGLEMENTATION ==================== */
-    .reglementation-content {
+    .reglementation-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .reglementation-text p {
-      color: var(--gris-texte);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .reglementation-articles {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .reglementation-articles li {
+    .reglementation-card {
       background: var(--blanc);
       border: 1px solid var(--gris-border);
-      border-left: 3px solid var(--vert-tech);
-      padding: 1rem 1.2rem;
-      border-radius: 0 6px 6px 0;
+      border-top: 3px solid var(--vert-tech);
+      border-radius: 6px;
+      padding: 1.2rem 1.2rem 1.3rem;
     }
 
-    .reglementation-articles strong {
+    .reglementation-card-article {
+      display: inline-block;
+      background: var(--vert-tech-10);
+      color: var(--vert-tech);
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--bleu-profond);
-      display: block;
-      margin-bottom: 0.3rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.6rem;
     }
 
-    .reglementation-articles span {
+    .reglementation-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bleu-profond);
+      margin-bottom: 0.4rem;
+    }
+
+    .reglementation-card p {
       font-size: 0.85rem;
       color: var(--gris-texte);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* ==================== CTA FINAL ==================== */
@@ -1412,8 +1485,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .reglementation-content {
-        grid-template-columns: 1fr;
+      .reglementation-cards {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .formation-programme-grid {
@@ -1593,6 +1666,7 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="formations.html">Formations</a></li>
+        <li><a href="qualite.html">Qualité</a></li>
         <li><a href="#pourquoi">Pourquoi Cresceo</a></li>
         <li><a href="#experts">Experts</a></li>
         <li><a href="#contact" class="nav-cta">Obtenir un devis</a></li>
@@ -1620,7 +1694,7 @@
     </div>
 
     <div class="hero-inner">
-      <p class="hero-baseline">Organisme de formation HSE, Lean et IA pour les professionnels du BTP et de l'Industrie</p>
+      <p class="hero-baseline">Organisme de formation certifié Qualiopi &mdash; HSE, Lean et IA pour les professionnels du BTP et de l'Industrie</p>
       <h1 class="hero-h1">Formations <span>Prévention</span> et <span class="orange">Productivité</span> grâce à l'IA</h1>
 
       <div class="hero-pillars">
@@ -1711,6 +1785,59 @@
             <p class="persona-situation">Vous devez mettre à jour votre DUERP</p>
             <p class="persona-solution">Utilisez l'IA pour actualiser votre analyse de risques à partir de données terrain réelles. Conforme RGPD, avec floutage automatique des personnes.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== L'IA EN ACTION ==================== -->
+  <section class="section section--alt" id="ia-en-action" style="padding-top:3rem;padding-bottom:3rem;">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag">L'IA en action</span>
+        <h2 class="section-title">Voyez ce que l'IA voit sur vos chantiers</h2>
+        <p class="section-subtitle">En 3 visites, vos équipes apprennent à détecter ce que l'IA repère &mdash; et deviennent autonomes. Voici quelques détections réelles, sur chantiers.</p>
+      </div>
+
+      <div class="ia-gallery">
+        <figure class="ia-gallery-item">
+          <picture>
+            <source srcset="assets/ia/ia-detection-coactivite.webp" type="image/webp">
+            <img src="assets/ia/ia-detection-coactivite.jpg" alt="Détection IA d'une situation de coactivité engins-piétons sur chantier" loading="lazy" width="1200" height="630">
+          </picture>
+          <figcaption>Coactivité engins &amp; piétons</figcaption>
+        </figure>
+        <figure class="ia-gallery-item">
+          <picture>
+            <source srcset="assets/ia/ia-detection-toiture.webp" type="image/webp">
+            <img src="assets/ia/ia-detection-toiture.jpg" alt="Détection IA d'un risque de chute de hauteur sur toiture" loading="lazy" width="1200" height="620">
+          </picture>
+          <figcaption>Chute de hauteur sur toiture</figcaption>
+        </figure>
+        <figure class="ia-gallery-item">
+          <picture>
+            <source srcset="assets/ia/ia-detection-escalier.webp" type="image/webp">
+            <img src="assets/ia/ia-detection-escalier.jpg" alt="Détection IA d'une posture à risque sur escalier" loading="lazy" width="1200" height="674">
+          </picture>
+          <figcaption>Posture à risque &amp; TMS</figcaption>
+        </figure>
+        <figure class="ia-gallery-item">
+          <picture>
+            <source srcset="assets/ia/ia-detection-zone.webp" type="image/webp">
+            <img src="assets/ia/ia-detection-zone.jpg" alt="Détection IA d'une zone à risque sur chantier en hauteur" loading="lazy" width="1200" height="616">
+          </picture>
+          <figcaption>Zone à risque en hauteur</figcaption>
+        </figure>
+      </div>
+
+      <div class="ia-vision">
+        <div class="ia-vision-text">
+          <p><strong>De la vision humaine à la vision IA.</strong> L'effet tunnel fait que l'œil humain s'habitue aux risques quotidiens et finit par ne plus les voir. L'IA, elle, ne s'habitue jamais.</p>
+          <p>Notre formation Regard Sécurité utilise cette différence comme outil pédagogique : on capte la réalité du chantier, on confronte la vision humaine à la vision IA, et on construit ensemble un plan d'actions concret.</p>
+          <a href="#formations" class="btn btn-primary" style="margin-top:1rem;">Découvrir la formation Regard Sécurité &rarr;</a>
+        </div>
+        <div class="ia-vision-note">
+          <p style="font-size:0.8rem;color:rgba(74,85,104,0.7);">Toutes les vidéos analysées par l'IA respectent le RGPD : floutage automatique des personnes, hébergement sécurisé, suppression à l'issue de la formation. <a href="qualite.html#rgpd" style="color:var(--vert-tech);">Voir notre conformité &rarr;</a></p>
         </div>
       </div>
     </div>
@@ -1954,13 +2081,13 @@
           <p class="diff-desc">KPIs avant/après pour prouver le ROI. ×3 en détection de risques, ×2 en identification des gaspillages.</p>
         </div>
 
-        <div class="diff-item">
+        <a href="qualite.html" class="diff-item" style="text-decoration:none;color:inherit;">
           <div class="diff-icon diff-icon--vert">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h3 class="diff-title">Organisme de formation de référence</h3>
-          <p class="diff-desc">Formations éligibles au financement OPCO Constructys et FAF (Fonds d'Assurance Formation).</p>
-        </div>
+          <h3 class="diff-title">Certifié Qualiopi</h3>
+          <p class="diff-desc">Organisme de formation certifié Qualiopi. Formations éligibles au financement OPCO Constructys et FAF. <span style="color:var(--vert-tech);font-weight:600;">Voir nos engagements &rarr;</span></p>
+        </a>
 
         <div class="diff-item">
           <div class="diff-icon diff-icon--orange">
@@ -2055,34 +2182,35 @@
     <div class="section-inner">
       <div class="section-header">
         <span class="section-tag">Cadre légal</span>
-        <h2 class="section-title">Vos obligations réglementaires</h2>
+        <h2 class="section-title">Vos obligations, nos formations</h2>
+        <p class="section-subtitle">Former à la sécurité et maintenir le DUERP : des obligations du Code du travail auxquelles nos formations répondent directement.</p>
       </div>
 
-      <div class="reglementation-content">
-        <div class="reglementation-text">
-          <p>En tant qu'employeur dans le BTP, vous avez l'obligation légale de former vos salariés à la sécurité et de maintenir à jour votre Document Unique d'Évaluation des Risques Professionnels (DUERP).</p>
-          <p>Nos formations vous aident à répondre concrètement à ces obligations, avec des méthodes innovantes et des résultats documentés.</p>
-          <a href="#contact" class="btn btn-primary" style="margin-top: 0.5rem;">Demander un programme</a>
+      <div class="reglementation-cards">
+        <div class="reglementation-card">
+          <span class="reglementation-card-article">L4141-1 &middot; R4141-2</span>
+          <h3>Accueil sécurité sur chantier</h3>
+          <p>Formation pratique et appropriée à la sécurité, à l'embauche et à chaque changement de poste.</p>
         </div>
+        <div class="reglementation-card">
+          <span class="reglementation-card-article">L4141-2 &middot; L4121-1</span>
+          <h3>Formation à la sécurité</h3>
+          <p>Mesures nécessaires pour assurer la sécurité et protéger la santé des travailleurs.</p>
+        </div>
+        <div class="reglementation-card">
+          <span class="reglementation-card-article">L4121-3 &middot; R4121-1</span>
+          <h3>Réalisation du DUERP</h3>
+          <p>Transcrire et mettre à jour les résultats de l'évaluation des risques dans un Document Unique.</p>
+        </div>
+        <div class="reglementation-card">
+          <span class="reglementation-card-article">L4154-2</span>
+          <h3>Renforcée intérim &amp; CDD</h3>
+          <p>Formation renforcée à la sécurité pour les salariés en CDD et intérimaires exposés à des risques particuliers.</p>
+        </div>
+      </div>
 
-        <ul class="reglementation-articles">
-          <li>
-            <strong>Accueil sécurité sur chantier</strong>
-            <span>Art. L4141-1 et R4141-2 du Code du travail — L'employeur organise une formation pratique et appropriée à la sécurité, notamment à l'embauche et à chaque changement de poste.</span>
-          </li>
-          <li>
-            <strong>Formation à la sécurité des collaborateurs</strong>
-            <span>Art. L4141-2 et L4121-1 du Code du travail — L'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé des travailleurs : actions de prévention, d'information et de formation.</span>
-          </li>
-          <li>
-            <strong>Réalisation du DUERP</strong>
-            <span>Art. L4121-3 et R4121-1 du Code du travail — L'employeur transcrit et met à jour les résultats de l'évaluation des risques dans un Document Unique.</span>
-          </li>
-          <li>
-            <strong>Formation renforcée (intérimaires / CDD)</strong>
-            <span>Art. L4154-2 du Code du travail — Les salariés en CDD et intérimaires exposés à des risques particuliers bénéficient d'une formation renforcée à la sécurité.</span>
-          </li>
-        </ul>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="#contact" class="btn btn-primary">Demander un programme adapté</a>
       </div>
     </div>
   </section>
@@ -2214,15 +2342,15 @@
       <div class="footer-col">
         <h4>Informations</h4>
         <ul>
+          <li><a href="qualite.html">Qualité &amp; Qualiopi</a></li>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
-          <li><a href="accessibilite.html">Accessibilité</a></li>
           <li><a href="mailto:contact@cresceo.fr">Contact</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>&copy; 2026 Cresceo SAS &mdash; Organisme de formation (NDA en cours d'obtention)</span>
+      <span>&copy; 2026 Cresceo SAS &mdash; Organisme de formation certifié Qualiopi</span>
       <span>La croissance par le savoir</span>
     </div>
   </footer>
@@ -2401,7 +2529,7 @@
       });
     }, observerOptions);
 
-    document.querySelectorAll('.persona-card, .formation-card, .diff-item, .expert-card, .reglementation-articles li').forEach(function(el) {
+    document.querySelectorAll('.persona-card, .formation-card, .diff-item, .expert-card, .reglementation-card, .ia-gallery-item').forEach(function(el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';

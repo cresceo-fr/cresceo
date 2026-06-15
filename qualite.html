@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qualité &amp; certification Qualiopi — Cresceo</title>
+  <meta name="description" content="Cresceo SAS, organisme de formation certifié Qualiopi. Indicateurs de performance, modalités d'évaluation, assistance FOAD, accessibilité, conformité RGPD.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cresceo.fr/qualite.html">
+
+  <meta property="og:title" content="Qualité &amp; certification Qualiopi — Cresceo">
+  <meta property="og:description" content="Cresceo SAS est un organisme de formation certifié Qualiopi. Nos engagements qualité, indicateurs et modalités.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cresceo.fr/qualite.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Qualité &amp; certification Qualiopi — Cresceo">
+  <meta name="twitter:description" content="Organisme de formation certifié Qualiopi. Indicateurs, modalités d'évaluation, accessibilité, RGPD.">
+
+  <link rel="icon" type="image/png" href="assets/icon.png">
+
+  <!-- GA4 (chargé uniquement après consentement) -->
+  <script>
+    window.gaLoaded = false;
+    function loadGA4() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7BZC8Y1G2Q';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7BZC8Y1G2Q');
+    }
+    if (localStorage.getItem('cresceo_consent') === 'accepted') { loadGA4(); }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bleu-profond: #112331;
+      --bleu-clair: #1a3347;
+      --vert-tech: #079b85;
+      --vert-tech-10: rgba(7, 155, 133, 0.1);
+      --orange-signal: #f9a937;
+      --blanc: #ffffff;
+      --gris-clair: #f5f6f8;
+      --gris-texte: #4a5568;
+      --gris-border: #e2e8f0;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Roboto', sans-serif; color: var(--bleu-profond); background: var(--blanc); line-height: 1.6; }
+
+    /* NAV */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(17, 35, 49, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .nav-logo img { height: 44px; width: auto; }
+    .nav-logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--blanc); letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blanc); }
+    .nav-cta { background: var(--vert-tech); color: var(--blanc) !important; padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: 600 !important; }
+    .nav-cta:hover { background: #068a76; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--blanc); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* PAGE HEADER */
+    .page-header { background: var(--bleu-profond); padding: 8rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    .page-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal)); }
+    .page-header h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--blanc); margin-bottom: 0.8rem; }
+    .page-header p { color: rgba(255,255,255,0.6); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+    .breadcrumb { margin-bottom: 1.5rem; font-size: 0.85rem; }
+    .breadcrumb a { color: var(--vert-tech); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb span { color: rgba(255,255,255,0.4); }
+
+    /* QUALIOPI HERO */
+    .qualiopi-hero { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 1rem; }
+    .qualiopi-card { background: linear-gradient(135deg, rgba(7,155,133,0.06), rgba(7,155,133,0.02)); border: 1px solid rgba(7,155,133,0.2); border-radius: 10px; padding: 2rem; display: flex; gap: 1.5rem; align-items: flex-start; }
+    .qualiopi-shield { flex-shrink: 0; width: 56px; height: 56px; background: var(--vert-tech); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--blanc); }
+    .qualiopi-text h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--bleu-profond); margin-bottom: 0.5rem; }
+    .qualiopi-text p { color: var(--gris-texte); font-size: 0.95rem; line-height: 1.7; }
+    .qualiopi-text strong { color: var(--vert-tech); }
+
+    @media (max-width: 768px) {
+      .qualiopi-card { flex-direction: column; gap: 1rem; }
+    }
+
+    /* SECTIONS */
+    .qualite-section { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    .qualite-section + .qualite-section { border-top: 1px solid var(--gris-border); }
+    .qualite-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--bleu-profond); margin-bottom: 0.5rem; }
+    .qualite-section > p.lead { color: var(--gris-texte); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .qualite-section h3 { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; color: var(--bleu-profond); margin: 1.5rem 0 0.6rem; }
+    .qualite-section ul { color: var(--gris-texte); font-size: 0.92rem; line-height: 1.75; padding-left: 1.2rem; }
+    .qualite-section ul li { margin-bottom: 0.4rem; }
+    .qualite-section ul li strong { color: var(--bleu-profond); }
+    .qualite-section a { color: var(--vert-tech); text-decoration: none; }
+    .qualite-section a:hover { text-decoration: underline; }
+
+    /* INDICATEURS GRID */
+    .indicateurs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin-top: 1rem; }
+    .indicateur-card { background: var(--blanc); border: 1px solid var(--gris-border); border-top: 3px solid var(--vert-tech); border-radius: 6px; padding: 1.2rem 0.8rem; text-align: center; }
+    .indicateur-val { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--vert-tech); }
+    .indicateur-lbl { font-size: 0.8rem; color: var(--gris-texte); margin-top: 0.3rem; }
+    .indicateur-sub { font-size: 0.7rem; color: #a0aec0; margin-top: 0.2rem; }
+    .indicateurs-note { font-size: 0.8rem; color: var(--gris-texte); text-align: center; margin-top: 0.8rem; font-style: italic; }
+    @media (max-width: 768px) {
+      .indicateurs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* INFO CARDS */
+    .info-card { background: var(--gris-clair); border-radius: 8px; padding: 1.3rem 1.5rem; margin-top: 1rem; }
+    .info-card-accent { border-left: 3px solid var(--vert-tech); }
+
+    /* CTA */
+    .cta-section { background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--bleu-clair) 100%); text-align: center; padding: 3.5rem 1.5rem; margin-top: 3rem; position: relative; }
+    .cta-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vert-tech), var(--orange-signal)); }
+    .cta-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--blanc); margin-bottom: 0.8rem; }
+    .cta-section p { color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+    .btn-primary { display: inline-block; padding: 0.85rem 1.8rem; background: var(--vert-tech); color: var(--blanc); border-radius: 4px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: #068a76; }
+
+    /* FOOTER */
+    .footer { background: #0a1a26; color: rgba(255,255,255,0.4); padding: 2rem 1.5rem; text-align: center; font-size: 0.8rem; }
+    .footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .footer a:hover { color: var(--vert-tech); }
+
+    /* RESPONSIVE NAV */
+    @media (max-width: 768px) {
+      .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; background: rgba(17, 35, 49, 0.98); flex-direction: column; padding: 1rem 1.5rem 1.5rem; gap: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.8rem 0; font-size: 0.95rem; }
+      .nav-hamburger { display: flex; }
+    }
+  </style>
+
+  <!-- Cookie banner styles (cohérence avec index.html) -->
+  <style>
+    .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--bleu-profond); border-top: 1px solid rgba(255,255,255,0.1); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+    .cookie-banner a { color: var(--vert-tech); text-decoration: none; }
+    .cookie-banner button { padding: 0.5rem 1.2rem; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; border: none; }
+    .cookie-accept { background: var(--vert-tech); color: var(--blanc); }
+    .cookie-refuse { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.2) !important; }
+  </style>
+</head>
+<body>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner" style="display:none;">
+    <span>Ce site utilise des cookies pour mesurer l'audience. <a href="mentions-legales.html">En savoir plus</a></span>
+    <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+    <button class="cookie-refuse" onclick="refuseCookies()">Refuser</button>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/icon.png" alt="Cresceo" width="44" height="44">
+        <span class="nav-logo-text">Cresceo</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="qualite.html" style="color:var(--vert-tech);">Qualité</a></li>
+        <li><a href="index.html#experts">Experts</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Obtenir un devis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a> <span>/</span> <span style="color: rgba(255,255,255,0.7);">Qualité</span>
+    </div>
+    <h1>Notre engagement qualité</h1>
+    <p>Cresceo SAS est un organisme de formation certifié Qualiopi. Voici nos indicateurs, modalités et engagements.</p>
+  </header>
+
+  <main>
+
+    <!-- ==================== CERTIFICATION QUALIOPI ==================== -->
+    <section class="qualiopi-hero" id="qualiopi">
+      <div class="qualiopi-card">
+        <div class="qualiopi-shield" aria-hidden="true">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <div class="qualiopi-text">
+          <h2>Certifié Qualiopi</h2>
+          <p>Cresceo SAS est un <strong>organisme de formation certifié Qualiopi</strong> pour la catégorie « Actions de formation ». Cette certification atteste de la qualité du processus mis en œuvre pour nos formations.</p>
+          <p style="margin-top:0.6rem;font-size:0.85rem;color:#a0aec0;">Numéro de certification et de déclaration d'activité en cours de mise à jour.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INDICATEURS DE PERFORMANCE ==================== -->
+    <section class="qualite-section" id="indicateurs">
+      <h2>Nos indicateurs de performance</h2>
+      <p class="lead">Résultats consolidés sur les sessions de formation menées à date.</p>
+
+      <div class="indicateurs-grid">
+        <div class="indicateur-card">
+          <div class="indicateur-val">100%</div>
+          <div class="indicateur-lbl">Taux de satisfaction globale</div>
+          <div class="indicateur-sub">87,5% Très satisfait<br>12,5% Satisfait</div>
+        </div>
+        <div class="indicateur-card">
+          <div class="indicateur-val">9,6 / 10</div>
+          <div class="indicateur-lbl">Taux de recommandation</div>
+        </div>
+        <div class="indicateur-card">
+          <div class="indicateur-val">100%</div>
+          <div class="indicateur-lbl">Adéquation Objectifs / Attentes</div>
+        </div>
+        <div class="indicateur-card">
+          <div class="indicateur-val">100%</div>
+          <div class="indicateur-lbl">Utilisabilité professionnelle</div>
+          <div class="indicateur-sub">Impact terrain</div>
+        </div>
+        <div class="indicateur-card">
+          <div class="indicateur-val">100%</div>
+          <div class="indicateur-lbl">Réussite aux QCM</div>
+          <div class="indicateur-sub">Évaluation sommative</div>
+        </div>
+      </div>
+      <p class="indicateurs-note">Indicateurs mis à jour à l'issue de chaque session.</p>
+    </section>
+
+    <!-- ==================== MODALITÉS D'ÉVALUATION ==================== -->
+    <section class="qualite-section" id="evaluation">
+      <h2>Modalités d'évaluation</h2>
+      <p class="lead">Chacune de nos formations s'appuie sur quatre niveaux d'évaluation.</p>
+
+      <ul>
+        <li><strong>Évaluation initiale</strong> : questionnaire de positionnement pour évaluer les connaissances de l'apprenant avant la formation.</li>
+        <li><strong>Évaluation formative</strong> : exercices d'application pendant la formation (analyse de cas, mises en situation).</li>
+        <li><strong>Évaluation sommative (acquis)</strong> : quiz final de validation des connaissances avec un seuil de réussite à 80%, complété par le Plan de Progrès Personnel le cas échéant.</li>
+        <li><strong>Évaluation de satisfaction</strong> : questionnaire à chaud rempli par chaque stagiaire en fin de session.</li>
+      </ul>
+    </section>
+
+    <!-- ==================== MODALITÉS D'ASSISTANCE FOAD ==================== -->
+    <section class="qualite-section" id="assistance">
+      <h2>Modalités d'assistance (formations à distance)</h2>
+      <p class="lead">Pour nos formations en distanciel (classes virtuelles, FOAD), une assistance technique et pédagogique est mise à disposition de chaque apprenant pendant toute la durée de la formation.</p>
+
+      <ul>
+        <li><strong>Assistance technique</strong> : support sur la prise en main des outils (visioconférence, plateforme de dépôt vidéo). Contact : <a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a></li>
+        <li><strong>Assistance pédagogique</strong> : le formateur reste joignable par email pour toute question pendant la formation. Réponse sous 24h ouvrées.</li>
+        <li><strong>Outils utilisés</strong> : Google Meet (visioconférence), serveur cloud sécurisé (dépôt vidéos).</li>
+        <li><strong>En cas de bug</strong> : nous rappelons l'apprenant dans l'heure pour rétablir l'accès ou proposer une session de rattrapage.</li>
+      </ul>
+    </section>
+
+    <!-- ==================== ACCESSIBILITÉ ==================== -->
+    <section class="qualite-section" id="accessibilite">
+      <h2>Accessibilité &amp; référent handicap</h2>
+      <p class="lead">Nos formations sont adaptables pour permettre à tous d'y participer dans les meilleures conditions.</p>
+
+      <div class="info-card info-card-accent">
+        <p style="color:var(--gris-texte);font-size:0.92rem;line-height:1.7;">Pour toute situation de handicap (PMR, visuel, auditif), merci de contacter notre référent handicap (<a href="mailto:contact@cresceo.fr">contact@cresceo.fr</a>) afin d'étudier les aménagements nécessaires : sous-titrage, accessibilité du site de formation, supports adaptés, accompagnement spécifique.</p>
+      </div>
+
+      <h3>Délai de prise en compte</h3>
+      <p style="color:var(--gris-texte);font-size:0.92rem;">Sous 5 jours ouvrés à partir de votre demande, pour vous proposer les aménagements possibles ou, le cas échéant, vous orienter vers un partenaire mieux adapté.</p>
+    </section>
+
+    <!-- ==================== CONFORMITÉ RGPD ==================== -->
+    <section class="qualite-section" id="rgpd">
+      <h2>Conformité RGPD</h2>
+      <p class="lead">Nos formations s'appuient sur des outils d'intelligence artificielle qui analysent des séquences vidéo de chantier. Nous respectons strictement le cadre du RGPD.</p>
+
+      <ul>
+        <li><strong>Floutage automatique</strong> : les personnes filmées sont automatiquement floutées par l'IA dans les rapports d'analyse.</li>
+        <li><strong>Hébergement sécurisé</strong> : les vidéos sont déposées sur un serveur cloud sécurisé dont l'accès est restreint au formateur et à l'apprenant concerné.</li>
+        <li><strong>Information préalable</strong> : un cadre de captation est présenté en début de formation. Les apprenants sont informés des conditions de traitement.</li>
+        <li><strong>Conservation limitée</strong> : les vidéos sont supprimées à l'issue de la formation, sauf accord explicite de conservation pour suivi pédagogique.</li>
+      </ul>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section">
+      <h2>Une question sur nos engagements ?</h2>
+      <p>Contactez-nous, nous vous répondons sous 24h ouvrées.</p>
+      <a href="index.html#contact" class="btn-primary">Nous contacter</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      <a href="index.html">Accueil</a> &middot;
+      <a href="formations.html">Formations</a> &middot;
+      <a href="qualite.html">Qualité</a> &middot;
+      <a href="mentions-legales.html">Mentions légales</a> &middot;
+      <a href="mailto:contact@cresceo.fr">Contact</a>
+    </p>
+    <p style="margin-top:0.8rem;">&copy; 2026 Cresceo SAS &mdash; Organisme de formation certifié Qualiopi</p>
+  </footer>
+
+  <script>
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // Cookie consent
+    (function() {
+      var consent = localStorage.getItem('cresceo_consent');
+      if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'flex';
+      }
+    })();
+
+    function acceptCookies() {
+      localStorage.setItem('cresceo_consent', 'accepted');
+      document.getElementById('cookieBanner').style.display = 'none';
+      loadGA4();
+    }
+
+    function refuseCookies() {
+      localStorage.setItem('cresceo_consent', 'refused');
+      document.getElementById('cookieBanner').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
