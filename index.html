@@ -813,6 +813,14 @@
       border-top: 2px solid var(--vert-tech);
       background: var(--blanc);
     }
+    .ia-gallery-item--lean figcaption {
+      border-top-color: var(--orange-signal);
+    }
+    .ia-gallery--lean .ia-gallery-item img {
+      max-height: 320px;
+      object-fit: cover;
+      object-position: top;
+    }
     .ia-vision {
       max-width: 800px;
       margin: 0 auto;
@@ -1802,31 +1810,31 @@
       <div class="ia-gallery">
         <figure class="ia-gallery-item">
           <picture>
-            <source srcset="assets/ia/ia-detection-coactivite.webp" type="image/webp">
-            <img src="assets/ia/ia-detection-coactivite.jpg" alt="Détection IA d'une situation de coactivité engins-piétons sur chantier" loading="lazy" width="1200" height="630">
+            <source srcset="assets/ia/safety-coactivite-route.webp" type="image/webp">
+            <img src="assets/ia/safety-coactivite-route.jpg" alt="Détection IA d'une coactivité engins et piétons sur chantier en voirie" loading="lazy" width="768" height="512">
           </picture>
-          <figcaption>Coactivité engins &amp; piétons</figcaption>
+          <figcaption>Coactivité &mdash; chantier en voirie</figcaption>
         </figure>
         <figure class="ia-gallery-item">
           <picture>
-            <source srcset="assets/ia/ia-detection-toiture.webp" type="image/webp">
-            <img src="assets/ia/ia-detection-toiture.jpg" alt="Détection IA d'un risque de chute de hauteur sur toiture" loading="lazy" width="1200" height="620">
+            <source srcset="assets/ia/safety-coactivite-engin.webp" type="image/webp">
+            <img src="assets/ia/safety-coactivite-engin.jpg" alt="Détection IA d'une coactivité engin et opérateur près d'une tranchée" loading="lazy" width="768" height="512">
           </picture>
-          <figcaption>Chute de hauteur sur toiture</figcaption>
+          <figcaption>Coactivité &mdash; engin de terrassement</figcaption>
         </figure>
         <figure class="ia-gallery-item">
           <picture>
-            <source srcset="assets/ia/ia-detection-escalier.webp" type="image/webp">
-            <img src="assets/ia/ia-detection-escalier.jpg" alt="Détection IA d'une posture à risque sur escalier" loading="lazy" width="1200" height="674">
+            <source srcset="assets/ia/safety-coactivite-tranchee.webp" type="image/webp">
+            <img src="assets/ia/safety-coactivite-tranchee.jpg" alt="Détection IA d'une coactivité dans une tranchée avec engin de levage" loading="lazy" width="768" height="512">
           </picture>
-          <figcaption>Posture à risque &amp; TMS</figcaption>
+          <figcaption>Coactivité &mdash; pose en tranchée</figcaption>
         </figure>
         <figure class="ia-gallery-item">
           <picture>
-            <source srcset="assets/ia/ia-detection-zone.webp" type="image/webp">
-            <img src="assets/ia/ia-detection-zone.jpg" alt="Détection IA d'une zone à risque sur chantier en hauteur" loading="lazy" width="1200" height="616">
+            <source srcset="assets/ia/safety-pieton-engin.webp" type="image/webp">
+            <img src="assets/ia/safety-pieton-engin.jpg" alt="Détection IA d'une situation piéton à proximité d'un engin de chantier" loading="lazy" width="768" height="512">
           </picture>
-          <figcaption>Zone à risque en hauteur</figcaption>
+          <figcaption>Piéton à proximité d'un engin</figcaption>
         </figure>
       </div>
 
@@ -1960,6 +1968,55 @@
             <p class="persona-situation">Vous préparez un REX de chantier</p>
             <p class="persona-solution">Structurez votre retour d'expérience à partir de données factuelles pour améliorer vos futurs projets.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== L'IA EN ACTION (PRODUCTIVITÉ) ==================== -->
+  <section class="section section--alt" id="ia-en-action-prod" style="padding-top:3rem;padding-bottom:3rem;background:linear-gradient(180deg, rgba(249,169,55,0.04) 0%, var(--gris-clair) 100%);">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-tag section-tag--orange">L'IA en action</span>
+        <h2 class="section-title">Mesurez ce que l'IA mesure sur vos chantiers</h2>
+        <p class="section-subtitle">Cycles de grue, temps morts, ouvrages posés, planning réel : l'IA capte la réalité du chantier en continu. Vos équipes pilotent à partir de données factuelles, pas d'impressions.</p>
+      </div>
+
+      <div class="ia-gallery ia-gallery--lean">
+        <figure class="ia-gallery-item ia-gallery-item--lean">
+          <picture>
+            <source srcset="assets/ia-prod/prod-chronoanalyse.webp" type="image/webp">
+            <img src="assets/ia-prod/prod-chronoanalyse.jpg" alt="Chronoanalyse IA d'un cycle de grue avec détection automatique des séquences" loading="lazy" width="1200" height="561">
+          </picture>
+          <figcaption>Chronoanalyse cycles de grue</figcaption>
+        </figure>
+        <figure class="ia-gallery-item ia-gallery-item--lean">
+          <picture>
+            <source srcset="assets/ia-prod/prod-dashboard.webp" type="image/webp">
+            <img src="assets/ia-prod/prod-dashboard.jpg" alt="Tableau de bord productivité chantier avec indicateurs grue, béton et ouvrages" loading="lazy" width="1200" height="1480">
+          </picture>
+          <figcaption>Tableau de bord productivité</figcaption>
+        </figure>
+        <figure class="ia-gallery-item ia-gallery-item--lean">
+          <picture>
+            <source srcset="assets/ia-prod/prod-planning.webp" type="image/webp">
+            <img src="assets/ia-prod/prod-planning.jpg" alt="Planning Gantt et maquette BIM 3D d'un chantier de gros œuvre" loading="lazy" width="1200" height="619">
+          </picture>
+          <figcaption>Planning réel &amp; maquette BIM</figcaption>
+        </figure>
+        <figure class="ia-gallery-item ia-gallery-item--lean">
+          <picture>
+            <source srcset="assets/ia-prod/prod-dashboard-bis.webp" type="image/webp">
+            <img src="assets/ia-prod/prod-dashboard-bis.jpg" alt="Tableau de bord chantier avec détail volume béton et temps de pose" loading="lazy" width="1200" height="932">
+          </picture>
+          <figcaption>Détail des cycles &amp; volumes</figcaption>
+        </figure>
+      </div>
+
+      <div class="ia-vision">
+        <div class="ia-vision-text">
+          <p><strong>De la production ressentie à la production mesurée.</strong> Sans données, on planifie au doigt mouillé. Avec l'IA, on repère les vrais goulets d'étranglement et les vrais gaspillages, on objective les arbitrages et on installe une culture de l'amélioration continue.</p>
+          <a href="#formationLean" class="btn btn-primary" style="margin-top:1rem;background:var(--orange-signal);">Découvrir la formation Piloter la Productivité &rarr;</a>
         </div>
       </div>
     </div>

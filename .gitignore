@@ -20,6 +20,8 @@ WhatsApp/
 !assets/*.webp
 !assets/ia/*.jpg
 !assets/ia/*.webp
+!assets/ia-prod/*.jpg
+!assets/ia-prod/*.webp
 
 # Dossiers privés
 DAF/
