@@ -1,0 +1,458 @@
+/* ==========================================================================
+   cresceo.css — Design system V2.0
+   Composants centralisés + tokens harmonisés (post-Qualiopi).
+   Linké depuis index.html, formations.html, qualite.html.
+   N'écrase pas le CSS inline existant : ajoute des composants neufs et
+   normalise progressivement.
+   ========================================================================== */
+
+:root {
+  /* Espacements (tokens) */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 5rem;
+
+  /* Border-radius */
+  --radius-sm: 4px;   /* boutons */
+  --radius-md: 8px;   /* cards */
+  --radius-lg: 12px;  /* héros, blocs majeurs */
+
+  /* Boutons (tailles unifiées) */
+  --btn-padding-y: 0.85rem;
+  --btn-padding-x: 1.8rem;
+  --btn-font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   BOUTON PRIMAIRE STANDARDISÉ
+   À utiliser partout pour les CTA convergents "Obtenir un devis".
+   ========================================================================== */
+.cr-btn-primary {
+  display: inline-block;
+  background: var(--vert-tech);
+  color: var(--blanc);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  border-radius: var(--radius-sm);
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.cr-btn-primary:hover {
+  background: #068a76;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(7, 155, 133, 0.25);
+}
+.cr-btn-primary--orange {
+  background: var(--orange-signal);
+}
+.cr-btn-primary--orange:hover {
+  background: #e89525;
+  box-shadow: 0 6px 18px rgba(249, 169, 55, 0.25);
+}
+
+/* ==========================================================================
+   BADGE UNIFIÉ (.cr-badge)
+   Remplace formation-tag, fiche-badge, section-tag à terme.
+   Modifiers : --hse (vert), --lean (orange), --info (bleu profond).
+   ========================================================================== */
+.cr-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: rgba(7, 155, 133, 0.12);
+  color: var(--vert-tech);
+}
+.cr-badge--hse {
+  background: rgba(7, 155, 133, 0.12);
+  color: var(--vert-tech);
+}
+.cr-badge--lean {
+  background: rgba(249, 169, 55, 0.14);
+  color: #c07800;
+}
+.cr-badge--info {
+  background: rgba(17, 35, 49, 0.08);
+  color: var(--bleu-profond);
+}
+
+/* ==========================================================================
+   STAT CARD (.cr-stat-card)
+   Carte chiffre clé centrée. Remplace reglementation-card + indicateur-card.
+   Border-top accent vert par défaut, --lean pour orange.
+   ========================================================================== */
+.cr-stat-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-border);
+  border-top: 3px solid var(--vert-tech);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  text-align: center;
+}
+.cr-stat-card--lean { border-top-color: var(--orange-signal); }
+.cr-stat-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--vert-tech);
+}
+.cr-stat-card--lean .cr-stat-value { color: var(--orange-signal); }
+.cr-stat-label {
+  font-size: 0.8rem;
+  color: var(--gris-texte);
+  margin-top: var(--space-xs);
+}
+.cr-stat-sub {
+  font-size: 0.7rem;
+  color: #a0aec0;
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   META GRID (.cr-meta-grid + .cr-meta-item)
+   Grille label/value. Remplace fiche-meta + info-card à terme.
+   ========================================================================== */
+.cr-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.cr-meta-item label,
+.cr-meta-item .cr-meta-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gris-texte);
+  margin-bottom: 0.3rem;
+}
+.cr-meta-item .cr-meta-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bleu-profond);
+}
+@media (max-width: 768px) {
+  .cr-meta-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+/* ==========================================================================
+   FEATURE CARD (.cr-feature-card)
+   Carte avec accent gauche. Remplace formation-card / coaching-card.
+   ========================================================================== */
+.cr-feature-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-border);
+  border-left: 3px solid var(--vert-tech);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+.cr-feature-card--lean { border-left-color: var(--orange-signal); }
+.cr-feature-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--bleu-profond);
+  margin-bottom: 0.5rem;
+}
+.cr-feature-card p {
+  font-size: 0.9rem;
+  color: var(--gris-texte);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   TRUST SECTION (.cr-trust)
+   Nouvelle section "Ils nous font confiance" (home).
+   ========================================================================== */
+.cr-trust {
+  padding: 3.5rem 1.5rem;
+  background: linear-gradient(180deg, var(--blanc) 0%, var(--gris-clair) 100%);
+  border-top: 1px solid var(--gris-border);
+  border-bottom: 1px solid var(--gris-border);
+}
+.cr-trust-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.cr-trust-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.cr-trust-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: var(--bleu-profond);
+  margin-bottom: 0.5rem;
+}
+.cr-trust-header p {
+  color: var(--gris-texte);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.cr-trust-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+.cr-trust-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+.cr-trust-stats .cr-stat-card {
+  padding: 1rem 0.8rem;
+}
+.cr-trust-stats .cr-stat-value {
+  font-size: 1.4rem;
+}
+.cr-trust-partners {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cr-partner-card {
+  background: var(--blanc);
+  border: 1px solid var(--gris-border);
+  border-radius: var(--radius-md);
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+.cr-partner-card--placeholder {
+  border-style: dashed;
+  background: rgba(7, 155, 133, 0.02);
+}
+.cr-partner-logo {
+  flex-shrink: 0;
+  width: 96px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gris-clair);
+  border-radius: var(--radius-sm);
+  color: var(--bleu-profond);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.cr-partner-text {
+  font-size: 0.9rem;
+  color: var(--gris-texte);
+  line-height: 1.55;
+}
+.cr-partner-text strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--bleu-profond);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+@media (max-width: 768px) {
+  .cr-trust-grid { grid-template-columns: 1fr; }
+  .cr-trust-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   QUALIOPI MARK (.cr-qualiopi-mark)
+   Bloc logo officiel + mention obligatoire Certifopac.
+   À utiliser dans footer + page /qualite.
+   Le PNG officiel est à déposer dans assets/qualiopi-logo.png (kit Certifopac).
+   ========================================================================== */
+.cr-qualiopi-mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  padding: 0.6rem 0;
+}
+.cr-qualiopi-mark img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+.cr-qualiopi-mark--small img { height: 40px; }
+.cr-qualiopi-mark .cr-qualiopi-mention {
+  font-size: 0.72rem;
+  color: var(--gris-texte);
+  line-height: 1.45;
+  max-width: 320px;
+}
+.cr-qualiopi-mark--on-dark .cr-qualiopi-mention {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================================================
+   PROGRAMME TABLE (.cr-programme-table)
+   Table de séquençage pour les fiches formation (extraction inline styles).
+   ========================================================================== */
+.cr-programme-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+.cr-programme-table th {
+  background: var(--gris-clair);
+  text-align: left;
+  padding: 0.7rem;
+  border: 1px solid var(--gris-border);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--bleu-profond);
+}
+.cr-programme-table td {
+  padding: 0.7rem;
+  border: 1px solid var(--gris-border);
+  vertical-align: top;
+  color: var(--gris-texte);
+}
+.cr-programme-table td strong { color: var(--bleu-profond); }
+
+/* ==========================================================================
+   QUALITE BANNER (.cr-qualite-banner)
+   Bandeau "Cresceo est certifié Qualiopi" extrait des inline styles formations.html.
+   ========================================================================== */
+.cr-qualite-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, rgba(7,155,133,0.06), rgba(7,155,133,0.02));
+  border: 1px solid rgba(7, 155, 133, 0.22);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.3rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cr-qualite-banner:hover {
+  border-color: var(--vert-tech);
+  transform: translateY(-1px);
+}
+.cr-qualite-banner__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--vert-tech);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanc);
+}
+.cr-qualite-banner__text { flex: 1; }
+.cr-qualite-banner__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--bleu-profond);
+}
+.cr-qualite-banner__sub {
+  font-size: 0.85rem;
+  color: var(--gris-texte);
+}
+.cr-qualite-banner__arrow {
+  color: var(--vert-tech);
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   PILLAR NAV (.cr-pillar-nav)
+   Navigation par pilier (formations.html). Extraite des inline styles.
+   ========================================================================== */
+.cr-pillar-nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cr-pillar-link {
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gris-border);
+  color: var(--gris-texte);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.cr-pillar-link:hover { background: rgba(7,155,133,0.05); }
+.cr-pillar-link--hse {
+  background: rgba(7,155,133,0.05);
+  border-color: var(--vert-tech);
+  color: var(--vert-tech);
+}
+.cr-pillar-link--hse-active {
+  background: rgba(7,155,133,0.12);
+  border-width: 2px;
+  font-weight: 700;
+}
+.cr-pillar-link--lean {
+  background: rgba(249,169,55,0.05);
+  border-color: var(--orange-signal);
+  color: #c07800;
+}
+
+/* ==========================================================================
+   COOKIE BANNER (.cr-cookie-banner)
+   Extraction de qualite.html pour factorisation cross-pages.
+   ========================================================================== */
+.cr-cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 200;
+  background: var(--bleu-profond);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+.cr-cookie-banner a {
+  color: var(--vert-tech);
+  text-decoration: none;
+}
+.cr-cookie-banner button {
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.cr-cookie-accept {
+  background: var(--vert-tech);
+  color: var(--blanc);
+}
+.cr-cookie-refuse {
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}

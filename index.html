@@ -48,6 +48,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- Design system V2.0 (cresceo.css) -->
+  <link rel="stylesheet" href="assets/css/cresceo.css">
+
   <!-- Schema.org -->
   <script type="application/ld+json">
   [
@@ -1757,6 +1760,64 @@
     </div>
   </section>
 
+  <!-- ==================== ILS NOUS FONT CONFIANCE ==================== -->
+  <section class="cr-trust" id="confiance" aria-label="Ils nous font confiance">
+    <div class="cr-trust-inner">
+      <div class="cr-trust-header">
+        <h2>Ils nous font confiance</h2>
+        <p>Premier partenaire industriel déployé et premières sessions évaluées : nos formations sont déjà sur les chantiers.</p>
+      </div>
+
+      <div class="cr-trust-grid">
+        <div class="cr-trust-stats">
+          <div class="cr-stat-card">
+            <div class="cr-stat-value">100%</div>
+            <div class="cr-stat-label">Satisfaction</div>
+            <div class="cr-stat-sub">87,5% Très satisfait</div>
+          </div>
+          <div class="cr-stat-card">
+            <div class="cr-stat-value">9,6/10</div>
+            <div class="cr-stat-label">Recommandation</div>
+          </div>
+          <div class="cr-stat-card">
+            <div class="cr-stat-value">100%</div>
+            <div class="cr-stat-label">Acquis &amp; QCM</div>
+            <div class="cr-stat-sub">Évaluation sommative</div>
+          </div>
+          <div class="cr-stat-card">
+            <div class="cr-stat-value">8/8</div>
+            <div class="cr-stat-label">Sessions évaluées</div>
+            <div class="cr-stat-sub">Données 2026</div>
+          </div>
+        </div>
+
+        <div class="cr-trust-partners">
+          <!-- TODO V2.0+ : remplacer le placeholder par le logo officiel CAD42 (validation JP requise) -->
+          <div class="cr-partner-card">
+            <div class="cr-partner-logo">CAD42</div>
+            <div class="cr-partner-text">
+              <strong>Premier partenaire industriel</strong>
+              Déploiement Regard Sécurité 2026 &mdash; cross-deal de 30 k€ signé sur le périmètre formations.
+            </div>
+          </div>
+
+          <!-- TODO V2.0+ : activer la mention presse BIM World 2026 dès qu'une URL d'article public est dispo -->
+          <a href="#contact" class="cr-partner-card cr-partner-card--placeholder" style="text-decoration:none;color:inherit;">
+            <div class="cr-partner-logo" style="font-size:0.7rem;">VOTRE<br>LOGO</div>
+            <div class="cr-partner-text">
+              <strong>Vous serez peut-être le prochain</strong>
+              Échanger sur vos enjeux de prévention ou de productivité : nos équipes vous répondent sous 24 h.
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:1.5rem;color:#a0aec0;font-size:0.78rem;">
+        Indicateurs consolidés à l'issue de chaque session &mdash; détail sur <a href="qualite.html" style="color:var(--vert-tech);">notre page qualité</a>.
+      </p>
+    </div>
+  </section>
+
   <!-- ==================== PERSONAS HSE ==================== -->
   <section class="section" id="prevention" style="background: linear-gradient(180deg, rgba(7,155,133,0.03) 0%, var(--blanc) 100%);">
     <div class="section-inner">
@@ -2267,7 +2328,7 @@
       </div>
 
       <div style="text-align:center;margin-top:2rem;">
-        <a href="#contact" class="btn btn-primary">Demander un programme adapté</a>
+        <a href="#contact" class="btn btn-primary">Obtenir un devis</a>
       </div>
     </div>
   </section>
@@ -2313,8 +2374,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="entreprise">Entreprise</label>
-              <input type="text" id="entreprise" name="entreprise" required>
+              <label for="entreprise">Entreprise <span style="font-weight:400;color:#a0aec0;font-size:0.78rem;">(facultatif)</span></label>
+              <input type="text" id="entreprise" name="entreprise">
             </div>
           </div>
 
@@ -2328,8 +2389,8 @@
           </div>
 
           <div class="form-group">
-            <label for="besoin">Votre besoin</label>
-            <select id="besoin" name="besoin" required onchange="updateDevis()">
+            <label for="besoin">Votre besoin <span style="font-weight:400;color:#a0aec0;font-size:0.78rem;">(facultatif &mdash; pour estimation)</span></label>
+            <select id="besoin" name="besoin" onchange="updateDevis()">
               <option value="">Sélectionnez...</option>
               <option value="individuel">Je souhaite me former moi-même</option>
               <option value="groupe">Je souhaite former une ou plusieurs équipes</option>
@@ -2403,6 +2464,15 @@
           <li><a href="mentions-legales.html">Mentions légales</a></li>
           <li><a href="mailto:contact@cresceo.fr">Contact</a></li>
         </ul>
+      </div>
+
+      <!-- Marque Qualiopi conforme Certifopac (logo officiel à intégrer dès réception du kit) -->
+      <div class="footer-col footer-col--qualiopi">
+        <h4>Certification</h4>
+        <a href="qualite.html" class="cr-qualiopi-mark cr-qualiopi-mark--small cr-qualiopi-mark--on-dark" style="text-decoration:none;">
+          <img src="assets/qualiopi-placeholder.svg" alt="Logo Qualiopi (placeholder en attente du kit officiel)">
+          <span class="cr-qualiopi-mention">La certification qualité a été délivrée au titre de la catégorie&nbsp;: Actions de formation.</span>
+        </a>
       </div>
     </div>
 

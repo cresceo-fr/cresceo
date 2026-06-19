@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLACEHOLDER Qualiopi — À REMPLACER PAR LE LOGO OFFICIEL CERTIFOPAC.
+  Téléchargement : générateur de logo officiel disponible sur certifopac.fr/qualiopi/ressources/usage-logo/
+  Règles :
+   - Logo officiel obligatoire (bandeau + marianne + "République Française")
+   - Aucune modification autorisée
+   - Mention obligatoire à associer : "La certification qualité a été délivrée
+     au titre de la catégorie d'actions suivante : Actions de formation"
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80" aria-label="Logo Qualiopi (placeholder en attente du kit officiel)">
+  <rect x="1" y="1" width="198" height="78" rx="6" fill="#ffffff" stroke="#079b85" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="100" y="32" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="16" font-weight="700" fill="#079b85">QUALIOPI</text>
+  <text x="100" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4a5568">Logo officiel à intégrer</text>
+  <text x="100" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a0aec0">(kit Certifopac)</text>
+</svg>

@@ -41,6 +41,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- Design system V2.0 (cresceo.css) -->
+  <link rel="stylesheet" href="assets/css/cresceo.css">
+
   <style>
     :root {
       --bleu-profond: #112331;
@@ -196,15 +199,17 @@
   <main>
 
     <!-- ==================== CERTIFICATION QUALIOPI ==================== -->
+    <!-- Conformité Certifopac : logo officiel + mention obligatoire ci-dessous (kit à intégrer dès réception). -->
     <section class="qualiopi-hero" id="qualiopi">
       <div class="qualiopi-card">
-        <div class="qualiopi-shield" aria-hidden="true">
-          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div class="qualiopi-shield" aria-hidden="true" style="background:transparent;width:auto;height:auto;border-radius:0;">
+          <img src="assets/qualiopi-placeholder.svg" alt="Logo Qualiopi (placeholder en attente du kit officiel)" style="display:block;height:72px;width:auto;">
         </div>
         <div class="qualiopi-text">
           <h2>Certifié Qualiopi</h2>
-          <p>Cresceo SAS est un <strong>organisme de formation certifié Qualiopi</strong> pour la catégorie « Actions de formation ». Cette certification atteste de la qualité du processus mis en œuvre pour nos formations.</p>
-          <p style="margin-top:0.6rem;font-size:0.85rem;color:#a0aec0;">Numéro de certification et de déclaration d'activité en cours de mise à jour.</p>
+          <p>Cresceo SAS est un <strong>organisme de formation certifié Qualiopi</strong>. La certification atteste de la qualité du processus mis en œuvre pour nos formations.</p>
+          <p style="margin-top:0.6rem;font-size:0.85rem;color:var(--gris-texte);"><strong>Mention obligatoire&nbsp;:</strong> « La certification qualité a été délivrée au titre de la catégorie d'actions suivante&nbsp;: Actions de formation. »</p>
+          <p style="margin-top:0.4rem;font-size:0.8rem;color:#a0aec0;">Numéro de certification, certificateur (CertifOPAC) et numéro de déclaration d'activité&nbsp;: en cours de mise à jour.</p>
         </div>
       </div>
     </section>

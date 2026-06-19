@@ -41,6 +41,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- Design system V2.0 (cresceo.css) -->
+  <link rel="stylesheet" href="assets/css/cresceo.css">
+
   <script type="application/ld+json">
   [
     {
@@ -518,32 +521,24 @@
 
   <!-- ==================== BANDEAU QUALITÉ ==================== -->
   <section style="max-width:900px;margin:0 auto;padding:1.5rem 1.5rem 0.5rem;">
-    <a href="qualite.html" style="display:flex;align-items:center;gap:1rem;background:linear-gradient(135deg,rgba(7,155,133,0.06),rgba(7,155,133,0.02));border:1px solid rgba(7,155,133,0.2);border-radius:8px;padding:1rem 1.3rem;text-decoration:none;color:inherit;transition:border-color 0.2s;">
-      <div style="flex-shrink:0;width:40px;height:40px;background:var(--vert-tech);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blanc);">
+    <a href="qualite.html" class="cr-qualite-banner">
+      <div class="cr-qualite-banner__icon">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
       </div>
-      <div style="flex:1;">
-        <div style="font-family:'Montserrat',sans-serif;font-size:0.9rem;font-weight:700;color:var(--bleu-profond);">Cresceo est certifié Qualiopi</div>
-        <div style="font-size:0.85rem;color:var(--gris-texte);">Indicateurs de performance, modalités d'évaluation et d'assistance, accessibilité &rarr;</div>
+      <div class="cr-qualite-banner__text">
+        <div class="cr-qualite-banner__title">Cresceo est certifié Qualiopi</div>
+        <div class="cr-qualite-banner__sub">Indicateurs de performance, modalités d'évaluation et d'assistance, accessibilité &rarr;</div>
       </div>
-      <div style="color:var(--vert-tech);font-size:1.2rem;">&rarr;</div>
+      <div class="cr-qualite-banner__arrow">&rarr;</div>
     </a>
   </section>
 
   <!-- ==================== PILLAR NAV ==================== -->
-  <nav style="max-width:900px;margin:0 auto;padding:1rem 1.5rem 2rem;display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center;">
-    <a href="#regard-securite" style="padding:0.7rem 1.5rem;border-radius:6px;background:rgba(7,155,133,0.1);border:2px solid var(--vert-tech);color:var(--vert-tech);font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:700;text-decoration:none;transition:background 0.2s;">
-      Regard Sécurité
-    </a>
-    <a href="#prevention" style="padding:0.7rem 1.5rem;border-radius:6px;background:rgba(7,155,133,0.05);border:1px solid var(--vert-tech);color:var(--vert-tech);font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;transition:background 0.2s;">
-      Piloter la Prévention
-    </a>
-    <a href="#lean" style="padding:0.7rem 1.5rem;border-radius:6px;background:rgba(249,169,55,0.05);border:1px solid var(--orange-signal);color:#c07800;font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;transition:background 0.2s;">
-      Piloter la Productivité
-    </a>
-    <a href="#coaching" style="padding:0.7rem 1.5rem;border-radius:6px;background:rgba(255,255,255,0.05);border:1px solid var(--gris-border);color:var(--gris-texte);font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;transition:background 0.2s;">
-      Accompagnement
-    </a>
+  <nav class="cr-pillar-nav">
+    <a href="#regard-securite" class="cr-pillar-link cr-pillar-link--hse cr-pillar-link--hse-active">Regard Sécurité</a>
+    <a href="#prevention" class="cr-pillar-link cr-pillar-link--hse">Piloter la Prévention</a>
+    <a href="#lean" class="cr-pillar-link cr-pillar-link--lean">Piloter la Productivité</a>
+    <a href="#coaching" class="cr-pillar-link">Accompagnement</a>
   </nav>
 
   <!-- ==================== REGARD SÉCURITÉ ==================== -->
@@ -602,33 +597,33 @@
     <div class="fiche-section">
       <h3>Contenu et séquençage</h3>
       <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;margin-top:0.5rem;font-size:0.9rem;">
+        <table class="cr-programme-table">
           <thead>
-            <tr style="background:var(--gris-clair);">
-              <th style="padding:0.7rem;text-align:left;border:1px solid var(--gris-border);font-family:'Montserrat',sans-serif;font-size:0.85rem;">Séquence</th>
-              <th style="padding:0.7rem;text-align:left;border:1px solid var(--gris-border);font-family:'Montserrat',sans-serif;font-size:0.85rem;">Durée</th>
-              <th style="padding:0.7rem;text-align:left;border:1px solid var(--gris-border);font-family:'Montserrat',sans-serif;font-size:0.85rem;">Contenu &amp; Activités</th>
-              <th style="padding:0.7rem;text-align:left;border:1px solid var(--gris-border);font-family:'Montserrat',sans-serif;font-size:0.85rem;">Méthodes pédagogiques</th>
+            <tr>
+              <th>Séquence</th>
+              <th>Durée</th>
+              <th>Contenu &amp; Activités</th>
+              <th>Méthodes pédagogiques</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);"><strong>Séquence 1 :</strong><br>Fondamentaux</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">2h00</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Théorie sur les biais cognitifs (effet tunnel). Présentation de l'IA CAD42. Cadre RGPD et floutage.</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Expositive &amp; Interactive (Classe virtuelle)</td>
+              <td><strong>Séquence 1&nbsp;:</strong><br>Fondamentaux</td>
+              <td>2h00</td>
+              <td>Théorie sur les biais cognitifs (effet tunnel). Présentation de l'IA CAD42. Cadre RGPD et floutage.</td>
+              <td>Expositive &amp; Interactive (Classe virtuelle)</td>
             </tr>
             <tr>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);"><strong>Séquence 2 :</strong><br>Mission Terrain</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">3h00</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Captation vidéo via smartphone. Upload sur plateforme sécurisée.<br><em>Ou analyse d'une vidéo de visite de chantier fournie par CRESCEO.</em></td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Méthode Active (Mise en situation réelle)</td>
+              <td><strong>Séquence 2&nbsp;:</strong><br>Mission Terrain</td>
+              <td>3h00</td>
+              <td>Captation vidéo via smartphone. Upload sur plateforme sécurisée.<br><em>Ou analyse d'une vidéo de visite de chantier fournie par CRESCEO.</em></td>
+              <td>Méthode Active (Mise en situation réelle)</td>
             </tr>
             <tr>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);"><strong>Séquence 3 :</strong><br>Analyse &amp; Action</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">2h00</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Débriefing expert : « Vision humaine vs Vision IA ».</td>
-              <td style="padding:0.7rem;border:1px solid var(--gris-border);">Démonstrative &amp; Coaching (Classe virtuelle)</td>
+              <td><strong>Séquence 3&nbsp;:</strong><br>Analyse &amp; Action</td>
+              <td>2h00</td>
+              <td>Débriefing expert&nbsp;: « Vision humaine vs Vision IA ».</td>
+              <td>Démonstrative &amp; Coaching (Classe virtuelle)</td>
             </tr>
           </tbody>
         </table>
@@ -851,7 +846,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+    <!-- Marque Qualiopi conforme Certifopac (logo officiel à intégrer dès réception du kit) -->
+    <a href="qualite.html" class="cr-qualiopi-mark cr-qualiopi-mark--small cr-qualiopi-mark--on-dark" style="text-decoration:none;align-items:center;text-align:center;">
+      <img src="assets/qualiopi-placeholder.svg" alt="Logo Qualiopi (placeholder en attente du kit officiel)">
+      <span class="cr-qualiopi-mention" style="max-width:420px;text-align:center;">La certification qualité a été délivrée au titre de la catégorie&nbsp;: Actions de formation.</span>
+    </a>
     <p>&copy; 2026 Cresceo SAS &mdash; Organisme de formation certifié Qualiopi &mdash; <a href="qualite.html">Qualité</a> &middot; <a href="mentions-legales.html">Mentions légales</a></p>
   </footer>
 
