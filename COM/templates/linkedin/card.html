@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<!-- Carte LinkedIn Cresceo, 1080x1080, charte "Ascension & precision".
+     Pilotée par query-string. Paramètres :
+       type   = stat | tips | news           (défaut stat)
+       kicker = accroche (ex. "Prévention · HSE")
+       title  = titre ; *mot* = surligné
+       hl     = vert | orange                 (couleur du surlignage, défaut vert)
+       sub    = ligne secondaire (orange)
+       source = petite source (gris)
+       STAT : num (ex. "87"), unit (ex. "%"), ring (0-100, défaut = num)
+       TIPS : t1, t2, t3
+       NEWS : m1, m2, m3 (lignes meta)
+     Ex. ?type=tips&kicker=Prévention · HSE&title=Chutes de *plain-pied*&t1=...&t2=...&t3=... -->
+<link rel="stylesheet" href="./fonts.css"><!-- Montserrat + Roboto embarqués (base64), rendu 100% hors-ligne -->
+<style>
+  :root{--bleu:#112331;--vert:#079b85;--orange:#f9a937;--blanc:#ffffff;--muted:rgba(255,255,255,.62);--accent:var(--vert);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1080px;}
+  .card{position:relative;width:1080px;height:1080px;overflow:hidden;
+    background:radial-gradient(1200px 700px at 72% 20%,rgba(7,155,133,.10),transparent 60%),var(--bleu);
+    font-family:'Roboto',sans-serif;color:var(--blanc);}
+  .grid{position:absolute;inset:0;
+    background-image:linear-gradient(rgba(7,155,133,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(7,155,133,.065) 1px,transparent 1px);
+    background-size:96px 96px;background-position:-1px -1px;
+    -webkit-mask-image:radial-gradient(1200px 1200px at 50% 45%,#000 55%,transparent 100%);
+            mask-image:radial-gradient(1200px 1200px at 50% 45%,#000 55%,transparent 100%);}
+  svg.deco{position:absolute;inset:0;width:1080px;height:1080px;}
+  .content{position:absolute;inset:0;padding:92px;display:flex;flex-direction:column;}
+  .eyebrow{display:flex;align-items:center;gap:16px;margin-top:58px;
+    font-family:'Montserrat',sans-serif;font-weight:700;font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--vert);}
+  .eyebrow .tick{width:46px;height:5px;background:var(--orange);border-radius:2px;}
+  .body{flex:1;display:flex;flex-direction:column;justify-content:center;}
+  .hl{color:var(--accent);}
+  .punch{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;color:var(--orange);margin-top:26px;}
+  .source{font-family:'Roboto',sans-serif;font-weight:400;font-size:22px;color:var(--muted);margin-top:22px;}
+  /* STAT */
+  .stat{display:flex;align-items:center;gap:40px;}
+  .stat .left{flex:1;max-width:560px;}
+  .stat .title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:58px;line-height:1.12;letter-spacing:-.5px;}
+  .ring{position:relative;width:360px;height:360px;flex:0 0 360px;}
+  .ring .num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'Montserrat',sans-serif;font-weight:800;font-size:106px;letter-spacing:-2px;}
+  /* TIPS */
+  .tips .title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:62px;line-height:1.1;letter-spacing:-.5px;margin-bottom:12px;}
+  .tips .intro{font-family:'Roboto',sans-serif;font-weight:400;font-size:26px;color:var(--muted);margin-bottom:40px;max-width:820px;}
+  .tips .rows{display:flex;flex-direction:column;gap:34px;}
+  .tips .row{display:flex;align-items:center;gap:30px;}
+  .tips .chip{flex:0 0 78px;width:78px;height:78px;background:var(--vert);display:flex;align-items:center;justify-content:center;
+    font-family:'Montserrat',sans-serif;font-weight:800;font-size:40px;color:var(--bleu);}
+  .tips .row:nth-child(2) .chip{background:var(--orange);}
+  .tips .txt{font-family:'Montserrat',sans-serif;font-weight:600;font-size:34px;line-height:1.25;max-width:800px;}
+  /* NEWS */
+  .news .title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:92px;line-height:1.02;letter-spacing:-1px;}
+  .news .meta{margin-top:40px;display:flex;flex-direction:column;gap:14px;
+    font-family:'Montserrat',sans-serif;font-weight:500;font-size:30px;color:#dbe4e6;}
+  /* FORMATION */
+  .form .title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:64px;line-height:1.08;letter-spacing:-.5px;}
+  .form .specs{list-style:none;margin-top:46px;display:flex;flex-direction:column;gap:28px;}
+  .form .specs li{position:relative;padding-left:52px;font-family:'Montserrat',sans-serif;font-weight:500;font-size:32px;line-height:1.22;max-width:880px;}
+  .form .specs li::before{content:"";position:absolute;left:0;top:13px;width:20px;height:20px;background:var(--orange);}
+  .form .cta{margin-top:50px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:30px;color:var(--vert);}
+  .footer{display:flex;align-items:center;justify-content:space-between;}
+  .footer img{height:52px;display:block;}
+  .footer .base{font-family:'Montserrat',sans-serif;font-weight:500;font-size:20px;color:var(--muted);letter-spacing:.02em;}
+  [hidden]{display:none!important;}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="grid"></div>
+    <svg class="deco" viewBox="0 0 1080 1080" fill="none">
+      <line x1="-70" y1="250" x2="170" y2="60" stroke="#079b85" stroke-width="30"/>
+      <line x1="-70" y1="202" x2="140" y2="34" stroke="#f9a937" stroke-width="13"/>
+      <line x1="1016" y1="1140" x2="1016" y2="792" stroke="#079b85" stroke-width="30"/>
+      <line x1="1052" y1="1140" x2="1052" y2="854" stroke="#f9a937" stroke-width="14"/>
+      <line x1="792" y1="1140" x2="1104" y2="828" stroke="#079b85" stroke-width="22" opacity=".85"/>
+      <path d="M1040 150 H940 M1040 150 V250" stroke="#079b85" stroke-width="3"/>
+      <path d="M1012 150 L1040 150 L1040 178 Z" fill="#f9a937"/>
+      <path d="M40 930 H140 M40 930 V830" stroke="#079b85" stroke-width="3"/>
+      <path d="M40 902 L40 930 L68 930 Z" fill="#f9a937"/>
+    </svg>
+
+    <div class="content">
+      <div class="eyebrow"><span class="tick"></span><span id="kicker">Prévention · HSE</span></div>
+
+      <div class="body">
+        <!-- STAT -->
+        <div class="stat" id="t-stat" hidden>
+          <div class="left">
+            <div class="title" id="s-title"></div>
+            <div class="punch" id="s-sub" hidden></div>
+            <div class="source" id="s-source" hidden></div>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 360 360" width="360" height="360">
+              <circle cx="180" cy="180" r="158" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="28"/>
+              <circle id="r-arc" cx="180" cy="180" r="158" fill="none" stroke="#079b85" stroke-width="28"
+                      stroke-linecap="round" transform="rotate(-90 180 180)"/>
+              <circle id="r-node" r="11" fill="#f9a937"/>
+            </svg>
+            <div class="num" id="s-num"></div>
+          </div>
+        </div>
+
+        <!-- TIPS -->
+        <div class="tips" id="t-tips" hidden>
+          <div class="title" id="p-title"></div>
+          <div class="intro" id="p-intro" hidden></div>
+          <div class="rows">
+            <div class="row"><div class="chip">1</div><div class="txt" id="p-t1"></div></div>
+            <div class="row"><div class="chip">2</div><div class="txt" id="p-t2"></div></div>
+            <div class="row"><div class="chip">3</div><div class="txt" id="p-t3"></div></div>
+          </div>
+        </div>
+
+        <!-- NEWS -->
+        <div class="news" id="t-news" hidden>
+          <div class="title" id="n-title"></div>
+          <div class="meta" id="n-meta"></div>
+          <div class="punch" id="n-sub" hidden></div>
+        </div>
+
+        <!-- FORMATION -->
+        <div class="form" id="t-form" hidden>
+          <div class="title" id="f-title"></div>
+          <div class="punch" id="f-sub" hidden></div>
+          <ul class="specs" id="f-specs"></ul>
+          <div class="cta" id="f-cta" hidden></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <img src="./cresceo-logo.png" alt="Cresceo">
+        <div class="base">La croissance par le savoir</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const q = new URLSearchParams(location.search);
+  const g = (k,d="") => q.get(k) ?? d;
+  const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const fmt = s => esc(s).replace(/\*(.+?)\*/g, '<span class="hl">$1</span>');
+  const show = id => { const e=document.getElementById(id); if(e) e.hidden=false; };
+  const setT = (id,val,html=false) => { const e=document.getElementById(id); if(!e||!val) return; e[html?'innerHTML':'textContent']=val; e.hidden=false; };
+
+  const type = (g("type","stat")).toLowerCase();
+  if (q.has("kicker")) document.getElementById("kicker").textContent = g("kicker");
+  document.documentElement.style.setProperty('--accent', g("hl","vert")==="orange" ? "#f9a937" : "#079b85");
+
+  if (type==="tips"){
+    show("t-tips");
+    setT("p-title", fmt(g("title","")), true);
+    setT("p-intro", g("intro",""));
+    setT("p-t1", g("t1","")); setT("p-t2", g("t2","")); setT("p-t3", g("t3",""));
+  } else if (type==="news"){
+    show("t-news");
+    setT("n-title", fmt(g("title","")), true);
+    const meta = ["m1","m2","m3"].map(k=>g(k,"")).filter(Boolean);
+    const mc = document.getElementById("n-meta");
+    mc.innerHTML = meta.map(m=>`<div>${esc(m)}</div>`).join("");
+    if(!meta.length) mc.hidden=true;
+    if (q.has("sub")) setT("n-sub", g("sub",""));
+  } else if (type==="formation"){
+    show("t-form");
+    setT("f-title", fmt(g("title","")), true);
+    if (q.has("sub")) setT("f-sub", g("sub",""));
+    const specs=["s1","s2","s3"].map(k=>g(k,"")).filter(Boolean);
+    const sc=document.getElementById("f-specs");
+    sc.innerHTML=specs.map(s=>`<li>${esc(s)}</li>`).join("");
+    if(!specs.length) sc.hidden=true;
+    if (q.has("cta")) setT("f-cta", g("cta",""));
+  } else {
+    show("t-stat");
+    setT("s-title", fmt(g("title","")), true);
+    document.getElementById("s-num").textContent = g("num","") + g("unit","%");
+    if (q.has("sub")) setT("s-sub", g("sub",""));
+    if (q.has("source")) setT("s-source", g("source",""));
+    const ring = parseFloat(g("ring", g("num","0")))||0;
+    const r=158, C=2*Math.PI*r, fill=Math.max(0,Math.min(100,ring))/100*C;
+    const arc=document.getElementById("r-arc"); arc.setAttribute("stroke-dasharray", fill+" "+C);
+    const ang=(-90+ring/100*360)*Math.PI/180;
+    const node=document.getElementById("r-node");
+    node.setAttribute("cx", 180+r*Math.cos(ang)); node.setAttribute("cy", 180+r*Math.sin(ang));
+  }
+  document.documentElement.dataset.ready="1";
+</script>
+</body>
+</html>

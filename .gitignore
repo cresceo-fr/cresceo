@@ -19,6 +19,9 @@ WhatsApp/
 !assets/*.jpg
 !assets/*.webp
 !assets/ia/*.jpg
+
+# Exception : assets du système de visuels LinkedIn (template HTML)
+!COM/templates/linkedin/*.png
 !assets/ia/*.webp
 !assets/ia-prod/*.jpg
 !assets/ia-prod/*.webp
@@ -40,3 +43,6 @@ CLAUDE.md
 # Fichiers temporaires
 .DS_Store
 Thumbs.db
+
+# Clone du repo public cresceo-site (site cresceo.fr)
+site/
