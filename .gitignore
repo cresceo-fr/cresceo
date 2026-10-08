@@ -19,6 +19,7 @@ WhatsApp/
 !assets/*.jpg
 !assets/*.webp
 !assets/ia/*.jpg
+!assets/signature/*.png
 
 # Exception : assets du système de visuels LinkedIn (template HTML)
 !COM/templates/linkedin/*.png
