@@ -11,6 +11,16 @@ Cresceo SAS, 58 rue de Monceau, 75008 Paris. SIREN 103 298 188. Numéro de décl
 - [Piloter la Productivité avec l'IA](https://cresceo.fr/formations.html#lean): parcours Lean Construction de 4 semaines (4 x 1 h, distanciel) pour détecter gaspillages et temps morts et piloter la production par la donnée. À partir de 400 € HT par participant.
 - [Accompagnement personnalisé](https://cresceo.fr/formations.html#coaching): coaching prévention ou productivité après la formation.
 
+## Pages thématiques
+
+- [Formation IA BTP](https://cresceo.fr/formation-ia-btp.html): page de référence, formations IA certifiées Qualiopi pour le BTP et critères pour choisir.
+- [Formation prévention des risques chantier avec l'IA](https://cresceo.fr/formation-prevention-risques-chantier-ia.html): Regard Sécurité et Piloter la Prévention.
+- [Formation Lean Construction avec l'IA](https://cresceo.fr/formation-lean-construction-ia.html): Piloter la Productivité avec l'IA.
+- [DUERP BTP](https://cresceo.fr/formation-duerp-btp.html): obligations du Code du travail et formation de l'encadrement.
+- [Accueil sécurité chantier externalisé](https://cresceo.fr/accueil-securite-chantier.html): à partir de 75 € HT par accueil (minimum 20).
+- [Financer une formation BTP avec Constructys](https://cresceo.fr/financement-formation-btp-constructys.html): démarches OPCO et FAF.
+- [Formation IA BTP pour les grandes entreprises](https://cresceo.fr/formation-ia-btp-grandes-entreprises.html): déploiement intra-entreprise sur devis.
+
 ## Qualité et financement
 
 - [Certification Qualiopi et indicateurs](https://cresceo.fr/qualite.html): indicateurs de performance (100 % de satisfaction, 9,6/10 de recommandation sur 8 sessions), modalités d'évaluation, accessibilité, RGPD.

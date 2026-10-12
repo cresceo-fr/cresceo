@@ -7,9 +7,9 @@
 
 | # | Requête | Intention | Page cible (actuelle → Phase 2) | Priorité |
 |---|---|---|---|---|
-| 1 | formation IA BTP | achat | home → `/formation-ia-btp` | P1 |
-| 2 | formation qualiopi IA BTP | achat | home → `/formation-ia-btp` | P1 |
-| 3 | formation intelligence artificielle BTP | achat | home → `/formation-ia-btp` | P1 |
+| 1 | formation IA BTP | achat | `/formation-ia-btp.html` | P1 |
+| 2 | formation qualiopi IA BTP | achat | `/formation-ia-btp.html` | P1 |
+| 3 | formation intelligence artificielle BTP | achat | `/formation-ia-btp.html` | P1 |
 | 4 | formation détection risques chantier | achat | formations.html#regard-securite → `/formation-prevention-risques-chantier-ia` | P1 |
 | 5 | formation prévention risques BTP | achat | formations.html#prevention → `/formation-prevention-risques-chantier-ia` | P1 |
 | 6 | formation sécurité chantier | achat | formations.html → `/formation-prevention-risques-chantier-ia` | P2 |
@@ -39,3 +39,4 @@
 ## Journal des actions
 
 - **12/10/2026, Phase 1** : schema.org unifié (Organization, Person, Course, FAQPage, BreadcrumbList), FAQ visible sur la home, titres et H2 orientés intentions, correction "Igor Canonne" sur la home, `llms.txt`, robots.txt ouvert aux bots IA, sitemap à jour, og:image, CSS de la home externalisé. Générateur du JSON-LD : `COM/scripts/seo_schema.py`.
+- **12/10/2026, Phase 2** : 7 pages par intention en ligne (formation-ia-btp, prévention risques chantier, Lean Construction, DUERP BTP en guide, accueil sécurité, financement Constructys, grandes entreprises sur devis). Maillage depuis home, formations.html et pied de page. Générateur : `COM/scripts/build_pages.py` (modifier le contenu dans le script puis relancer `python COM/scripts/build_pages.py site`).
