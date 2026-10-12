@@ -1,0 +1,29 @@
+# Cresceo
+
+> Cresceo est un organisme de formation français certifié Qualiopi (certificat n° 875611-1, Certifopac, valable du 07/09/2026 au 06/09/2029) spécialisé dans les formations IA pour le BTP et l'Industrie : détection des risques chantier par IA, prévention HSE et Lean Construction. Formations dès 400 € par participant, finançables par l'OPCO Constructys (BTP) ou le FAF (indépendants).
+
+Cresceo SAS, 58 rue de Monceau, 75008 Paris. SIREN 103 298 188. Numéro de déclaration d'activité : 11757694675. Contact : contact@cresceo.fr. Finaliste des Trophées de l'Innovation du WinLab' CCCA-BTP (BATIMAT 2026). Partenaire technologique : CAD.42 (solution d'analyse vidéo IA des chantiers).
+
+## Formations
+
+- [Regard Sécurité](https://cresceo.fr/formations.html#regard-securite): formation de 7 h (hybride : 4 h distanciel + 3 h terrain) pour identifier les situations à risque sur chantier (coactivité engins-piétons, chutes, TMS) grâce à l'analyse vidéo par IA. 400 € par participant, sans prérequis. Public : conducteurs de travaux, chefs de chantier, préventeurs HSE.
+- [Piloter la Prévention avec l'IA](https://cresceo.fr/formations.html#prevention): parcours de 4 semaines (4 x 1 h, hybride) pour piloter les indicateurs sécurité et animer la prévention avec des preuves visuelles. À partir de 400 € HT par participant.
+- [Piloter la Productivité avec l'IA](https://cresceo.fr/formations.html#lean): parcours Lean Construction de 4 semaines (4 x 1 h, distanciel) pour détecter gaspillages et temps morts et piloter la production par la donnée. À partir de 400 € HT par participant.
+- [Accompagnement personnalisé](https://cresceo.fr/formations.html#coaching): coaching prévention ou productivité après la formation.
+
+## Qualité et financement
+
+- [Certification Qualiopi et indicateurs](https://cresceo.fr/qualite.html): indicateurs de performance (100 % de satisfaction, 9,6/10 de recommandation sur 8 sessions), modalités d'évaluation, accessibilité, RGPD.
+- Financement : prise en charge possible par l'OPCO Constructys pour les entreprises du BTP, ou par le FAF pour les indépendants, jusqu'à 100 % selon la situation.
+
+## Équipe
+
+- Igor Canonne, Président, expert HSE et Intelligence Artificielle, plus de 15 ans en prévention et sécurité BTP.
+- Julien Gardette, expert Lean Construction et BTP.
+
+## Optional
+
+- [Accueil et devis](https://cresceo.fr/#contact)
+- [Page LinkedIn Cresceo](https://www.linkedin.com/company/cresceo/)
+- [Questions fréquentes](https://cresceo.fr/#faq)
+- [Mentions légales](https://cresceo.fr/mentions-legales.html)
