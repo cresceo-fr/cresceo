@@ -5,19 +5,19 @@
 
 ## Mots-clés cibles
 
-| # | Requête | Intention | Page cible (actuelle → Phase 2) | Priorité |
+| # | Requête | Intention | Page cible | Priorité |
 |---|---|---|---|---|
 | 1 | formation IA BTP | achat | `/formation-ia-btp.html` | P1 |
 | 2 | formation qualiopi IA BTP | achat | `/formation-ia-btp.html` | P1 |
 | 3 | formation intelligence artificielle BTP | achat | `/formation-ia-btp.html` | P1 |
-| 4 | formation détection risques chantier | achat | formations.html#regard-securite → `/formation-prevention-risques-chantier-ia` | P1 |
-| 5 | formation prévention risques BTP | achat | formations.html#prevention → `/formation-prevention-risques-chantier-ia` | P1 |
-| 6 | formation sécurité chantier | achat | formations.html → `/formation-prevention-risques-chantier-ia` | P2 |
-| 7 | formation lean construction | achat | formations.html#lean → `/formation-lean-construction-ia` | P1 |
-| 8 | formation lean management BTP | achat | formations.html#lean → `/formation-lean-construction-ia` | P2 |
-| 9 | formation DUERP BTP | achat / info | home → `/formation-duerp-btp` | P2 |
-| 10 | accueil sécurité chantier externalisé | achat | home → `/accueil-securite-chantier` | P2 |
-| 11 | financement formation BTP Constructys | info / achat | formations.html → `/financement-formation-btp-constructys` | P1 |
+| 4 | formation détection risques chantier | achat | `/formation-prevention-risques-chantier-ia.html` | P1 |
+| 5 | formation prévention risques BTP | achat | `/formation-prevention-risques-chantier-ia.html` | P1 |
+| 6 | formation sécurité chantier | achat | `/formation-prevention-risques-chantier-ia.html` | P2 |
+| 7 | formation lean construction | achat | `/formation-lean-construction-ia.html` | P1 |
+| 8 | formation lean management BTP | achat | `/formation-lean-construction-ia.html` | P2 |
+| 9 | formation DUERP BTP | achat / info | `/formation-duerp-btp.html` | P2 |
+| 10 | accueil sécurité chantier externalisé | achat | `/accueil-securite-chantier.html` | P2 |
+| 11 | financement formation BTP Constructys | info / achat | `/financement-formation-btp-constructys.html` | P1 |
 | 12 | formation conducteur de travaux IA | achat | à créer (page persona) | P3 |
 | 13 | IA chantier sécurité | info | blog (cluster IA x BTP) | P2 |
 | 14 | productivité chantier IA | info | blog (cluster Lean) | P3 |
