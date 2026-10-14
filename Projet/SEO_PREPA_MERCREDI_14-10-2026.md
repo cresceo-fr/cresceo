@@ -107,6 +107,25 @@ Modèle de demande (ton à ajuster selon le contact) :
 
 **Pour publier un article** : passer `status: draft` à `status: published` dans le fichier Markdown, lancer `python COM/scripts/build_blog.py site`, puis commit et push dans `site/`. Au premier article publié, ajouter « Blog » dans la navigation (home et formations.html). Aperçu local des brouillons : `python COM/scripts/build_blog.py site --drafts`, sans commiter le dossier `site/blog/` ainsi généré.
 
+### Mise à jour du 14/10 après-midi
+
+- **Blog en ligne** : https://cresceo.fr/blog/ avec les articles 1 et 2. « Blog » est dans le menu. Les pages formation affichent les articles liés (section « Sur le blog »).
+- **Articles 3 à 10 en brouillon** dans `COM/blog/` (`status: draft`), de 950 à 1 080 mots, chiffres vérifiés sur INRS, Assurance Maladie, Légifrance, McKinsey, Batiweb, AQC et FFB. Le site de l'OPPBTP était inaccessible : ses chiffres non confirmés ont été écartés.
+
+| Article | Signataire | Points à valider par le signataire |
+|---|---|---|
+| Accueil sécurité des nouveaux arrivants | Igor | Les 7 étapes (synthèse, pas un référentiel officiel), chiffre INRS de 2018, positionnement de Regard Sécurité |
+| Coactivité sur chantier | Igor | Lecture « PPSPS générique » (R4532-64 et 65) |
+| Chutes de hauteur | Igor | Hiérarchie de prévention en 4 étapes, exemples de chantier |
+| Chutes de plain-pied | Igor | Chiffres tous secteurs (pas de chiffre BTP propre), phrase sur le Lean |
+| TMS dans le BTP | Igor | Source Santé publique France, rattachement « Même pas mal BTP » |
+| Lean Construction et prévention | Julien | Données OPPBTP de 2021, répartition des accidents de 2017 |
+| Coût des reprises | Julien | Enquête PlanRadar 2023 (déclarative, éditeur) |
+| Retards de chantier | Julien | Chiffres McKinsey de 2015 et 2017 (mégaprojets mondiaux) ; durée de la formation Productivité (un fichier interne évoque un passage à 1 jour) |
+
+- **Calendrier de publication proposé** (2 articles par semaine, un par pilier, une fois validés) : 20/10 accueil sécurité + Lean et prévention ; 27/10 chutes de hauteur + coût des reprises ; 03/11 coactivité + retards de chantier ; 10/11 TMS + chutes de plain-pied.
+- **Posts LinkedIn déjà publiés à corriger si republiés** : W31 (62 % devient 61 %, 45 % et 29 % non sourcés, visuel inclus), W30 (44 % non retrouvé), W41 (15 % est un chiffre tous secteurs, pas BTP).
+
 ## 6. Mesure
 
 1er relevé complet prévu le **lundi 02/11/2026** (protocole dans [SEO_MOTS_CLES.md](SEO_MOTS_CLES.md)) : premières impressions sur les 7 nouvelles pages attendues d'ici là. Le classement sur « formation qualiopi IA BTP » dépend surtout des liens entrants et prendra 2 à 4 mois.
