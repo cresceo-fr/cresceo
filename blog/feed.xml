@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog Cresceo</title>
+    <link>https://cresceo.fr/blog/</link>
+    <description>Prévention des risques, Lean Construction et IA sur chantier.</description>
+    <language>fr-FR</language>
+    <item>
+      <title>Budget formation 2026 : comment ne pas laisser filer le financement OPCO avant la fin de l&#x27;année</title>
+      <link>https://cresceo.fr/blog/budget-formation-opco-fin-annee.html</link>
+      <guid>https://cresceo.fr/blog/budget-formation-opco-fin-annee.html</guid>
+      <pubDate>Wed, 14 Oct 2026 08:00:00 +0200</pubDate>
+      <description>Enveloppe en baisse, plafonds Constructys revus en juin 2026, demande 15 jours avant : le calendrier et les 5 réflexes pour engager votre budget formation avant le 31 décembre.</description>
+    </item>
+    <item>
+      <title>IA sur chantier : ce qu&#x27;elle détecte vraiment, et ce qu&#x27;elle ne remplace pas</title>
+      <link>https://cresceo.fr/blog/ia-chantier-detection-risques.html</link>
+      <guid>https://cresceo.fr/blog/ia-chantier-detection-risques.html</guid>
+      <pubDate>Wed, 14 Oct 2026 08:00:00 +0200</pubDate>
+      <description>Coactivité engins-piétons, chutes, TMS : ce que l&#x27;analyse vidéo par IA repère sur un chantier, pourquoi l&#x27;œil humain les rate, et ce qui reste du ressort de l&#x27;encadrement.</description>
+    </item>
+  </channel>
+</rss>

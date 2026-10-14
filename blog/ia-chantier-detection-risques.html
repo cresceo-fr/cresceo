@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA et sécurité chantier : ce que l&#x27;IA détecte, ses limites | Cresceo</title>
+  <meta name="description" content="Coactivité engins-piétons, chutes, TMS : ce que l&#x27;analyse vidéo par IA repère sur un chantier, pourquoi l&#x27;œil humain les rate, et ce qui reste du ressort de l&#x27;encadrement.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://cresceo.fr/blog/ia-chantier-detection-risques.html">
+
+  <meta property="og:title" content="IA et sécurité chantier : ce que l&#x27;IA détecte, ses limites | Cresceo">
+  <meta property="og:description" content="Coactivité engins-piétons, chutes, TMS : ce que l&#x27;analyse vidéo par IA repère sur un chantier, pourquoi l&#x27;œil humain les rate, et ce qui reste du ressort de l&#x27;encadrement.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cresceo.fr/blog/ia-chantier-detection-risques.html">
+  <meta property="og:image" content="https://cresceo.fr/assets/logo.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Cresceo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IA et sécurité chantier : ce que l&#x27;IA détecte, ses limites | Cresceo">
+  <meta name="twitter:description" content="Coactivité engins-piétons, chutes, TMS : ce que l&#x27;analyse vidéo par IA repère sur un chantier, pourquoi l&#x27;œil humain les rate, et ce qui reste du ressort de l&#x27;encadrement.">
+  <meta name="twitter:image" content="https://cresceo.fr/assets/logo.png">
+
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Blog Cresceo" href="https://cresceo.fr/blog/feed.xml">
+
+  <!-- GA4 (chargé uniquement après consentement) -->
+  <script>
+    window.gaLoaded = false;
+    function loadGA4() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7BZC8Y1G2Q';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7BZC8Y1G2Q');
+    }
+    if (localStorage.getItem('cresceo_consent') === 'accepted') { loadGA4(); }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/cresceo.css">
+  <link rel="stylesheet" href="/assets/css/formations.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://cresceo.fr/blog/ia-chantier-detection-risques.html#article",
+        "url": "https://cresceo.fr/blog/ia-chantier-detection-risques.html",
+        "mainEntityOfPage": "https://cresceo.fr/blog/ia-chantier-detection-risques.html",
+        "headline": "IA sur chantier : ce qu'elle détecte vraiment, et ce qu'elle ne remplace pas",
+        "description": "Coactivité engins-piétons, chutes, TMS : ce que l'analyse vidéo par IA repère sur un chantier, pourquoi l'œil humain les rate, et ce qui reste du ressort de l'encadrement.",
+        "inLanguage": "fr-FR",
+        "datePublished": "2026-10-14",
+        "dateModified": "2026-10-14",
+        "author": {
+          "@type": "Person",
+          "@id": "https://cresceo.fr/#igor-canonne",
+          "name": "Igor Canonne"
+        },
+        "publisher": {
+          "@id": "https://cresceo.fr/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://cresceo.fr/blog/#blog"
+        },
+        "image": "https://cresceo.fr/assets/logo.png",
+        "keywords": "IA chantier sécurité",
+        "citation": [
+          "https://cresceo.fr/formations.html#regard-securite",
+          "https://www.cnil.fr/fr/la-videosurveillance-videoprotection-au-travail",
+          "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178066/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://cresceo.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://cresceo.fr/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IA sur chantier : ce qu'elle détecte vraiment, et ce qu'elle ne remplace pas",
+            "item": "https://cresceo.fr/blog/ia-chantier-detection-risques.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/assets/icon.png" alt="Cresceo" width="44" height="44">
+        <span class="nav-logo-text">Cresceo</span>
+      </a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#formations">Formations</a></li>
+        <li><a href="/qualite.html">Qualité</a></li>
+        <li><a href="/#experts">Experts</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact" class="nav-cta">Obtenir un devis</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="/">Accueil</a> <span>/</span> <a href="/blog/">Blog</a> <span>/</span> <span style="color: rgba(255,255,255,0.7);">Article</span>
+    </div>
+    <h1>IA sur chantier : ce qu&#x27;elle détecte vraiment, et ce qu&#x27;elle ne remplace pas</h1>
+    <p class="post-meta">Par <strong>Igor Canonne</strong>, Président, expert HSE et Intelligence Artificielle &middot; publié le 14 octobre 2026</p>
+  </header>
+
+  <main class="page-content">
+    <section class="answer-box" aria-label="En bref">
+      <p class="answer-lead">L&#x27;analyse vidéo par intelligence artificielle repère sur une visite de chantier filmée au smartphone des situations à risque que l&#x27;habitude rend invisibles : coactivité entre engins et piétons, risques de chute, postures à l&#x27;origine de TMS. Elle ne remplace ni l&#x27;évaluation des risques, ni le jugement de l&#x27;encadrant, ni le dialogue avec les équipes : elle leur donne une base factuelle et visuelle. Utilisée en formation, elle multiplie par 3 la capacité de détection des risques des encadrants.</p>
+    </section>
+
+    <article class="content-body">
+<h2>Comment fonctionne la détection des risques par IA sur un chantier ?</h2>
+<p>Le principe est simple. Un encadrant filme une visite de chantier avec son smartphone, comme il ferait un tour de contrôle. La vidéo est déposée sur une plateforme sécurisée, où un modèle d'intelligence artificielle l'analyse image par image. Il en ressort un rapport visuel : chaque situation à risque détectée est illustrée par une capture et classée par type de risque.</p>
+<p>Pas besoin d'installer de caméras fixes ni de capteurs : c'est une analyse ponctuelle d'une visite, pas une surveillance continue. Les rapports sont factuels et visuels, ce qui les rend lisibles par tous, du conducteur de travaux au compagnon.</p>
+<h2>Quels risques l'IA repère-t-elle ?</h2>
+<div class="table-wrap"><table class="cr-programme-table">
+<thead>
+<tr>
+<th>Famille de risque</th>
+<th>Ce que l'analyse fait ressortir</th>
+<th>Pourquoi l'œil humain le rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coactivité engins-piétons</td>
+<td>Piétons dans le rayon d'action d'un engin, croisements de flux</td>
+<td>La situation dure quelques secondes et se répète tous les jours</td>
+</tr>
+<tr>
+<td>Chutes</td>
+<td>Situations de travail exposées au vide, protections absentes ou déplacées</td>
+<td>Une protection retirée « pour 5 minutes » finit par faire partie du décor</td>
+</tr>
+<tr>
+<td>TMS</td>
+<td>Postures contraignantes, gestes répétés, port de charges</td>
+<td>La pénibilité ne se voit pas sur un instant, elle se voit sur la durée</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ces 3 familles sont au cœur de la formation Regard Sécurité. Elles ont un point commun : ce sont des risques que l'on connaît tous, mais que l'on ne voit plus.</p>
+<h2>Pourquoi l'encadrement ne voit-il plus certains risques ?</h2>
+<p>Après quelques semaines sur un même chantier, le cerveau filtre. C'est l'effet tunnel, un biais cognitif bien documenté : notre attention se concentre sur l'objectif (l'avancement, le planning, la qualité) et laisse de côté ce qui paraît habituel. Le danger n'a pas disparu, il est devenu normal.</p>
+<p>L'IA ne s'habitue pas. Elle regarde la 100e visite avec le même œil que la première. C'est ce qui en fait un outil d'entraînement : en comparant ce qu'il a vu et ce que l'IA a vu, l'encadrant recalibre son propre regard. C'est le cœur de notre approche : la formation ne vise pas à déléguer la vigilance à une machine, mais à rendre l'encadrant plus vigilant.</p>
+<h2>Ce que l'IA ne remplace pas</h2>
+<ul>
+<li><strong>L'évaluation des risques.</strong> Elle reste une obligation de l'employeur (Code du travail, article L4121-3) et se transcrit dans le document unique. L'IA fournit des observations, pas une évaluation.</li>
+<li><strong>Le contexte.</strong> L'IA voit une image, pas le planning, le mode opératoire ou le PPSPS. Une situation repérée peut être maîtrisée par une mesure que la vidéo ne montre pas. L'interprétation reste humaine.</li>
+<li><strong>Ce qui n'est pas filmé.</strong> L'analyse porte sur ce que la caméra a vu : le parcours de la visite compte autant que l'outil.</li>
+<li><strong>Le dialogue avec les équipes.</strong> Un rapport ne change pas un comportement. Ce qui le change, c'est une causerie ou un quart d'heure sécurité bien animé, à partir d'images concrètes de son propre chantier.</li>
+<li><strong>La coordination.</strong> Sur un chantier à plusieurs entreprises, la prévention de la coactivité passe d'abord par la coordination SPS et les plans de prévention.</li>
+</ul>
+<h2>Comment l'introduire sans braquer les équipes ?</h2>
+<p>Filmer un chantier, c'est filmer des personnes. Quelques règles simples font la différence :</p>
+<ol>
+<li><strong>Une finalité claire et annoncée</strong> : la prévention, pas le contrôle individuel ni la sanction.</li>
+<li><strong>Des captations ponctuelles</strong> lors de visites, et non une surveillance continue des postes de travail, que la CNIL encadre strictement.</li>
+<li><strong>Des équipes informées</strong> en amont, et les représentants du personnel associés lorsqu'il y en a.</li>
+<li><strong>Des personnes floutées</strong> dans les rapports, et des vidéos stockées sur une plateforme sécurisée.</li>
+<li><strong>Une restitution collective</strong> : les images servent à animer la prévention, pas à désigner des fautifs.</li>
+</ol>
+<p>C'est aussi un changement de posture managériale : passer d'une prévention par la sanction à une prévention par le coaching, appuyée sur des faits que chacun peut voir.</p>
+<h2>Ce que change une formation</h2>
+<p>Utilisée seule, l'IA produit des rapports. Utilisée en formation, elle développe une compétence. Dans Regard Sécurité, l'encadrant suit 3 séquences en une journée : les fondamentaux (biais cognitifs, fonctionnement de l'IA, cadre RGPD), une mission terrain sur son propre chantier, puis un débriefing avec un expert HSE. Résultat mesuré sur nos sessions : une capacité de détection des risques multipliée par 3.</p>
+
+      <aside class="cresceo-box">
+        <p class="cresceo-box__title">Ce que propose Cresceo</p>
+        <p>Regard Sécurité (7 heures, 400 € par participant, sans prérequis) : vos encadrants filment une visite de leur chantier, l&#x27;IA l&#x27;analyse, puis un expert HSE débriefe « vision humaine contre vision IA ». Formation certifiée Qualiopi.</p>
+        <a href="/formation-prevention-risques-chantier-ia.html" class="btn btn-primary">Prévention des risques chantier</a>
+      </aside>
+
+      <section class="post-sources">
+        <h2>Sources</h2>
+        <ul>
+        <li><a href="https://cresceo.fr/formations.html#regard-securite" rel="noopener" target="_blank">Cresceo, programme de la formation Regard Sécurité (PROG-RS-001)</a></li>
+        <li><a href="https://www.cnil.fr/fr/la-videosurveillance-videoprotection-au-travail" rel="noopener" target="_blank">CNIL, la vidéosurveillance et vidéoprotection au travail</a></li>
+        <li><a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178066/" rel="noopener" target="_blank">Code du travail, article L4121-3 (évaluation des risques), Légifrance</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <nav class="related" aria-label="Pages liées">
+      <h2>À lire aussi</h2>
+      <div class="related-grid">
+      <a class="related-card" href="/formation-prevention-risques-chantier-ia.html"><span>Prévention des risques chantier</span><small>Apprendre à voir les risques que l&#x27;habitude rend invisibles, puis piloter la prévention par la donnée.</small></a>
+      <a class="related-card" href="/formation-ia-btp.html"><span>Formation IA BTP</span><small>Former l&#x27;encadrement de chantier à utiliser l&#x27;intelligence artificielle pour la prévention et la productivité.</small></a>
+      <a class="related-card" href="/formation-duerp-btp.html"><span>DUERP BTP</span><small>Ce que dit le Code du travail, et comment des observations terrain fiables alimentent votre document unique.</small></a>
+      <a class="related-card" href="/formation-lean-construction-ia.html"><span>Lean Construction</span><small>Mesurer la réalité du chantier pour réduire les gaspillages et piloter la production par la donnée.</small></a>
+      </div>
+    </nav>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
+    <!-- Marque Qualiopi conforme Certifopac (kit officiel AFC). Hauteur ≥160px (taille minimale charte). -->
+    <a href="/qualite.html" style="display:inline-block;text-decoration:none;background:var(--blanc);padding:0.8rem 1rem;border-radius:6px;">
+      <picture>
+        <source srcset="/assets/qualiopi-officiel.webp" type="image/webp">
+        <img src="/assets/qualiopi-officiel.png" alt="Qualiopi processus certifié — délivrée par Certifopac. La certification qualité a été délivrée au titre de la catégorie d'action suivante : Actions de formation." style="display:block;height:160px;width:auto;">
+      </picture>
+    </a>
+    <p>&copy; 2026 Cresceo SAS &mdash; Organisme de formation certifié Qualiopi &mdash; <a href="/qualite.html">Qualité</a> &middot; <a href="/mentions-legales.html">Mentions légales</a></p>
+    <p style="font-size:0.78rem;opacity:0.75;margin-top:-0.5rem;">Enregistré sous le numéro 11757694675. Cet enregistrement ne vaut pas agrément de l'État.</p>
+    <p class="footer-seo-links"><a href="/formation-ia-btp.html">Formation IA BTP</a> &middot; <a href="/formation-prevention-risques-chantier-ia.html">Prévention des risques chantier</a> &middot; <a href="/formation-lean-construction-ia.html">Lean Construction</a> &middot; <a href="/formation-duerp-btp.html">DUERP BTP</a> &middot; <a href="/accueil-securite-chantier.html">Accueil sécurité chantier</a> &middot; <a href="/financement-formation-btp-constructys.html">Financement Constructys</a> &middot; <a href="/formation-ia-btp-grandes-entreprises.html">Grandes entreprises</a></p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

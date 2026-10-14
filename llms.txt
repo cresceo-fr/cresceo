@@ -26,6 +26,12 @@ Cresceo SAS, 58 rue de Monceau, 75008 Paris. SIREN 103 298 188. Numéro de décl
 - [Certification Qualiopi et indicateurs](https://cresceo.fr/qualite.html): indicateurs de performance (100 % de satisfaction, 9,6/10 de recommandation sur 8 sessions), modalités d'évaluation, accessibilité, RGPD.
 - Financement : prise en charge possible par l'OPCO Constructys pour les entreprises du BTP, ou par le FAF pour les indépendants, dans la limite de leurs plafonds (Constructys Bâtiment, juin 2026 : 24 € HT par heure et par stagiaire pour les entreprises de moins de 11 salariés, 19 € HT de 11 à 49 salariés). Demande à déposer au moins 15 jours avant la formation.
 
+## Blog
+
+- [Tous les articles](https://cresceo.fr/blog/)
+- [Budget formation 2026 : comment ne pas laisser filer le financement OPCO avant la fin de l'année](https://cresceo.fr/blog/budget-formation-opco-fin-annee.html): Enveloppe en baisse, plafonds Constructys revus en juin 2026, demande 15 jours avant : le calendrier et les 5 réflexes pour engager votre budget formation avant le 31 décembre.
+- [IA sur chantier : ce qu'elle détecte vraiment, et ce qu'elle ne remplace pas](https://cresceo.fr/blog/ia-chantier-detection-risques.html): Coactivité engins-piétons, chutes, TMS : ce que l'analyse vidéo par IA repère sur un chantier, pourquoi l'œil humain les rate, et ce qui reste du ressort de l'encadrement.
+
 ## Équipe
 
 - Igor Canonne, Président, expert HSE et Intelligence Artificielle, plus de 15 ans en prévention et sécurité BTP.
