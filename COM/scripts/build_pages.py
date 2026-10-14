@@ -521,7 +521,39 @@ def jsonld(page):
     return "\n".join("  " + l for l in body.split("\n"))
 
 
-def render(page, nav_html, footer_html):
+def published_posts_by_page():
+    """Map intent-page slug -> published blog posts linking to it (cta or related), newest first."""
+    import yaml
+
+    by_page = {}
+    for f in sorted((Path(__file__).resolve().parents[1] / "blog").glob("*.md"), reverse=True):
+        meta = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1])
+        if meta.get("status") != "published":
+            continue
+        for slug in {meta["cta"], *meta.get("related", [])}:
+            by_page.setdefault(slug, []).append(meta)
+    return by_page
+
+
+def blog_section(posts):
+    if not posts:
+        return ""
+    cards = "\n".join(
+        f'      <a class="related-card" href="/blog/{p["slug"]}.html"><span>{esc(p["title"])}</span>'
+        f'<small>{esc(p["description"])}</small></a>'
+        for p in posts[:4]
+    )
+    return f"""
+    <nav class="related" aria-label="Articles du blog">
+      <h2>Sur le blog</h2>
+      <div class="related-grid">
+{cards}
+      </div>
+    </nav>
+"""
+
+
+def render(page, nav_html, footer_html, posts=()):
     url = f"{SITE}/{page['slug']}.html"
     facts = "\n".join(
         f'        <div class="fiche-meta-item"><span class="fiche-meta-label">{esc(k)}</span>'
@@ -615,7 +647,7 @@ def render(page, nav_html, footer_html):
 {related}
       </div>
     </nav>
-  </main>
+{blog_section(posts)}  </main>
 
   <section class="cta-section">
     <h2>Un projet de formation ?</h2>
@@ -640,9 +672,10 @@ def main(site_dir):
     # Inject the SEO link row into the footer (idempotent: only if not already present in template)
     if "footer-seo-links" not in footer_html:
         footer_html = footer_html.replace("  </footer>", footer_links_html() + "  </footer>", 1)
+    posts = published_posts_by_page()
     for page in PAGES:
         out = site / f"{page['slug']}.html"
-        out.write_text(render(page, nav_html, footer_html), encoding="utf-8")
+        out.write_text(render(page, nav_html, footer_html, posts.get(page["slug"], [])), encoding="utf-8")
         print("wrote", out.name)
 
 
