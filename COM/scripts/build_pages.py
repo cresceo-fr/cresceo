@@ -99,7 +99,7 @@ PAGES = [
 </ol>
 
 <h2>Certification Qualiopi et financement</h2>
-<p>Cresceo est certifié Qualiopi (certificat n° 875611-1, Certifopac) et enregistré sous le numéro de déclaration d'activité 11757694675. Nos formations peuvent être prises en charge par l'OPCO Constructys pour les entreprises du BTP, ou par un FAF pour les dirigeants non salariés, jusqu'à 100 % selon votre situation. Détails et démarches : <a href="financement-formation-btp-constructys.html">financer une formation BTP avec Constructys</a>. Indicateurs de résultats : <a href="qualite.html">qualité et certification</a>.</p>
+<p>Cresceo est certifié Qualiopi (certificat n° 875611-1, Certifopac) et enregistré sous le numéro de déclaration d'activité 11757694675. Nos formations peuvent être prises en charge par l'OPCO Constructys pour les entreprises du BTP, ou par un FAF pour les dirigeants non salariés, dans la limite des plafonds de votre financeur. Plafonds, démarches et délais : <a href="financement-formation-btp-constructys.html">financer une formation BTP avec Constructys</a>. Indicateurs de résultats : <a href="qualite.html">qualité et certification</a>.</p>
 """,
         "faq": [
             ("Faut-il des compétences en informatique pour suivre une formation IA BTP ?",
@@ -107,7 +107,7 @@ PAGES = [
             ("Où se déroulent les formations ?",
              "Partout en France : la partie théorique se fait en classe virtuelle et la mise en pratique sur vos propres chantiers."),
             ("Les formations IA de Cresceo sont-elles finançables ?",
-             "Oui. Cresceo étant certifié Qualiopi, ses formations sont éligibles à une prise en charge par l'OPCO de l'entreprise (Constructys pour le BTP) ou par un FAF pour les dirigeants non salariés, jusqu'à 100 % selon la situation."),
+             "Oui. Cresceo étant certifié Qualiopi, ses formations sont éligibles à une prise en charge par l'OPCO de l'entreprise (Constructys pour le BTP) ou par un FAF pour les dirigeants non salariés, dans la limite des plafonds de votre financeur (par exemple 24 € HT de l'heure pour les entreprises du Bâtiment de moins de 11 salariés chez Constructys)."),
             ("Quelle formation choisir pour commencer ?",
              "Regard Sécurité (7 h, sans prérequis) est la porte d'entrée : elle montre en une journée ce que l'IA voit sur un chantier. Les parcours Piloter la Prévention et Piloter la Productivité s'adressent ensuite aux encadrants responsables d'un chantier actif."),
         ],
@@ -341,15 +341,16 @@ PAGES = [
         "slug": "financement-formation-btp-constructys",
         "nav": "Financement Constructys",
         "title": "Financer une formation BTP avec Constructys (OPCO) | Cresceo",
-        "description": "Comment faire financer une formation BTP par l'OPCO Constructys ou un FAF : démarches, documents, délais. Formations IA BTP certifiées Qualiopi, prise en charge jusqu'à 100 %.",
+        "description": "Comment faire financer une formation BTP par l'OPCO Constructys ou un FAF : plafonds 2026, délai de 15 jours, démarches eGestion, documents. Formations IA BTP certifiées Qualiopi.",
         "h1": "Financer une formation BTP avec l'OPCO Constructys",
         "subtitle": "Démarches, documents et bons réflexes pour faire prendre en charge vos formations.",
         "lead": ("Les entreprises du BTP peuvent faire financer leurs formations par Constructys, l'opérateur de compétences (OPCO) de la construction, "
                  "à condition que l'organisme soit certifié Qualiopi. Cresceo l'est (certificat n° 875611-1) : ses formations IA, prévention et "
-                 "Lean Construction peuvent être prises en charge jusqu'à 100 % selon votre situation. La demande se fait avant le début de la "
-                 "formation, avec le devis et le programme que nous vous fournissons."),
+                 "Lean Construction sont finançables dans la limite des plafonds de Constructys : dans le Bâtiment, 24 € HT par heure et par "
+                 "stagiaire pour les entreprises de moins de 11 salariés, 19 € HT de 11 à 49 salariés. La demande complète doit parvenir à "
+                 "Constructys sur eGestion au moins 15 jours avant le début de la formation."),
         "facts": [("OPCO du BTP", "Constructys"), ("Condition", "Organisme certifié Qualiopi"),
-                  ("Prise en charge", "Jusqu'à 100 % selon situation"), ("Quand", "Avant le début de la formation")],
+                  ("Plafond Bâtiment", "24 € HT/h (< 11 sal.), 19 € HT/h (11-49)"), ("Délai", "15 jours avant, via eGestion")],
         "courses": [],
         "body": """
 <h2>Qui finance quoi ?</h2>
@@ -363,10 +364,24 @@ PAGES = [
 </table></div>
 <p>Les règles de prise en charge (plafonds, critères, taille d'entreprise) sont fixées par chaque financeur et évoluent régulièrement : vérifiez les conditions en vigueur sur le site de votre OPCO ou de votre FAF.</p>
 
+<h2>Combien Constructys prend-il en charge en 2026 ?</h2>
+<p>Barème du plan de développement des compétences de la branche Bâtiment, applicable aux demandes reçues à partir du 1er juin 2026 (actions non qualifiantes, dans la limite de 300 heures par stagiaire) :</p>
+<div class="table-wrap"><table class="cr-programme-table">
+  <thead><tr><th>Taille de l'entreprise</th><th>Plafond coût pédagogique</th><th>Plafond en intra-entreprise</th><th>Frais de salaire</th></tr></thead>
+  <tbody>
+    <tr><td>Moins de 11 salariés</td><td>24 € HT / heure / stagiaire</td><td>840 € HT / jour / groupe</td><td>15 € HT / heure / stagiaire</td></tr>
+    <tr><td>11 à 49 salariés</td><td>19 € HT / heure / stagiaire</td><td>665 € HT / jour / groupe</td><td>Actions qualifiantes et cas particuliers uniquement</td></tr>
+    <tr><td>50 à 299 salariés</td><td colspan="3">Participation sur le budget de l'entreprise : à voir avec votre délégation régionale</td></tr>
+  </tbody>
+</table></div>
+<p><strong>Exemple</strong> : pour Regard Sécurité (7 h, 400 € par participant), le plafond Constructys représente 168 € par participant dans une entreprise du Bâtiment de moins de 11 salariés (7 h x 24 €), et 133 € de 11 à 49 salariés (7 h x 19 €). Le reste est à la charge de l'entreprise, ou finançable par d'autres dispositifs selon votre situation : demandez-nous une estimation.</p>
+<p>Pour les entreprises de moins de 300 salariés, Constructys finance aussi des <strong>actions Lean Management</strong> dans la limite de 1 000 € HT par jour (2 jours de diagnostic et 6 jours d'accompagnement au maximum), un cadre adapté à notre <a href="formation-lean-construction-ia.html">accompagnement Lean Construction</a>. Les montants sont des plafonds, accordés dans la limite des fonds disponibles. Pour les Travaux publics, les modalités sont à vérifier auprès de votre délégation régionale.</p>
+<p class="source-note">Source : Constructys, « Plan de développement des compétences, modalités de participation financière », juin 2026, et page <a href="https://www.constructys.fr/financer-vos-projets-de-formation/modalites-demandes-de-prise-charge/conditions-de-prise-en-charge-2/" rel="noopener" target="_blank">conditions de prise en charge</a>. Barème en vigueur au 14 octobre 2026.</p>
+
 <h2>Les démarches, étape par étape</h2>
 <ol>
   <li><strong>Demandez un devis et le programme</strong> de la formation à Cresceo.</li>
-  <li><strong>Déposez la demande de prise en charge</strong> sur l'espace en ligne de votre OPCO ou FAF, <strong>avant le début de la formation</strong> et le plus tôt possible.</li>
+  <li><strong>Déposez la demande de prise en charge</strong> complète sur l'espace en ligne de votre OPCO ou FAF. Chez Constructys : plateforme <strong>eGestion</strong> obligatoire, <strong>au moins 15 jours calendaires avant le début</strong> de la formation. Une formation déjà commencée n'est pas finançable.</li>
   <li><strong>Recevez l'accord de financement</strong>, puis signez la convention de formation.</li>
   <li><strong>La formation a lieu</strong> ; nous émettons les attestations et les justificatifs de réalisation.</li>
   <li><strong>Règlement</strong> : selon l'accord, l'OPCO règle directement l'organisme de formation (subrogation) ou rembourse l'entreprise.</li>
@@ -391,9 +406,11 @@ PAGES = [
             ("Quel est l'OPCO des entreprises du BTP ?",
              "Constructys est l'opérateur de compétences (OPCO) de la construction. Il finance notamment les formations du plan de développement des compétences des entreprises du BTP."),
             ("Quand faut-il déposer la demande de prise en charge ?",
-             "Avant le début de la formation, et le plus tôt possible pour tenir compte du délai d'instruction de votre OPCO."),
-            ("Une formation peut-elle être prise en charge à 100 % ?",
-             "C'est possible selon la taille de l'entreprise, les critères du financeur et le budget disponible. Les formations Cresceo sont éligibles à une prise en charge jusqu'à 100 % selon votre situation."),
+             "Chez Constructys, la demande complète doit parvenir sur la plateforme eGestion au moins 15 jours calendaires avant le début de la formation. Déposez-la le plus tôt possible : les financements dépendent des fonds disponibles."),
+            ("Combien Constructys prend-il en charge sur une formation ?",
+             "Dans la branche Bâtiment, pour les demandes reçues depuis le 1er juin 2026, Constructys finance le coût pédagogique dans la limite de 24 € HT par heure et par stagiaire pour les entreprises de moins de 11 salariés, et de 19 € HT de 11 à 49 salariés. Les entreprises de moins de 11 salariés peuvent aussi obtenir une participation aux frais de salaire (15 € HT par heure). Pour les Travaux publics, renseignez-vous auprès de votre délégation régionale."),
+            ("Une formation déjà commencée peut-elle être financée ?",
+             "Non. La demande doit parvenir complète à Constructys au moins 15 jours avant le début de la formation, et une formation qui a démarré avant la réception de la demande n'est pas éligible."),
             ("Pourquoi la certification Qualiopi est-elle importante pour le financement ?",
              "Depuis le 1er janvier 2022, seuls les organismes certifiés Qualiopi peuvent bénéficier des fonds publics et mutualisés de la formation, dont ceux des OPCO."),
         ],

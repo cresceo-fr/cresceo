@@ -178,7 +178,7 @@ FAQ = [
      "Un accompagnement personnalisé est aussi proposé après la formation."),
     ("Combien coûte une formation et peut-elle être financée ?",
      "Les formations démarrent à 400 € par participant. Elles sont éligibles à une prise en charge par votre OPCO "
-     "(Constructys pour le BTP) ou par le FAF pour les indépendants, jusqu'à 100 % selon votre situation."),
+     "(Constructys pour le BTP) ou par le FAF pour les indépendants, dans la limite de leurs plafonds horaires. Demandez-nous une estimation de votre reste à charge."),
     ("À qui s'adressent les formations ?",
      "À l'encadrement de chantier du BTP et de l'Industrie : conducteurs et directeurs de travaux, chefs de chantier, "
      "préventeurs HSE, responsables méthodes. Regard Sécurité ne demande aucun prérequis."),
