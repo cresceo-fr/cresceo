@@ -92,6 +92,21 @@ Modèle de demande (ton à ajuster selon le contact) :
 | 30 min | Lancement de la rédaction des articles 3 à 10 en brouillon, envoi aux signataires pour relecture | Claude, puis Igor et Julien |
 | 15 min | Déclaration Carif-Oref (Défi métiers) | Baptiste |
 
-## 5. Mesure
+## 5. Point d'avancement du 14/10
+
+**Fait**
+- Générateur de blog : `COM/scripts/build_blog.py` (sources Markdown dans `COM/blog/`, index `/blog/`, flux RSS, schema `BlogPosting` avec auteur nommé, sitemap et `llms.txt` mis à jour à chaque publication).
+- Articles 1 et 2 rédigés en brouillon (`status: draft`) : [budget formation OPCO](../COM/blog/2026-10-15-budget-formation-opco-fin-annee.md) (signé Cresceo) et [IA sur chantier](../COM/blog/2026-10-16-ia-chantier-detection-risques.md) (signé Igor, à lui faire relire).
+- Page financement enrichie du barème officiel Constructys de juin 2026 et de la règle des 15 jours (eGestion).
+
+**Constats**
+- **Barème Constructys Bâtiment (demandes reçues depuis le 01/06/2026)** : 24 € HT/h/stagiaire pour les moins de 11 salariés, 19 € HT/h de 11 à 49 salariés. Regard Sécurité (400 €, 7 h) est donc prise en charge à hauteur de 168 € ou 133 € par participant, pas à 100 %. Les mentions « jusqu'à 100 % » ajoutées par le travail SEO ont été corrigées. **Reste le bandeau devis de la home** (« Prise en charge possible jusqu'à 100 % », « reste à charge peut être nul ») : **à arbitrer avec Igor**.
+- Opportunité : Constructys finance les **actions Lean Management** des entreprises de moins de 300 salariés jusqu'à 1 000 € HT/jour (2 jours de diagnostic et 6 jours d'accompagnement au maximum). Vérifier l'éligibilité de Cresceo comme prestataire.
+- **Batinfo** : l'article du 03/09 cite Cresceo **sans lien** vers cresceo.fr. C'est la demande de lien la plus simple à faire.
+- **WinLab'** : la page du concours ne publie pas de liste de finalistes, donc pas de lien à attendre de ce côté pour l'instant.
+
+**Pour publier un article** : passer `status: draft` à `status: published` dans le fichier Markdown, lancer `python COM/scripts/build_blog.py site`, puis commit et push dans `site/`. Au premier article publié, ajouter « Blog » dans la navigation (home et formations.html). Aperçu local des brouillons : `python COM/scripts/build_blog.py site --drafts`, sans commiter le dossier `site/blog/` ainsi généré.
+
+## 6. Mesure
 
 1er relevé complet prévu le **lundi 02/11/2026** (protocole dans [SEO_MOTS_CLES.md](SEO_MOTS_CLES.md)) : premières impressions sur les 7 nouvelles pages attendues d'ici là. Le classement sur « formation qualiopi IA BTP » dépend surtout des liens entrants et prendra 2 à 4 mois.
